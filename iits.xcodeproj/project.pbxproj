@@ -13,6 +13,7 @@
 		460B362D2B7B7D8400D99FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */; };
 		464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A42B7B80250005590A /* .swiftlint.yml */; };
 		464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A72B7B842A0005590A /* sonar-project.properties */; };
+		464FE0AC2B7B86C70005590A /* build.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0AB2B7B86C70005590A /* build.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		464FE0A42B7B80250005590A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		464FE0A62B7B80B60005590A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		464FE0A72B7B842A0005590A /* sonar-project.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
+		464FE0AB2B7B86C70005590A /* build.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = build.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,10 +43,11 @@
 		460B36182B7B7D8300D99FFF = {
 			isa = PBXGroup;
 			children = (
-				464FE0A72B7B842A0005590A /* sonar-project.properties */,
 				464FE0A62B7B80B60005590A /* README.md */,
-				464FE0A42B7B80250005590A /* .swiftlint.yml */,
 				460B36232B7B7D8300D99FFF /* iits */,
+				464FE0A92B7B86C70005590A /* .github */,
+				464FE0A42B7B80250005590A /* .swiftlint.yml */,
+				464FE0A72B7B842A0005590A /* sonar-project.properties */,
 				460B36222B7B7D8300D99FFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +78,22 @@
 				460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		464FE0A92B7B86C70005590A /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				464FE0AA2B7B86C70005590A /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		464FE0AA2B7B86C70005590A /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				464FE0AB2B7B86C70005590A /* build.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464FE0AC2B7B86C70005590A /* build.yml in Resources */,
 				464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */,
 				460B362D2B7B7D8400D99FFF /* Preview Assets.xcassets in Resources */,
 				464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */,

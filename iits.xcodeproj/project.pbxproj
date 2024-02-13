@@ -11,6 +11,8 @@
 		460B36272B7B7D8300D99FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B36262B7B7D8300D99FFF /* ContentView.swift */; };
 		460B36292B7B7D8400D99FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460B36282B7B7D8400D99FFF /* Assets.xcassets */; };
 		460B362D2B7B7D8400D99FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */; };
+		464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A42B7B80250005590A /* .swiftlint.yml */; };
+		464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A72B7B842A0005590A /* sonar-project.properties */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		460B36282B7B7D8400D99FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		460B362A2B7B7D8400D99FFF /* iits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iits.entitlements; sourceTree = "<group>"; };
 		460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		464FE0A42B7B80250005590A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		464FE0A62B7B80B60005590A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		464FE0A72B7B842A0005590A /* sonar-project.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,9 @@
 		460B36182B7B7D8300D99FFF = {
 			isa = PBXGroup;
 			children = (
+				464FE0A72B7B842A0005590A /* sonar-project.properties */,
+				464FE0A62B7B80B60005590A /* README.md */,
+				464FE0A42B7B80250005590A /* .swiftlint.yml */,
 				460B36232B7B7D8300D99FFF /* iits */,
 				460B36222B7B7D8300D99FFF /* Products */,
 			);
@@ -79,6 +87,7 @@
 				460B361D2B7B7D8300D99FFF /* Sources */,
 				460B361E2B7B7D8300D99FFF /* Frameworks */,
 				460B361F2B7B7D8300D99FFF /* Resources */,
+				464FE0A32B7B7F750005590A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,12 +136,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */,
 				460B362D2B7B7D8400D99FFF /* Preview Assets.xcassets in Resources */,
+				464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */,
 				460B36292B7B7D8400D99FFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		464FE0A32B7B7F750005590A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		460B361D2B7B7D8300D99FFF /* Sources */ = {

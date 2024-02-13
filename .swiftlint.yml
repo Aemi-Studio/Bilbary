@@ -1,0 +1,6 @@
+force_cast:
+  severity: warning
+line_length:
+  severity: warning
+identifier_name:
+  severity: warning

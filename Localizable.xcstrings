@@ -1,6 +1,21 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " Read" : {
+
+    },
+    "5 Min" : {
+
+    },
+    "Book" : {
+
+    },
+    "Book Content" : {
+
+    },
+    "Book information" : {
+
+    },
     "Color" : {
 
     },
@@ -38,7 +53,15 @@
       "comment" : "Reading Time Goal of 30 minutes"
     },
     "goalReadTime.60min" : {
-      "comment" : "Reading Time Goal of 60 minutes"
+      "comment" : "Reading Time Goal of 60 minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Hour"
+          }
+        }
+      }
     },
     "goalStreakDuration.7days" : {
       "comment" : "Goal Streak Duration of 7 days or 1 week"
@@ -61,8 +84,14 @@
     "goalStreakDuration.unlimited" : {
       "comment" : "No Goal Streak Duration or forever"
     },
-    "Hello, world!" : {
-
+    "Informations" : {
+      "comment" : "Information about the current open book"
+    },
+    "Library" : {
+      "comment" : "Library"
+    },
+    "Like" : {
+      "comment" : "Action of liking, in the context of the current book"
     },
     "M" : {
 

@@ -28,6 +28,5 @@ extension CustomizationModel {
         @AppStorage("wordSpacing")
         var wordSpacing: Double = 1.0
 
-
     }
 }

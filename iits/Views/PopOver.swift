@@ -23,7 +23,7 @@ struct PopOver<Label: View, Popover: View>: View {
 
     init(
         _ title: String,
-        _ systemImage: String,
+        systemImage: String,
         anchor: PopoverAttachmentAnchor = .point(.bottom),
         arrowEdge: Edge = .bottom,
         @ViewBuilder popover: @escaping () -> Popover
@@ -31,6 +31,7 @@ struct PopOver<Label: View, Popover: View>: View {
         self.title = title
         self.systemImage = systemImage
         self.anchor = anchor
+        self.label = nil
         self.arrowEdge = arrowEdge
         self.popover = popover
     }

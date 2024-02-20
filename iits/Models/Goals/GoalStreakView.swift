@@ -12,10 +12,9 @@ struct GoalStreakView: View {
     @State
     private var goalModel: GoalModel = .shared
 
-
     var body: some View {
         VStack(spacing: 16) {
-            
+
             StreakWeekRowView()
 
             VStack {

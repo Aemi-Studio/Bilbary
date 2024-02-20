@@ -56,5 +56,4 @@ final class CustomizationModel: ObservableObject {
         CustomColor(rawValue: self.backgroundColor)?.asColor
     }
 
-
 }

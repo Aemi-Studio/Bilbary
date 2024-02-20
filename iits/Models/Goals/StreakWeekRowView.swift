@@ -19,7 +19,6 @@ struct StreakWeekRowView: View {
         GridItem(.flexible(minimum: 0, maximum: .infinity), spacing: 4, alignment: .center)
     ]
 
-    
     var body: some View {
         HStack(spacing: 4) {
             LazyVGrid(columns: columns) {

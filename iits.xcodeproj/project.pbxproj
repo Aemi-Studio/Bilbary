@@ -11,6 +11,24 @@
 		460B36272B7B7D8300D99FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B36262B7B7D8300D99FFF /* ContentView.swift */; };
 		460B36292B7B7D8400D99FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460B36282B7B7D8400D99FFF /* Assets.xcassets */; };
 		460B362D2B7B7D8400D99FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */; };
+		462739AE2B83A24A00B085FF /* GoalStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462739AD2B83A24A00B085FF /* GoalStreakView.swift */; };
+		462D500E2B83F1F9001ED44E /* PopOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D500D2B83F1F9001ED44E /* PopOver.swift */; };
+		462D50102B840365001ED44E /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D500F2B840365001ED44E /* GoalModel.swift */; };
+		462D50122B840577001ED44E /* Loggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50112B840577001ED44E /* Loggers.swift */; };
+		462D50152B8407AD001ED44E /* +GoalModelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50142B8407AD001ED44E /* +GoalModelStorage.swift */; };
+		462D50172B8407D1001ED44E /* GoalReadTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50162B8407D1001ED44E /* GoalReadTime.swift */; };
+		462D50192B8407E7001ED44E /* GoalStreakDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50182B8407E7001ED44E /* GoalStreakDuration.swift */; };
+		462D501B2B84084A001ED44E /* GoalStreakDuration+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D501A2B84084A001ED44E /* GoalStreakDuration+String.swift */; };
+		462D501D2B8409B2001ED44E /* GoalReadTime+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D501C2B8409B2001ED44E /* GoalReadTime+String.swift */; };
+		462D50232B841236001ED44E /* StreakWeekRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50222B841236001ED44E /* StreakWeekRowView.swift */; };
+		462D50272B8413D6001ED44E /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* Customization.swift */; };
+		462D50292B8413E6001ED44E /* CustomizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50282B8413E6001ED44E /* CustomizationModel.swift */; };
+		462D502B2B841405001ED44E /* +CustomizationModelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D502A2B841405001ED44E /* +CustomizationModelStorage.swift */; };
+		462D502D2B8416AE001ED44E /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D502C2B8416AE001ED44E /* CustomColor.swift */; };
+		462D502F2B841794001ED44E /* CustomColor+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D502E2B841794001ED44E /* CustomColor+Color.swift */; };
+		462D50312B841FF0001ED44E /* CustomFontFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50302B841FF0001ED44E /* CustomFontFace.swift */; };
+		462D50332B842056001ED44E /* CustomFontFace+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50322B842056001ED44E /* CustomFontFace+Font.swift */; };
+		462D50352B842509001ED44E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 462D50342B842509001ED44E /* Localizable.xcstrings */; };
 		464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A42B7B80250005590A /* .swiftlint.yml */; };
 		464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A72B7B842A0005590A /* sonar-project.properties */; };
 		464FE0AC2B7B86C70005590A /* build.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0AB2B7B86C70005590A /* build.yml */; };
@@ -23,6 +41,24 @@
 		460B36282B7B7D8400D99FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		460B362A2B7B7D8400D99FFF /* iits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iits.entitlements; sourceTree = "<group>"; };
 		460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		462739AD2B83A24A00B085FF /* GoalStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalStreakView.swift; sourceTree = "<group>"; };
+		462D500D2B83F1F9001ED44E /* PopOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOver.swift; sourceTree = "<group>"; };
+		462D500F2B840365001ED44E /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
+		462D50112B840577001ED44E /* Loggers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggers.swift; sourceTree = "<group>"; };
+		462D50142B8407AD001ED44E /* +GoalModelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+GoalModelStorage.swift"; sourceTree = "<group>"; };
+		462D50162B8407D1001ED44E /* GoalReadTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalReadTime.swift; sourceTree = "<group>"; };
+		462D50182B8407E7001ED44E /* GoalStreakDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalStreakDuration.swift; sourceTree = "<group>"; };
+		462D501A2B84084A001ED44E /* GoalStreakDuration+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalStreakDuration+String.swift"; sourceTree = "<group>"; };
+		462D501C2B8409B2001ED44E /* GoalReadTime+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalReadTime+String.swift"; sourceTree = "<group>"; };
+		462D50222B841236001ED44E /* StreakWeekRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakWeekRowView.swift; sourceTree = "<group>"; };
+		462D50262B8413D6001ED44E /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
+		462D50282B8413E6001ED44E /* CustomizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationModel.swift; sourceTree = "<group>"; };
+		462D502A2B841405001ED44E /* +CustomizationModelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+CustomizationModelStorage.swift"; sourceTree = "<group>"; };
+		462D502C2B8416AE001ED44E /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		462D502E2B841794001ED44E /* CustomColor+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomColor+Color.swift"; sourceTree = "<group>"; };
+		462D50302B841FF0001ED44E /* CustomFontFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontFace.swift; sourceTree = "<group>"; };
+		462D50322B842056001ED44E /* CustomFontFace+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomFontFace+Font.swift"; sourceTree = "<group>"; };
+		462D50342B842509001ED44E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		464FE0A42B7B80250005590A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		464FE0A62B7B80B60005590A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		464FE0A72B7B842A0005590A /* sonar-project.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
@@ -43,6 +79,7 @@
 		460B36182B7B7D8300D99FFF = {
 			isa = PBXGroup;
 			children = (
+				462D50342B842509001ED44E /* Localizable.xcstrings */,
 				464FE0A62B7B80B60005590A /* README.md */,
 				460B36232B7B7D8300D99FFF /* iits */,
 				464FE0A92B7B86C70005590A /* .github */,
@@ -63,11 +100,15 @@
 		460B36232B7B7D8300D99FFF /* iits */ = {
 			isa = PBXGroup;
 			children = (
+				462D50252B8412F0001ED44E /* Customization */,
 				460B36242B7B7D8300D99FFF /* iitsApp.swift */,
 				460B36262B7B7D8300D99FFF /* ContentView.swift */,
 				460B36282B7B7D8400D99FFF /* Assets.xcassets */,
 				460B362A2B7B7D8400D99FFF /* iits.entitlements */,
 				460B362B2B7B7D8400D99FFF /* Preview Content */,
+				462D50242B8412E1001ED44E /* Goals */,
+				462D500D2B83F1F9001ED44E /* PopOver.swift */,
+				462D50112B840577001ED44E /* Loggers.swift */,
 			);
 			path = iits;
 			sourceTree = "<group>";
@@ -78,6 +119,43 @@
 				460B362C2B7B7D8400D99FFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		462D50132B84078D001ED44E /* GoalModel */ = {
+			isa = PBXGroup;
+			children = (
+				462D500F2B840365001ED44E /* GoalModel.swift */,
+				462D50142B8407AD001ED44E /* +GoalModelStorage.swift */,
+				462D50162B8407D1001ED44E /* GoalReadTime.swift */,
+				462D501C2B8409B2001ED44E /* GoalReadTime+String.swift */,
+				462D50182B8407E7001ED44E /* GoalStreakDuration.swift */,
+				462D501A2B84084A001ED44E /* GoalStreakDuration+String.swift */,
+			);
+			path = GoalModel;
+			sourceTree = "<group>";
+		};
+		462D50242B8412E1001ED44E /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				462739AD2B83A24A00B085FF /* GoalStreakView.swift */,
+				462D50222B841236001ED44E /* StreakWeekRowView.swift */,
+				462D50132B84078D001ED44E /* GoalModel */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		462D50252B8412F0001ED44E /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				462D50262B8413D6001ED44E /* Customization.swift */,
+				462D50282B8413E6001ED44E /* CustomizationModel.swift */,
+				462D502A2B841405001ED44E /* +CustomizationModelStorage.swift */,
+				462D502C2B8416AE001ED44E /* CustomColor.swift */,
+				462D502E2B841794001ED44E /* CustomColor+Color.swift */,
+				462D50302B841FF0001ED44E /* CustomFontFace.swift */,
+				462D50322B842056001ED44E /* CustomFontFace+Font.swift */,
+			);
+			path = Customization;
 			sourceTree = "<group>";
 		};
 		464FE0A92B7B86C70005590A /* .github */ = {
@@ -157,6 +235,7 @@
 			files = (
 				464FE0AC2B7B86C70005590A /* build.yml in Resources */,
 				464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */,
+				462D50352B842509001ED44E /* Localizable.xcstrings in Resources */,
 				460B362D2B7B7D8400D99FFF /* Preview Assets.xcassets in Resources */,
 				464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */,
 				460B36292B7B7D8400D99FFF /* Assets.xcassets in Resources */,
@@ -181,7 +260,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
+			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    # /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\n    /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -190,8 +269,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462D50312B841FF0001ED44E /* CustomFontFace.swift in Sources */,
+				462739AE2B83A24A00B085FF /* GoalStreakView.swift in Sources */,
 				460B36272B7B7D8300D99FFF /* ContentView.swift in Sources */,
+				462D501D2B8409B2001ED44E /* GoalReadTime+String.swift in Sources */,
+				462D500E2B83F1F9001ED44E /* PopOver.swift in Sources */,
+				462D50292B8413E6001ED44E /* CustomizationModel.swift in Sources */,
+				462D502B2B841405001ED44E /* +CustomizationModelStorage.swift in Sources */,
+				462D50192B8407E7001ED44E /* GoalStreakDuration.swift in Sources */,
+				462D50172B8407D1001ED44E /* GoalReadTime.swift in Sources */,
+				462D50122B840577001ED44E /* Loggers.swift in Sources */,
+				462D50152B8407AD001ED44E /* +GoalModelStorage.swift in Sources */,
+				462D502D2B8416AE001ED44E /* CustomColor.swift in Sources */,
+				462D502F2B841794001ED44E /* CustomColor+Color.swift in Sources */,
 				460B36252B7B7D8300D99FFF /* iitsApp.swift in Sources */,
+				462D50102B840365001ED44E /* GoalModel.swift in Sources */,
+				462D501B2B84084A001ED44E /* GoalStreakDuration+String.swift in Sources */,
+				462D50272B8413D6001ED44E /* Customization.swift in Sources */,
+				462D50332B842056001ED44E /* CustomFontFace+Font.swift in Sources */,
+				462D50232B841236001ED44E /* StreakWeekRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +420,7 @@
 				DEVELOPMENT_TEAM = NP94WB3P75;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -364,6 +461,7 @@
 				DEVELOPMENT_TEAM = NP94WB3P75;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

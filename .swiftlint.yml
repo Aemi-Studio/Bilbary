@@ -4,3 +4,7 @@ line_length:
   severity: warning
 identifier_name:
   severity: warning
+
+disabled_rules:
+    switch_case_alignment
+

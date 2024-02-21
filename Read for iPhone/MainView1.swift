@@ -13,7 +13,7 @@ struct MainView1: View {
     private var bottomSheetShown: Bool = false
 
     let columns: [GridItem] = [
-        
+
         .init(.flexible(minimum: 0, maximum: .infinity), alignment: .center),
         .init(.flexible(minimum: 0, maximum: .infinity), alignment: .center),
         .init(.flexible(minimum: 0, maximum: .infinity), alignment: .center),
@@ -24,7 +24,7 @@ struct MainView1: View {
 
     var body: some View {
         GeometryReader { geometry in
-            
+
             VStack {
                 Spacer()
             }

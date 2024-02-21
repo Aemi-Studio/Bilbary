@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BottomSheet<Content: View>: View {
 
-
     @Binding
     var isOpen: Bool
 
@@ -51,9 +50,9 @@ struct BottomSheet<Content: View>: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                
+
                 self.indicator
-                    .padding(.vertical,6)
+                    .padding(.vertical, 6)
 
                 self.content
 
@@ -75,15 +74,15 @@ struct BottomSheet<Content: View>: View {
             .gesture(
                 DragGesture()
                     .updating(self.$translation) { value, state, _ in
-                    state = value.translation.height
-                }
-                    .onEnded { value in
-                    let snapDistance = self.maxHeight * Constants.snapRatio
-                    guard abs(value.translation.height) > snapDistance else {
-                        return
+                        state = value.translation.height
                     }
-                    self.isOpen = value.translation.height < 0
-                }
+                    .onEnded { value in
+                        let snapDistance = self.maxHeight * Constants.snapRatio
+                        guard abs(value.translation.height) > snapDistance else {
+                            return
+                        }
+                        self.isOpen = value.translation.height < 0
+                    }
             )
         }
     }

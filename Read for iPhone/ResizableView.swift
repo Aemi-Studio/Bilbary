@@ -47,10 +47,10 @@ struct RedRectangle: View {
                 )
 
         }
-            .frame(width: 100, height: minHeight)
-            .onAppear {
-                height = minHeight
-            }
+        .frame(width: 100, height: minHeight)
+        .onAppear {
+            height = minHeight
+        }
     }
 }
 

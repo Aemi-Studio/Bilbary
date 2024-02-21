@@ -7,40 +7,78 @@
 
 import SwiftUI
 
-// swiftlint:disable trailing_whitespace
-
-struct UIButton: View {
+struct UIButton<L: View>: View {
 
     @Binding
     var isShown: Bool
 
-    var label: String = "Button"
-    var icon: String = "circle"
-    var iconActive: String = "circle.fill"
-    var colorActive: Color = .primary
+    private var title: String?
+    private var systemImage: String = "circle"
+    private var systemImageActive: String = "circle.fill"
+
+    private var action: (() -> Void)?
+
+    private var label: (() -> L)?
 
     @State
     private var isActive: Bool = false
 
+    init(
+        isShown: Binding<Bool>,
+        _ title: String = "Button",
+        systemImage: String = "circle",
+        systemImageActive: String = "circle.fill",
+        action: @escaping () -> Void = {}
+    ) where L == EmptyView {
+        self._isShown = isShown
+        self.title = title
+        self.systemImage = systemImage
+        self.systemImageActive = systemImageActive
+        self.action = action
+    }
+
+    init(
+        isShown: Binding<Bool>,
+        action: @escaping () -> Void = {},
+        @ViewBuilder label: @escaping () -> L
+    ) {
+        self._isShown = isShown
+        self.label = label
+        self.action = action
+    }
+
     var body: some View {
         Button {
             self.isActive.toggle()
+            self.action?()
         } label: {
+
             HStack {
-                Image(systemName: "circle")
-                    .foregroundStyle(.clear)
+                if title == nil, let label = self.label {
+                    label()
+                } else {
+                    Image(systemName: "circle")
+                        .foregroundStyle(.clear)
+                }
             }
             .padding()
             .overlay {
-                Label(label, systemImage: self.isActive
-                        ? iconActive
-                        : icon
-                )
-                .labelStyle(.iconOnly)
+                if let title = self.title {
+                    Label(
+                        title,
+                        systemImage: self.isActive
+                            ? systemImageActive
+                            : systemImage
+                    )
+                    .labelStyle(.iconOnly)
+                } else {
+                    EmptyView()
+                }
             }
-            .foregroundStyle(self.isActive
-                                ? colorActive
-                                : .secondary
+            .foregroundStyle(
+                self.isActive
+                    ? .primary
+                    : .secondary
             )
             .fontWeight(.bold)
             .background {
@@ -54,17 +92,15 @@ struct UIButton: View {
 
                 }
             }
-            .contentShape(RoundedRectangle(cornerRadius: 8))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .contentShape(
+                RoundedRectangle(cornerRadius: 8)
+            )
+            .clipShape(
+                RoundedRectangle(cornerRadius: 8)
+            )
 
         }
         .opacity(self.isShown ? 1 : 0)
         .buttonStyle(.plain)
     }
-}
-
-#Preview {
-    UIButton(
-        isShown: .constant(false)
-    )
 }

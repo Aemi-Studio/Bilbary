@@ -15,6 +15,7 @@ final class ViewModel {
     public var libraryPath: NavigationPath = .init()
     public var contentPath: NavigationPath = .init()
 
+    public var interfaceVisibility: Bool = false
     public var libraryVisibility: NavigationSplitViewVisibility = .detailOnly
 
     private init() {}

@@ -28,7 +28,7 @@ struct ContentView: View {
             ScrollView(.horizontal) {
                 VStack(spacing: 0) {
                     LazyVGrid(columns: columns) {
-                        Button {
+                        UIButton(isShown: $view.interfaceVisibility) {
                             ViewModel.shared.toggleSidebar()
                         } label: {
                             Label(
@@ -39,7 +39,7 @@ struct ContentView: View {
                         }
                         .buttonStyle(.plain)
 
-                        PopOver {
+                        PopOver(isShown: $view.interfaceVisibility) {
                             HStack(spacing: 0) {
                                 Group {
                                     Text("5 Min")
@@ -52,7 +52,7 @@ struct ContentView: View {
                             HStack {}.frame(width: 200, height: 100)
                         }
 
-                        PopOver {
+                        PopOver(isShown: $view.interfaceVisibility) {
                             Label(
                                 NSLocalizedString("Streak", comment: ""),
                                 systemImage: "timer"
@@ -68,7 +68,7 @@ struct ContentView: View {
                     }
                     .padding(0)
                     LazyVGrid(columns: columns) {
-                        PopOver {
+                        PopOver(isShown: $view.interfaceVisibility) {
                             Label(
                                 NSLocalizedString("Informations", comment: "Information about the current open book"),
                                 systemImage: "book"
@@ -78,7 +78,7 @@ struct ContentView: View {
                             HStack {}.frame(width: 200, height: 100)
                         }
 
-                        Button {
+                        UIButton(isShown: .constant(true)) {
                             logger.log("I like that.")
                         } label: {
                             Label(
@@ -89,7 +89,7 @@ struct ContentView: View {
                         }
                         .buttonStyle(.plain)
 
-                        PopOver {
+                        PopOver(isShown: $view.interfaceVisibility) {
                             Label(
                                 NSLocalizedString("Text Customization", comment: ""),
                                 systemImage: "textformat.size"
@@ -106,6 +106,12 @@ struct ContentView: View {
                 .frame(minWidth: UIWindow.width)
             }
             .scrollDisabled(true)
+            .onTapGesture {
+                if view.libraryVisibility == .detailOnly {
+                    view.interfaceVisibility.toggle()
+                }
+            }
+            .contentShape(Rectangle())
             .toolbar(.hidden, for: .navigationBar)
         }
     }

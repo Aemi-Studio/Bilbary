@@ -2,9 +2,8 @@ force_cast:
   severity: warning
 line_length:
   severity: warning
-identifier_name:
-  severity: warning
 
 disabled_rules:
-    switch_case_alignment
+  - switch_case_alignment
+  - identifier_name
 

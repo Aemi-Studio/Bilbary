@@ -84,6 +84,9 @@
     "goalStreakDuration.unlimited" : {
       "comment" : "No Goal Streak Duration or forever"
     },
+    "Import ePub File" : {
+
+    },
     "Informations" : {
       "comment" : "Information about the current open book"
     },
@@ -112,6 +115,7 @@
 
     },
     "W" : {
+
     }
   },
   "version" : "1.0"

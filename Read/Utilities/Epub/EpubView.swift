@@ -9,7 +9,7 @@ import SwiftUI
 import EPUBKit
 import OSLog
 
-struct MainView: View {
+struct EpubView: View {
 
     private let logger: Logger = .init()
 
@@ -64,5 +64,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    EpubView()
 }

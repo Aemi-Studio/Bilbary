@@ -1,0 +1,118 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " Read" : {
+
+    },
+    "5 Min" : {
+
+    },
+    "Book" : {
+
+    },
+    "Book Content" : {
+
+    },
+    "Book information" : {
+
+    },
+    "Color" : {
+
+    },
+    "customization.colorPicker" : {
+      "comment" : "Custom Color in the Picker"
+    },
+    "customization.fontPicker" : {
+      "comment" : "Custom Font in the Picker"
+    },
+    "F" : {
+
+    },
+    "goalModel.beNotified" : {
+      "comment" : "Be notified to achieve my goal"
+    },
+    "goalModel.readTimePicker" : {
+      "comment" : "Picker for Reading Time"
+    },
+    "goalModel.streakDurationPicker" : {
+      "comment" : "Picker for Streak Duration"
+    },
+    "goalReadTime.0min" : {
+      "comment" : "No Reading Time Goal"
+    },
+    "goalReadTime.1min" : {
+      "comment" : "Reading Time Goal of 1 minute"
+    },
+    "goalReadTime.5min" : {
+      "comment" : "Reading Time Goal of 5 minutes"
+    },
+    "goalReadTime.10min" : {
+      "comment" : "Reading Time Goal of 10 minutes"
+    },
+    "goalReadTime.30min" : {
+      "comment" : "Reading Time Goal of 30 minutes"
+    },
+    "goalReadTime.60min" : {
+      "comment" : "Reading Time Goal of 60 minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Hour"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.7days" : {
+      "comment" : "Goal Streak Duration of 7 days or 1 week"
+    },
+    "goalStreakDuration.14days" : {
+      "comment" : "Goal Streak Duration of 14 days or 2 weeks"
+    },
+    "goalStreakDuration.30days" : {
+      "comment" : "Goal Streak Duration of 30 days or 1 month"
+    },
+    "goalStreakDuration.90days" : {
+      "comment" : "Goal Streak Duration of 90 days or 3 months"
+    },
+    "goalStreakDuration.180days" : {
+      "comment" : "Goal Streak Duration of 180 days or 6 months"
+    },
+    "goalStreakDuration.365days" : {
+      "comment" : "Goal Streak Duration of 365 days or 1 year"
+    },
+    "goalStreakDuration.unlimited" : {
+      "comment" : "No Goal Streak Duration or forever"
+    },
+    "Informations" : {
+      "comment" : "Information about the current open book"
+    },
+    "Library" : {
+      "comment" : "Library"
+    },
+    "Like" : {
+      "comment" : "Action of liking, in the context of the current book"
+    },
+    "M" : {
+
+    },
+    "S" : {
+
+    },
+    "Streak" : {
+
+    },
+    "T" : {
+
+    },
+    "Text" : {
+
+    },
+    "Text Customization" : {
+
+    },
+    "W" : {
+    }
+  },
+  "version" : "1.0"
+}

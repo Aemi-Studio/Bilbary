@@ -33,8 +33,10 @@ final class ViewModel {
 
     public private(set) var activePopover: PopoverType = .none {
         didSet {
-            if activePopover != .library {
-                libraryVisibility = .detailOnly
+            withAnimation {
+                if activePopover != .library {
+                    libraryVisibility = .detailOnly
+                }
             }
         }
     }
@@ -63,7 +65,9 @@ final class ViewModel {
     }
 
     public func setPopover(to type: PopoverType) {
-        self.activePopover = type
+        withAnimation {
+            self.activePopover = type
+        }
     }
 
 }

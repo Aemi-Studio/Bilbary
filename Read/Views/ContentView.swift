@@ -36,12 +36,14 @@ struct ContentView: View {
             }
             .scrollDisabled(true)
             .onTapGesture {
-                if view.libraryVisibility == .detailOnly {
-                    if !view.isAnyPopoverDisplayed {
-                        view.interfaceVisibility.toggle()
+                withAnimation {
+                    if view.libraryVisibility == .detailOnly {
+                        if !view.isAnyPopoverDisplayed {
+                            view.interfaceVisibility.toggle()
+                        }
+                    } else {
+                        view.libraryVisibility.toggle()
                     }
-                } else {
-                    view.libraryVisibility.toggle()
                 }
             }
             .contentShape(Rectangle())

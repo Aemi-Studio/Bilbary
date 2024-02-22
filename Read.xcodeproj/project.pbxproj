@@ -53,6 +53,8 @@
 		464FE0A52B7B80250005590A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A42B7B80250005590A /* .swiftlint.yml */; };
 		464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A72B7B842A0005590A /* sonar-project.properties */; };
 		464FE0AC2B7B86C70005590A /* build.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0AB2B7B86C70005590A /* build.yml */; };
+		46A485B12B87382B00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B02B87382B00C6C7E3 /* EPUBKit */; };
+		46A485B32B87383D00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B22B87383D00C6C7E3 /* EPUBKit */; };
 		46A701022B8613F000A700B4 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A701012B8613F000A700B4 /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A485B12B87382B00C6C7E3 /* EPUBKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A485B32B87383D00C6C7E3 /* EPUBKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +350,9 @@
 			dependencies = (
 			);
 			name = "Read for iPad & macOS";
+			packageProductDependencies = (
+				46A485B02B87382B00C6C7E3 /* EPUBKit */,
+			);
 			productName = iits;
 			productReference = 460B36212B7B7D8300D99FFF /* Read for iPad & macOS.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +370,9 @@
 			dependencies = (
 			);
 			name = "Read for iPhone";
+			packageProductDependencies = (
+				46A485B22B87383D00C6C7E3 /* EPUBKit */,
+			);
 			productName = "Read for iPhone";
 			productReference = 463CEDE32B8559E3001D951C /* Read for iPhone.app */;
 			productType = "com.apple.product-type.application";
@@ -394,6 +404,9 @@
 				Base,
 			);
 			mainGroup = 460B36182B7B7D8300D99FFF;
+			packageReferences = (
+				46A485AF2B87382A00C6C7E3 /* XCRemoteSwiftPackageReference "EPUBKit" */,
+			);
 			productRefGroup = 460B36222B7B7D8300D99FFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -810,6 +823,31 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46A485AF2B87382A00C6C7E3 /* XCRemoteSwiftPackageReference "EPUBKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/witekbobrowski/EPUBKit.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 2.0.0;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46A485B02B87382B00C6C7E3 /* EPUBKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46A485AF2B87382A00C6C7E3 /* XCRemoteSwiftPackageReference "EPUBKit" */;
+			productName = EPUBKit;
+		};
+		46A485B22B87383D00C6C7E3 /* EPUBKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46A485AF2B87382A00C6C7E3 /* XCRemoteSwiftPackageReference "EPUBKit" */;
+			productName = EPUBKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 460B36192B7B7D8300D99FFF /* Project object */;
 }

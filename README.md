@@ -1,4 +1,4 @@
-#  `iits` Project
+#  `Read` Project
 
 
 ## Development Setup

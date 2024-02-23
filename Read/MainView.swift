@@ -14,12 +14,21 @@ struct MainView: View {
     private var view: ViewModel = .shared
 
     var body: some View {
-        NavigationSplitView(columnVisibility: $view.libraryVisibility) {
-            LibraryView()
-        } detail: {
-            ContentView()
+        GeometryReader { proxy in
+            NavigationSplitView(columnVisibility: $view.libraryVisibility) {
+                LibraryView()
+            } detail: {
+                ContentView()
+            }
+            .navigationSplitViewStyle(.balanced)
+            .onAppear {
+                self.view.screenWidth = proxy.size.width
+            }
         }
-        .navigationSplitViewStyle(.balanced)
+        .preference(key: ScreenWidthKey.self, value: self.view.screenWidth)
+        .onPreferenceChange(ScreenWidthKey.self) { value in
+            self.view.screenWidth = value
+        }
     }
 }
 

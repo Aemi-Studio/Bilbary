@@ -34,7 +34,7 @@ struct EpubView: View {
                 VStack(spacing: 24) {
                     Text(document?.author?.xmlEscaped ?? "")
                         .fontDesign(.serif)
-                    Text(document?.tableOfContents.label ?? "")
+                    Text(document?.tableOfContents.item ?? "")
                         .fontDesign(.serif)
                 }
                 .frame(minHeight: 200)

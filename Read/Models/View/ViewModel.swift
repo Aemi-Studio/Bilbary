@@ -6,54 +6,66 @@
 //
 
 import SwiftUI
+import OSLog
 
 @Observable
 final class ViewModel {
 
     static let shared: ViewModel = .init()
 
+    private let logger: Logger = .init()
+
+    public var screenWidth: CGFloat = 0
+
     public var libraryPath: NavigationPath = .init()
     public var contentPath: NavigationPath = .init()
 
     public var interfaceVisibility: Bool = false
-    public var libraryVisibility: NavigationSplitViewVisibility = .detailOnly
+    public var libraryVisibility: NavigationSplitViewVisibility = .detailOnly {
+        didSet {
+            switch self.libraryVisibility {
+            case .detailOnly:
+                self.setPopover(to: .none)
+            default:
+                self.setPopover(to: .library)
+            }
+        }
+    }
+
+    public private(set) var activePopover: PopoverType = .none {
+        didSet {
+            logger.info("\(String(describing: self.activePopover))")
+        }
+    }
+
+    public var isAnyPopoverDisplayed: Bool {
+        self.activePopover != .none
+    }
 
     private init() {}
 
-    public func toggleSidebar() {
-        self.libraryVisibility = self.libraryVisibility == .detailOnly ? .doubleColumn : .detailOnly
-    }
-
-    public func goTo<H: Hashable>(_ value: H, for columnType: ColumnType = .library) {
-        switch columnType {
-        case .library:
-            self.libraryPath.append(value)
-        case .content:
-            self.contentPath.append(value)
+    public func isTogglable(_ type: PopoverType) -> Int {
+        if libraryVisibility == .doubleColumn {
+            return -1
+        }
+        return switch self.activePopover {
+        case .none:
+            0
+        case type:
+            1
+        default:
+            -1
         }
     }
 
-    // swiftlint:disable:next identifier_name
-    public func goBack(_ k: Int = 1, for columnType: ColumnType = .library) {
-        switch columnType {
-        case .library:
-            self.libraryPath.removeLast(k)
-        case .content:
-            self.contentPath.removeLast(k)
-        }
+    public func activePopover(is type: PopoverType) -> Bool {
+        type != .none && self.activePopover == type
     }
 
-    public func replace<H: Hashable>(_ value: H, for columnType: ColumnType = .library) {
-        var path: NavigationPath = switch columnType {
-        case .library:
-            self.libraryPath
-        case .content:
-            self.contentPath
+    public func setPopover(to type: PopoverType) {
+        withAnimation {
+            self.activePopover = type
         }
-
-        path.removeLast()
-        path.append(value)
-
     }
 
 }

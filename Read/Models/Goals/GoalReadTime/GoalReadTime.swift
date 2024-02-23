@@ -1,13 +1,14 @@
 //
 //  GoalReadTime.swift
-//  iits
+//  Read
 //
-//  Created by Guillaume Coquard on 19/02/24.
+//  Created by Guillaume Coquard on 23/02/24.
 //
 
 import Foundation
 
 enum GoalReadTime: Int, CaseIterable {
+    typealias RawValue = ReadTime.RawValue
     case none = 0
     case aMin = 1
     case fiveMin = 5

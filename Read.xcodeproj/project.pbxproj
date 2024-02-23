@@ -195,7 +195,6 @@
 				460B36242B7B7D8300D99FFF /* ReadApp.swift */,
 				460B36262B7B7D8300D99FFF /* MainView.swift */,
 				460B362A2B7B7D8400D99FFF /* Read.entitlements */,
-				463CEDC32B84DBAA001D951C /* Permissions */,
 			);
 			path = Read;
 			sourceTree = "<group>";
@@ -352,6 +351,7 @@
 				462E0DE02B889433001D2161 /* Content */,
 				462D50252B8412F0001ED44E /* Customization */,
 				462D50242B8412E1001ED44E /* Goals */,
+				463CEDC32B84DBAA001D951C /* Permissions */,
 				462E0DE72B88A5A0001D2161 /* ReadTime */,
 				462DD8E02B84943600ECF5D2 /* UNotifications */,
 				463CEDDB2B854B64001D951C /* View */,

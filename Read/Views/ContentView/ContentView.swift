@@ -38,6 +38,8 @@ struct ContentView: View {
             .onTapGesture {
                 withAnimation {
                     if view.libraryVisibility == .detailOnly {
+                        logger.info("\(String(describing: view.isAnyPopoverDisplayed))")
+                        logger.info("\(String(describing: view.activePopover))")
                         if !view.isAnyPopoverDisplayed {
                             view.interfaceVisibility.toggle()
                         }

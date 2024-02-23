@@ -62,9 +62,7 @@ struct RButton<L>: RActionable, View {
 
     private var label: some View {
         if let _label = self._label {
-            AnyView(
-                _label
-            )
+            AnyView( _label )
         } else {
             AnyView(
                 Label(
@@ -83,47 +81,52 @@ struct RButton<L>: RActionable, View {
                 self.action?()
             }
         } label: {
-            HStack {
-                if hasCustomLabel {
-                    label
-                } else {
-                    Image(systemName: "circle")
-                        .foregroundStyle(.clear)
+            AnyView(
+                HStack {
+                    if hasCustomLabel {
+                        label
+                    } else {
+                        Image(systemName: "circle")
+                            .foregroundStyle(.clear)
+                    }
                 }
-            }
-            .padding()
-            .overlay {
-                if !hasCustomLabel {
-                    self.label
-                        .labelStyle(.iconOnly)
-                } else {
-                    EmptyView()
+                .padding()
+                .overlay {
+                    if !hasCustomLabel {
+                        AnyView(
+                            self.label
+                                .labelStyle(.iconOnly)
+                        )
+                    } else {
+                        AnyView(
+                            EmptyView()
+                        )
+                    }
                 }
-            }
-            .foregroundStyle(
-                self.isUIActive
-                    ? .primary
-                    : .secondary
-            )
-            .fontWeight(.bold)
-            .background {
-                if self.isUIActive {
-                    Rectangle()
-                        .foregroundStyle(.quaternary.opacity(0.5))
-                        .background(.regularMaterial)
-                } else {
-                    Rectangle()
-                        .foregroundStyle(.clear)
+                .foregroundStyle(
+                    self.isUIActive
+                        ? .primary
+                        : .secondary
+                )
+                .fontWeight(.medium)
+                .background {
+                    if self.isUIActive {
+                        Rectangle()
+                            .foregroundStyle(.quaternary.opacity(0.5))
+                            .background(.regularMaterial)
+                    } else {
+                        Rectangle()
+                            .foregroundStyle(.clear)
 
+                    }
                 }
-            }
-            .contentShape(
-                RoundedRectangle(cornerRadius: 8)
+                .contentShape(
+                    RoundedRectangle(cornerRadius: 8)
+                )
+                .clipShape(
+                    RoundedRectangle(cornerRadius: 8)
+                )
             )
-            .clipShape(
-                RoundedRectangle(cornerRadius: 8)
-            )
-
         }
         .opacity(self.isShown ? 1 : 0)
         .buttonStyle(.plain)

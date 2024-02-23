@@ -23,7 +23,7 @@ struct GoalStreakView: View {
                         NSLocalizedString("goalModel.readTimePicker", comment: "Picker for Reading Time"),
                         selection: self.$goalModel.readTime
                     ) {
-                        ForEach(GoalReadTime.allCases, id: \.self) { time in
+                        ForEach(ReadTime.allCases, id: \.self) { time in
                             Text(time.asString).tag(time.rawValue)
                         }
                     }

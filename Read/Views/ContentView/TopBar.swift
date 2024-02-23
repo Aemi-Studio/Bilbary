@@ -25,18 +25,7 @@ struct TopBar: View {
                 view.libraryVisibility.toggle()
             }
         } center: {
-            RPopover(isShown: $view.interfaceVisibility, type: .readingTime) {
-                HStack(spacing: 0) {
-                    Group {
-                        Text("5 Min")
-                            .fontWeight(.bold)
-                        Text(" Read")
-                            .opacity(0.5)
-                    }
-                }
-            } popover: {
-                HStack {}.frame(width: 200, height: 100)
-            }
+            RReadingTimeMenu()
         } trailing: {
             RPopover(
                 isShown: $view.interfaceVisibility,

@@ -23,23 +23,21 @@ final class ViewModel {
     public var interfaceVisibility: Bool = false
     public var libraryVisibility: NavigationSplitViewVisibility = .detailOnly {
         didSet {
-            if self.libraryVisibility != .detailOnly {
-                self.setPopover(to: .library)
-            } else if self.activePopover == .library {
+            switch self.libraryVisibility {
+            case .detailOnly:
                 self.setPopover(to: .none)
+            default:
+                self.setPopover(to: .library)
             }
         }
     }
 
     public private(set) var activePopover: PopoverType = .none {
         didSet {
-            withAnimation {
-                if activePopover != .library {
-                    libraryVisibility = .detailOnly
-                }
-            }
+            logger.info("\(String(describing: self.activePopover))")
         }
     }
+
     public var isAnyPopoverDisplayed: Bool {
         self.activePopover != .none
     }

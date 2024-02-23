@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension ViewModel {
-
     enum PopoverType: Int, CaseIterable {
         case none           = -1
         case library        = 0
@@ -17,5 +16,4 @@ extension ViewModel {
         case customization  = 3
         case information    = 4
     }
-
 }

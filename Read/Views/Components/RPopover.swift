@@ -97,9 +97,7 @@ struct RPopover<L, P>: RActionable, View {
                 ) {
                     self.defaultAction()
                 } label: {
-                    AnyView(
-                        _label
-                    )
+                    AnyView( _label )
                 }
             )
         } else {
@@ -121,13 +119,9 @@ struct RPopover<L, P>: RActionable, View {
 
     private var popover: some View {
         if let _popover = self._popover {
-            AnyView(
-                _popover
-            )
+            AnyView( _popover )
         } else {
-            AnyView(
-                EmptyView()
-            )
+            AnyView( EmptyView() )
         }
     }
 

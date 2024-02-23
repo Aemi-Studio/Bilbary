@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 
-// swiftlint:disable:next type_name
 struct ReadApp: App {
     var body: some Scene {
         WindowGroup {

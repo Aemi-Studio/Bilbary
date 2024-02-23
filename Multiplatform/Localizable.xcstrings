@@ -1,0 +1,222 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " Read" : {
+
+    },
+    "Book" : {
+
+    },
+    "Book Content" : {
+
+    },
+    "Book information" : {
+
+    },
+    "Color" : {
+
+    },
+    "customization.colorPicker" : {
+      "comment" : "Custom Color in the Picker"
+    },
+    "customization.fontPicker" : {
+      "comment" : "Custom Font in the Picker"
+    },
+    "F" : {
+
+    },
+    "goalModel.beNotified" : {
+      "comment" : "Be notified to achieve my goal"
+    },
+    "goalModel.readTimePicker" : {
+      "comment" : "Picker for Reading Time"
+    },
+    "goalModel.streakDurationPicker" : {
+      "comment" : "Picker for Streak Duration"
+    },
+    "goalReadTime.none" : {
+      "comment" : "No reading time goal"
+    },
+    "goalStreakDuration.7days" : {
+      "comment" : "Goal Streak Duration of 7 days or 1 week",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Week"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.14days" : {
+      "comment" : "Goal Streak Duration of 14 days or 2 weeks",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 Weeks"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.30days" : {
+      "comment" : "Goal Streak Duration of 30 days or 1 month",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Month"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.90days" : {
+      "comment" : "Goal Streak Duration of 90 days or 3 months",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 Months"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.180days" : {
+      "comment" : "Goal Streak Duration of 180 days or 6 months",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6 Months"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.365days" : {
+      "comment" : "Goal Streak Duration of 365 days or 1 year",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Year"
+          }
+        }
+      }
+    },
+    "goalStreakDuration.unlimited" : {
+      "comment" : "No Goal Streak Duration or forever",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not set"
+          }
+        }
+      }
+    },
+    "Import ePub File" : {
+
+    },
+    "Informations" : {
+      "comment" : "Information about the current open book"
+    },
+    "Library" : {
+      "comment" : "Library"
+    },
+    "Like" : {
+      "comment" : "Action of liking, in the context of the current book"
+    },
+    "M" : {
+
+    },
+    "readTime.0min" : {
+      "comment" : "No Reading Time Goal",
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Limit"
+          }
+        }
+      }
+    },
+    "readTime.1min" : {
+      "comment" : "Reading Time Goal of 1 minute",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Minute"
+          }
+        }
+      }
+    },
+    "readTime.5min" : {
+      "comment" : "Reading Time Goal of 5 minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 Minutes"
+          }
+        }
+      }
+    },
+    "readTime.10min" : {
+      "comment" : "Reading Time Goal of 10 minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 Minutes"
+          }
+        }
+      }
+    },
+    "readTime.30min" : {
+      "comment" : "Reading Time Goal of 30 minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 Minutes"
+          }
+        }
+      }
+    },
+    "readTime.60min" : {
+      "comment" : "Reading Time Goal of 60 minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Hour"
+          }
+        }
+      }
+    },
+    "S" : {
+
+    },
+    "Select a content length" : {
+      "comment" : "Picker string for content length/duration"
+    },
+    "Streak" : {
+
+    },
+    "T" : {
+
+    },
+    "Text" : {
+
+    },
+    "Text Customization" : {
+
+    },
+    "W" : {
+
+    }
+  },
+  "version" : "1.0"
+}

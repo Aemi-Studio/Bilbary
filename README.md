@@ -1,4 +1,4 @@
-#  `Bilberry` Project
+#  `Bilbary` Project
 
 
 ## Development Setup

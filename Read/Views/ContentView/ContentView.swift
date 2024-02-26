@@ -33,6 +33,7 @@ struct ContentView: View {
                 .padding(100)
                 .safeAreaPadding()
                 .frame(minWidth: self.view.screenWidth)
+                .frame(maxWidth: self.view.screenWidth)
             }
             .scrollDisabled(true)
             .onTapGesture {

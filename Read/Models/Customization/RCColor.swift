@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CustomColor: String, CaseIterable {
+enum RCColor: String, CaseIterable {
     case black = "Black"
     case dark = "Dark"
     case sepia = "Sepia"

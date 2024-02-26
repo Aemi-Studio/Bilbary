@@ -1,5 +1,5 @@
 //
-//  CustomColor+Color.swift
+//  RCColor+Color.swift
 //  iits
 //
 //  Created by Guillaume Coquard on 20/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension CustomColor {
+extension RCColor {
 
     var asColor: Color {
         return switch self {

@@ -46,7 +46,7 @@ struct BottomBar: View {
                 systemImage: "textformat.size",
                 type: .customization
             ) {
-                Customization()
+                CustomizerView()
             }
         }
     }

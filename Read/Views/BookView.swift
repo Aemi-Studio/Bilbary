@@ -12,7 +12,8 @@ struct BookView: View {
     var book: Book?
 
     var body: some View {
-        Text("Book Content")
+        // swiftlint:disable:next line_length
+        Text("He was still a handsome man, with a tanned, chiseled face and long, thick, wavy white hair, but his cells had begun to reproduce in a haphazard fashion, destroying the DNA of neighboring cells and secreting toxins into his body.")
     }
 }
 

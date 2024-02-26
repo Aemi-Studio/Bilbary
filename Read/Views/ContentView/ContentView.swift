@@ -13,7 +13,7 @@ struct ContentView: View {
     var book: Book?
 
     @State
-    private var view: ViewModel = .shared
+    private var view: RViewModel = .shared
 
     private let logger: Logger = .views
 

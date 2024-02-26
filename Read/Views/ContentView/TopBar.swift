@@ -10,7 +10,7 @@ import SwiftUI
 struct TopBar: View {
 
     @State
-    private var view: ViewModel = .shared
+    private var view: RViewModel = .shared
 
     var body: some View {
 

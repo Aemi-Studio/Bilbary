@@ -11,7 +11,7 @@ import OSLog
 struct MainView: View {
 
     @State
-    private var view: ViewModel = .shared
+    private var view: RViewModel = .shared
 
     var body: some View {
         GeometryReader { proxy in
@@ -28,6 +28,9 @@ struct MainView: View {
         .preference(key: ScreenWidthKey.self, value: self.view.screenWidth)
         .onPreferenceChange(ScreenWidthKey.self) { value in
             self.view.screenWidth = value
+        }
+        .sheet(isPresented: $view.displayOnboarding) {
+            OnePageOnboardingView()
         }
     }
 }

@@ -16,6 +16,15 @@
     "Book information" : {
 
     },
+    "Cater to Your Liking" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Customize your pace, time, and content" : {
+
+    },
     "F" : {
 
     },
@@ -123,6 +132,12 @@
     "Like" : {
       "comment" : "Action of liking, in the context of the current book"
     },
+    "Like for More" : {
+
+    },
+    "Like what you see? We will recommend more of it" : {
+
+    },
     "M" : {
 
     },
@@ -196,10 +211,19 @@
     "S" : {
 
     },
+    "Scroll to Read More" : {
+
+    },
     "Select a content length" : {
       "comment" : "Picker string for content length/duration"
     },
+    "Start small with a few sentences. All you have to do is scroll if you like what you see." : {
+
+    },
     "Streak" : {
+
+    },
+    "Swipe for Different Content" : {
 
     },
     "T" : {
@@ -209,6 +233,12 @@
 
     },
     "W" : {
+
+    },
+    "We offer a variety of genres for you to choose from. All you have to do is swipe." : {
+
+    },
+    "Welcome to Read" : {
 
     }
   },

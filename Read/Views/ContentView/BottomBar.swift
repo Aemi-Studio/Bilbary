@@ -11,7 +11,7 @@ import OSLog
 struct BottomBar: View {
 
     @State
-    private var view: ViewModel = .shared
+    private var view: RViewModel = .shared
 
     private var logger: Logger = .init()
 

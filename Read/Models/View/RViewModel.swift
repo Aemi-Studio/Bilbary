@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  RViewModel.swift
 //  iits
 //
 //  Created by Guillaume Coquard on 20/02/24.
@@ -9,9 +9,16 @@ import SwiftUI
 import OSLog
 
 @Observable
-final class ViewModel {
+final class RViewModel {
 
-    static let shared: ViewModel = .init()
+    static let shared: RViewModel = .init()
+
+    private let storage: RVMStorage = .init()
+    public var displayOnboarding : Bool {
+        didSet {
+            self.storage.displayOnboarding = self.displayOnboarding
+        }
+    }
 
     private let logger: Logger = .init()
 
@@ -42,7 +49,9 @@ final class ViewModel {
         self.activePopover != .none
     }
 
-    private init() {}
+    private init() {
+        self.displayOnboarding = self.storage.displayOnboarding
+    }
 
     public func isTogglable(_ type: PopoverType) -> Int {
         if libraryVisibility == .doubleColumn {

@@ -10,7 +10,7 @@ import SwiftUI
 struct LibraryView: View {
 
     @State
-    private var view: ViewModel = .shared
+    private var view: RViewModel = .shared
 
     var body: some View {
         NavigationStack(path: $view.libraryPath) {

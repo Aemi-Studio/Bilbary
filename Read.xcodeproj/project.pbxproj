@@ -59,11 +59,14 @@
 		462E0DF72B88B83E001D2161 /* RCPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DF62B88B83E001D2161 /* RCPreset.swift */; };
 		462E0DF92B88C3A6001D2161 /* RCScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DF82B88C3A6001D2161 /* RCScheme.swift */; };
 		462E0DFB2B8C98CF001D2161 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DFA2B8C98CF001D2161 /* Color.swift */; };
+		462E0DFD2B8CD5A1001D2161 /* ViewModel+ViewModelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DFC2B8CD5A1001D2161 /* ViewModel+ViewModelStorage.swift */; };
+		462E0DFE2B8CD6ED001D2161 /* OnePageOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20752E92B8BF1A10093BCBA /* OnePageOnboardingView.swift */; };
+		462E0DFF2B8CD6EE001D2161 /* OnePageOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20752E92B8BF1A10093BCBA /* OnePageOnboardingView.swift */; };
 		463CEDC02B84DAAC001D951C /* PermissionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDBF2B84DAAC001D951C /* PermissionsModel.swift */; };
 		463CEDCB2B85018E001D951C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDCA2B85018E001D951C /* ContentView.swift */; };
 		463CEDCD2B850257001D951C /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDCC2B850257001D951C /* LibraryView.swift */; };
 		463CEDD02B8503A8001D951C /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDCF2B8503A8001D951C /* UIWindow.swift */; };
-		463CEDD22B853AE9001D951C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDD12B853AE9001D951C /* ViewModel.swift */; };
+		463CEDD22B853AE9001D951C /* RViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDD12B853AE9001D951C /* RViewModel.swift */; };
 		463CEDD42B853E59001D951C /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDD32B853E59001D951C /* BookView.swift */; };
 		463CEDD62B8543CC001D951C /* ViewModel+ColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDD52B8543CC001D951C /* ViewModel+ColumnType.swift */; };
 		463CEDD82B854579001D951C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDD72B854579001D951C /* Book.swift */; };
@@ -126,11 +129,12 @@
 		462E0DF62B88B83E001D2161 /* RCPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPreset.swift; sourceTree = "<group>"; };
 		462E0DF82B88C3A6001D2161 /* RCScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCScheme.swift; sourceTree = "<group>"; };
 		462E0DFA2B8C98CF001D2161 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		462E0DFC2B8CD5A1001D2161 /* ViewModel+ViewModelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+ViewModelStorage.swift"; sourceTree = "<group>"; };
 		463CEDBF2B84DAAC001D951C /* PermissionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsModel.swift; sourceTree = "<group>"; };
 		463CEDCA2B85018E001D951C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		463CEDCC2B850257001D951C /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		463CEDCF2B8503A8001D951C /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
-		463CEDD12B853AE9001D951C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		463CEDD12B853AE9001D951C /* RViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RViewModel.swift; sourceTree = "<group>"; };
 		463CEDD32B853E59001D951C /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		463CEDD52B8543CC001D951C /* ViewModel+ColumnType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+ColumnType.swift"; sourceTree = "<group>"; };
 		463CEDD72B854579001D951C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		46A485B72B87392B00C6C7E3 /* EpubHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpubHelper.swift; sourceTree = "<group>"; };
 		46A485B82B87392B00C6C7E3 /* EpubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpubView.swift; sourceTree = "<group>"; };
 		46A701012B8613F000A700B4 /* RButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
+		B20752E92B8BF1A10093BCBA /* OnePageOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePageOnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,10 +349,11 @@
 		463CEDDB2B854B64001D951C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				463CEDD12B853AE9001D951C /* ViewModel.swift */,
+				463CEDD12B853AE9001D951C /* RViewModel.swift */,
 				462E0DD12B87B172001D2161 /* ViewModel+PopoverType.swift */,
 				462E0DCE2B87AE2C001D2161 /* ViewModel+NavigationPath.swift */,
 				463CEDD52B8543CC001D951C /* ViewModel+ColumnType.swift */,
+				462E0DFC2B8CD5A1001D2161 /* ViewModel+ViewModelStorage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 			children = (
 				462E0DF32B88A8B6001D2161 /* Components */,
 				462E0DF22B88A8A0001D2161 /* ContentView */,
+				B20752E92B8BF1A10093BCBA /* OnePageOnboardingView.swift */,
 				463CEDCC2B850257001D951C /* LibraryView.swift */,
 				463CEDD32B853E59001D951C /* BookView.swift */,
 				462E0DF52B88B701001D2161 /* Popovers */,
@@ -543,7 +550,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		464FE0A32B7B7F750005590A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -554,7 +561,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\n    #/opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
 		};
@@ -592,7 +599,7 @@
 				462E0DF92B88C3A6001D2161 /* RCScheme.swift in Sources */,
 				462DD8E22B84946500ECF5D2 /* UNHelper.swift in Sources */,
 				462E0DDE2B8893A4001D2161 /* RReadingTimeMenu.swift in Sources */,
-				463CEDD22B853AE9001D951C /* ViewModel.swift in Sources */,
+				463CEDD22B853AE9001D951C /* RViewModel.swift in Sources */,
 				462DD8E52B8497A000ECF5D2 /* Notification.Name.swift in Sources */,
 				462E0DCC2B87AC98001D2161 /* NavigationSplitViewVisibility.swift in Sources */,
 				463CEDCB2B85018E001D951C /* ContentView.swift in Sources */,
@@ -604,6 +611,7 @@
 				463CEDD02B8503A8001D951C /* UIWindow.swift in Sources */,
 				462E0DD52B87E216001D2161 /* RActionable.swift in Sources */,
 				462E0DC52B877C78001D2161 /* RBarRow.swift in Sources */,
+				462E0DFE2B8CD6ED001D2161 /* OnePageOnboardingView.swift in Sources */,
 				463CEDD62B8543CC001D951C /* ViewModel+ColumnType.swift in Sources */,
 				463CEDD42B853E59001D951C /* BookView.swift in Sources */,
 				462D502D2B8416AE001ED44E /* RCColor.swift in Sources */,
@@ -614,6 +622,7 @@
 				462D501B2B84084A001ED44E /* GoalStreakDuration+String.swift in Sources */,
 				462D50272B8413D6001ED44E /* CustomizerView.swift in Sources */,
 				462D50332B842056001ED44E /* RCFontFace+Font.swift in Sources */,
+				462E0DFD2B8CD5A1001D2161 /* ViewModel+ViewModelStorage.swift in Sources */,
 				462D50232B841236001ED44E /* StreakWeekRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,6 +644,7 @@
 				462E0DD02B87AE2C001D2161 /* ViewModel+NavigationPath.swift in Sources */,
 				462E0DED2B88A7C4001D2161 /* GoalReadTime+String.swift in Sources */,
 				463CEDE62B8559E3001D951C /* ReadApp.swift in Sources */,
+				462E0DFF2B8CD6EE001D2161 /* OnePageOnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

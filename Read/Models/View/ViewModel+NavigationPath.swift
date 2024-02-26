@@ -1,5 +1,5 @@
 //
-//  ViewModel+NavigationPath.swift
+//  RViewModel+NavigationPath.swift
 //  Read
 //
 //  Created by Guillaume Coquard on 22/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension ViewModel {
+extension RViewModel {
     public func goTo<H: Hashable>(_ value: H, for columnType: ColumnType = .library) {
         switch columnType {
         case .library:

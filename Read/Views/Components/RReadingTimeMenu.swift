@@ -14,7 +14,7 @@ struct RReadingTimeMenu: View {
     private var contentModel: ContentModel = .shared
 
     @State
-    private var viewModel: ViewModel = .shared
+    private var viewModel: RViewModel = .shared
 
     private var logger: Logger = .init()
 

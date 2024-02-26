@@ -1,5 +1,5 @@
 //
-//  ViewModel+PopoverType.swift
+//  RViewModel+PopoverType.swift
 //  Read
 //
 //  Created by Guillaume Coquard on 22/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension ViewModel {
+extension RViewModel {
     enum PopoverType: Int, CaseIterable {
         case none           = -1
         case library        = 0

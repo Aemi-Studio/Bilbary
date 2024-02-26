@@ -8,6 +8,6 @@
 import SwiftUI
 
 protocol RActionable {
-    var type: ViewModel.PopoverType { get }
+    var type: RViewModel.PopoverType { get }
     var isUIActive: Bool { get }
 }

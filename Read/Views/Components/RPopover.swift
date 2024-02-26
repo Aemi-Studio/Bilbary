@@ -19,7 +19,7 @@ struct RPopover<L, P>: RActionable, View {
     private var isPresented: Bool = false
 
     @State
-    private var view: ViewModel = .shared
+    private var view: RViewModel = .shared
 
     private var hasCustomLabel: Bool = false
 
@@ -33,9 +33,9 @@ struct RPopover<L, P>: RActionable, View {
     private var anchor: PopoverAttachmentAnchor = .point(.bottom)
     private var arrowEdge: Edge = .bottom
 
-    internal let type: ViewModel.PopoverType
+    internal let type: RViewModel.PopoverType
     internal var isUIActive: Bool {
-        self.isPresented || ViewModel.shared.activePopover(is: self.type)
+        self.isPresented || RViewModel.shared.activePopover(is: self.type)
     }
 
     init(
@@ -45,7 +45,7 @@ struct RPopover<L, P>: RActionable, View {
         systemImageActive: String? = nil,
         anchor: PopoverAttachmentAnchor = .point(.bottom),
         arrowEdge: Edge = .bottom,
-        type: ViewModel.PopoverType,
+        type: RViewModel.PopoverType,
         @ViewBuilder popover: @escaping () -> P
     ) where L == any View, P == any View {
         self._isShown = isShown
@@ -63,7 +63,7 @@ struct RPopover<L, P>: RActionable, View {
         isShown: Binding<Bool>,
         anchor: PopoverAttachmentAnchor = .point(.bottom),
         arrowEdge: Edge = .bottom,
-        type: ViewModel.PopoverType,
+        type: RViewModel.PopoverType,
         @ViewBuilder label: @escaping () -> L,
         @ViewBuilder popover: @escaping () -> P
     ) where L == any View, P == any View {

@@ -1,4 +1,4 @@
-#  `Read` Project
+#  `Bilberry` Project
 
 
 ## Development Setup

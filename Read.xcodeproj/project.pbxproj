@@ -11,7 +11,6 @@
 		460B36272B7B7D8300D99FFF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B36262B7B7D8300D99FFF /* MainView.swift */; };
 		460B36292B7B7D8400D99FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460B36282B7B7D8400D99FFF /* Assets.xcassets */; };
 		462739AE2B83A24A00B085FF /* GoalStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462739AD2B83A24A00B085FF /* GoalStreakView.swift */; };
-		462D500E2B83F1F9001ED44E /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D500D2B83F1F9001ED44E /* RPopover.swift */; };
 		462D50102B840365001ED44E /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D500F2B840365001ED44E /* GoalModel.swift */; };
 		462D50122B840577001ED44E /* Loggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50112B840577001ED44E /* Loggers.swift */; };
 		462D50152B8407AD001ED44E /* GoalModelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50142B8407AD001ED44E /* GoalModelStorage.swift */; };
@@ -78,11 +77,15 @@
 		463CEDFA2B8569BE001D951C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDF92B8569BE001D951C /* MainView.swift */; };
 		464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0A72B7B842A0005590A /* sonar-project.properties */; };
 		464FE0AC2B7B86C70005590A /* build.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0AB2B7B86C70005590A /* build.yml */; };
+		4656F4322B8CD920004DD8BB /* RButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4302B8CD920004DD8BB /* RButton.swift */; };
+		4656F4332B8CD920004DD8BB /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
 		46A485B12B87382B00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B02B87382B00C6C7E3 /* EPUBKit */; };
 		46A485B32B87383D00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B22B87383D00C6C7E3 /* EPUBKit */; };
 		46A485BA2B87392B00C6C7E3 /* EpubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A485B72B87392B00C6C7E3 /* EpubHelper.swift */; };
 		46A485BB2B87392B00C6C7E3 /* EpubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A485B82B87392B00C6C7E3 /* EpubView.swift */; };
-		46A701022B8613F000A700B4 /* RButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A701012B8613F000A700B4 /* RButton.swift */; };
+		A07E40472B8CAACE00E5E1F2 /* GenericInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */; };
+		A08CE2952B8CA0960054400D /* GeneralLibraryStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */; };
+		A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +95,6 @@
 		460B36282B7B7D8400D99FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Read/Assets.xcassets; sourceTree = "<group>"; };
 		460B362A2B7B7D8400D99FFF /* Read.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Read.entitlements; sourceTree = "<group>"; };
 		462739AD2B83A24A00B085FF /* GoalStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalStreakView.swift; sourceTree = "<group>"; };
-		462D500D2B83F1F9001ED44E /* RPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPopover.swift; sourceTree = "<group>"; };
 		462D500F2B840365001ED44E /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		462D50112B840577001ED44E /* Loggers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggers.swift; sourceTree = "<group>"; };
 		462D50142B8407AD001ED44E /* GoalModelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModelStorage.swift; sourceTree = "<group>"; };
@@ -148,9 +150,13 @@
 		464FE0A62B7B80B60005590A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		464FE0A72B7B842A0005590A /* sonar-project.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
 		464FE0AB2B7B86C70005590A /* build.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = build.yml; sourceTree = "<group>"; };
+		4656F4302B8CD920004DD8BB /* RButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
+		4656F4312B8CD920004DD8BB /* RPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPopover.swift; sourceTree = "<group>"; };
 		46A485B72B87392B00C6C7E3 /* EpubHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpubHelper.swift; sourceTree = "<group>"; };
 		46A485B82B87392B00C6C7E3 /* EpubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpubView.swift; sourceTree = "<group>"; };
-		46A701012B8613F000A700B4 /* RButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
+		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
+		A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLibraryStructs.swift; sourceTree = "<group>"; };
+		A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookCard.swift; sourceTree = "<group>"; };
 		B20752E92B8BF1A10093BCBA /* OnePageOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePageOnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,10 +307,10 @@
 		462E0DF32B88A8B6001D2161 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4656F4302B8CD920004DD8BB /* RButton.swift */,
+				4656F4312B8CD920004DD8BB /* RPopover.swift */,
 				462E0DF42B88A90D001D2161 /* Protocols */,
-				46A701012B8613F000A700B4 /* RButton.swift */,
 				462E0DC42B877C78001D2161 /* RBarRow.swift */,
-				462D500D2B83F1F9001ED44E /* RPopover.swift */,
 				462E0DDD2B8893A4001D2161 /* RReadingTimeMenu.swift */,
 			);
 			path = Components;
@@ -391,6 +397,9 @@
 				462E0DF32B88A8B6001D2161 /* Components */,
 				462E0DF22B88A8A0001D2161 /* ContentView */,
 				B20752E92B8BF1A10093BCBA /* OnePageOnboardingView.swift */,
+				A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */,
+				A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */,
+				A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */,
 				463CEDCC2B850257001D951C /* LibraryView.swift */,
 				463CEDD32B853E59001D951C /* BookView.swift */,
 				462E0DF52B88B701001D2161 /* Popovers */,
@@ -449,6 +458,7 @@
 				460B361E2B7B7D8300D99FFF /* Frameworks */,
 				460B361F2B7B7D8300D99FFF /* Resources */,
 				464FE0A32B7B7F750005590A /* ShellScript */,
+				4656F4342B8CDA17004DD8BB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -469,6 +479,8 @@
 				463CEDDF2B8559E3001D951C /* Sources */,
 				463CEDE02B8559E3001D951C /* Frameworks */,
 				463CEDE12B8559E3001D951C /* Resources */,
+				4656F4362B8CDA39004DD8BB /* ShellScript */,
+				4656F4352B8CDA29004DD8BB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -550,6 +562,23 @@
 /* Begin PBXShellScriptBuildPhase section */
 		464FE0A32B7B7F750005590A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
+		};
+		4656F4342B8CDA17004DD8BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
 			files = (
 			);
@@ -563,7 +592,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\n    #/opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
+			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
+		};
+		4656F4352B8CDA29004DD8BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint --fix --format && /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
+		};
+		4656F4362B8CDA39004DD8BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -e /opt/homebrew/bin/swiftlint ]]; then\n    /opt/homebrew/bin/swiftlint\nelse\n    echo \"warning:SwiftLint has not been found on your computer. You should install it with Homebrew (https://brew.sh/)\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -575,20 +638,23 @@
 				462D50312B841FF0001ED44E /* RCFontFace.swift in Sources */,
 				462E0DCF2B87AE2C001D2161 /* ViewModel+NavigationPath.swift in Sources */,
 				462E0DEC2B88A7C4001D2161 /* GoalReadTime+String.swift in Sources */,
+				A08CE2952B8CA0960054400D /* GeneralLibraryStructs.swift in Sources */,
+				A07E40472B8CAACE00E5E1F2 /* GenericInfoCard.swift in Sources */,
+				A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */,
 				462739AE2B83A24A00B085FF /* GoalStreakView.swift in Sources */,
 				460B36272B7B7D8300D99FFF /* MainView.swift in Sources */,
 				462E0DF72B88B83E001D2161 /* RCPreset.swift in Sources */,
-				46A701022B8613F000A700B4 /* RButton.swift in Sources */,
 				462D501D2B8409B2001ED44E /* ReadTime+String.swift in Sources */,
 				46A485BA2B87392B00C6C7E3 /* EpubHelper.swift in Sources */,
 				462E0DD82B87E9B1001D2161 /* PressActions.swift in Sources */,
-				462D500E2B83F1F9001ED44E /* RPopover.swift in Sources */,
+				4656F4322B8CD920004DD8BB /* RButton.swift in Sources */,
 				462E0DF02B88A87C001D2161 /* GoalReadTime.swift in Sources */,
 				462E0DC12B8779A8001D2161 /* TopBar.swift in Sources */,
 				462DD8E72B8497E900ECF5D2 /* NotificationCenter.swift in Sources */,
 				462E0DD22B87B172001D2161 /* ViewModel+PopoverType.swift in Sources */,
 				462E0DDB2B880098001D2161 /* ScreenWidthKey.swift in Sources */,
 				46A485BB2B87392B00C6C7E3 /* EpubView.swift in Sources */,
+				4656F4332B8CD920004DD8BB /* RPopover.swift in Sources */,
 				462D50292B8413E6001ED44E /* RCustomizerModel.swift in Sources */,
 				462D502B2B841405001ED44E /* RCustomizerModel+RCustomizerModelStorage.swift in Sources */,
 				462E0DC72B879EBF001D2161 /* BottomBar.swift in Sources */,

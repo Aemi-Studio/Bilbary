@@ -14,7 +14,7 @@ final class RViewModel {
     static let shared: RViewModel = .init()
 
     private let storage: RVMStorage = .init()
-    public var displayOnboarding : Bool {
+    public var displayOnboarding: Bool {
         didSet {
             self.storage.displayOnboarding = self.displayOnboarding
         }

@@ -60,7 +60,7 @@ struct OnePageOnboardingView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                
+
                 HStack {
                     Spacer(minLength: 50)
                     Image(systemName: "hand.draw.fill")
@@ -107,7 +107,7 @@ struct OnePageOnboardingView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                
+
                 HStack {
                     Spacer(minLength: 50)
                     Image(systemName: "slider.horizontal.3")
@@ -132,11 +132,8 @@ struct OnePageOnboardingView: View {
                 .padding()
                 .frame(maxWidth: .infinity)
 
-
             }
             .padding(.vertical, 20)
-
-
 
             Button {
                 view.displayOnboarding = false

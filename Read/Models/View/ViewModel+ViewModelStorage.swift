@@ -9,7 +9,7 @@ import SwiftUI
 
 extension RViewModel {
     internal struct RVMStorage {
-        
+
         @AppStorage("displayOnboarding")
         var displayOnboarding: Bool = true
 

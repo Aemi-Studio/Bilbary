@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomHStack: View {
     @Binding var viewOption: Int
-    
+
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {

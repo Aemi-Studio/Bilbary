@@ -62,7 +62,7 @@ struct ContentView: View {
                         }
                     }
                     VStack {
- 
+
                     }
                     .padding(0)
                     LazyVGrid(columns: columns) {

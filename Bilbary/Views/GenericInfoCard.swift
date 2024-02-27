@@ -45,28 +45,26 @@ struct GenericInfoCard: View {
         }
         customButton(title: title, subtitle: subTitle, contentText: contentText, lineStrokeWidth: 12, numberCircle: number, action: {})
     }
-    
+
     func customButton(title: String, subtitle: String, contentText: String, lineStrokeWidth: CGFloat, numberCircle: Int, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             VStack(alignment: .leading) {
                 HStack {
-                    
+
                     if numberCircle != 0 {
                         NumberCircle(number: numberCircle, maxNumber: 100, circleSize: 40, strokeWidth: 4, fontSize: 15)
-                    }
-                    else
-                    {
+                    } else {
                         ZStack {
                             Rectangle()
                                 .fill(colorScheme == .dark ? Color.gray.opacity(0.07) : Color.white) // Background color
                                 .frame(width: 40, height: 40) // Square dimensions
-                            
+
                             Image(systemName: nameImage)
                                 .foregroundColor(colorScheme == .dark ? .white : .black) // Image color
                         }
                         .shadow(radius: 10)
                     }
-                    
+
                     VStack(alignment: .leading) {
                         Text(title)
                             .foregroundColor(colorScheme == .dark ? .white : .black) // Title color
@@ -79,9 +77,8 @@ struct GenericInfoCard: View {
                     }
                     Spacer()
                 }
-                
-                if contentText != ""
-                {
+
+                if contentText != "" {
                     Text(contentText)
                         .multilineTextAlignment(.leading)
                 }

@@ -25,7 +25,7 @@ struct LibraryView: View {
 
     @State
     private var searchText = ""
-    
+
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
@@ -43,38 +43,38 @@ struct LibraryView: View {
                         }
 
                         HStack {
-                          TextField("Placeholder", text: $searchText)
-                              .padding(.leading, 30)
-                              .overlay(
-                                  HStack {
-                                      Image(systemName: "magnifyingglass")
-                                          .foregroundColor(.gray)
-                                          .padding(.leading, 8)
-                                      Spacer()
+                            TextField("Placeholder", text: $searchText)
+                                .padding(.leading, 30)
+                                .overlay(
+                                    HStack {
+                                        Image(systemName: "magnifyingglass")
+                                            .foregroundColor(.gray)
+                                            .padding(.leading, 8)
+                                        Spacer()
 
-                                      if searchText.isEmpty {
-                                          Image(systemName: "mic.fill")
-                                              .foregroundColor(.gray)
-                                              .padding(.trailing, 8)
-                                      } else {
-                                          Image(systemName: "xmark.circle.fill")
-                                              .foregroundColor(.gray)
-                                              .padding(.trailing, 8)
-                                              .onTapGesture {
-                                                  withAnimation {
-                                                      self.text = ""
-                                                  }
-                                              }
-                                      }
-                                  }
-                              )
-                              .foregroundColor(.primary)
-                              .padding(10)
-                              .background(Color(.systemGray3))
-                              .cornerRadius(8)
-                          }
-                          .padding()
-                          .background(colorScheme == .dark ? Color.black : Color.white)
+                                        if searchText.isEmpty {
+                                            Image(systemName: "mic.fill")
+                                                .foregroundColor(.gray)
+                                                .padding(.trailing, 8)
+                                        } else {
+                                            Image(systemName: "xmark.circle.fill")
+                                                .foregroundColor(.gray)
+                                                .padding(.trailing, 8)
+                                                .onTapGesture {
+                                                    withAnimation {
+                                                        self.searchText = ""
+                                                    }
+                                                }
+                                        }
+                                    }
+                                )
+                                .foregroundColor(.primary)
+                                .padding(10)
+                                .background(Color(.systemGray3))
+                                .cornerRadius(8)
+                        }
+                        .padding()
+                        .background(colorScheme == .dark ? Color.black : Color.white)
 
                         ScrollView {
                             VStack(alignment: .leading) {
@@ -102,11 +102,11 @@ struct LibraryView: View {
                     CustomHStack(viewOption: $viewOption)
                 }
                 /*
-                .overlay(LinearGradient(
-                    gradient: Gradient(colors: [.clear, .white]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                ))
+                 .overlay(LinearGradient(
+                 gradient: Gradient(colors: [.clear, .white]),
+                 startPoint: .top,
+                 endPoint: .bottom
+                 ))
                  */
             }
             .searchable(text: $searchText)

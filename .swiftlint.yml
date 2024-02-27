@@ -1,7 +1,5 @@
 force_cast:
   severity: warning
-line_length:
-  severity: warning
 
 disabled_rules:
   - switch_case_alignment

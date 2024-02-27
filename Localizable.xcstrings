@@ -1,12 +1,19 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     " Read" : {
+
+    },
+    "%lld" : {
 
     },
     "5 Min" : {
 
     },
+<<<<<<< HEAD
     "Book" : {
 
     },
@@ -19,6 +26,8 @@
     "Cater to Your Liking" : {
 
     },
+=======
+>>>>>>> 1769633 (Final library.)
     "Color" : {
 
     },
@@ -93,6 +102,9 @@
     "goalStreakDuration.unlimited" : {
       "comment" : "No Goal Streak Duration or forever"
     },
+    "History" : {
+
+    },
     "Import ePub File" : {
 
     },
@@ -106,6 +118,7 @@
       "comment" : "Action of liking, in the context of the current book"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "Like for More" : {
 
     },
@@ -113,14 +126,21 @@
 =======
     "Look for something" : {
 >>>>>>> 9681133 (First Stage of Library View)
+=======
+    "Likes" : {
+>>>>>>> 1769633 (Final library.)
 
     },
     "M" : {
 
     },
+    "Placeholder" : {
+
+    },
     "S" : {
 
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     "Scroll to Read More" : {
 
@@ -134,6 +154,8 @@
 >>>>>>> 9681133 (First Stage of Library View)
 
     },
+=======
+>>>>>>> 1769633 (Final library.)
     "Streak" : {
 
     },
@@ -147,6 +169,15 @@
 
     },
     "Text Customization" : {
+
+    },
+    "The Giant in Glee." : {
+
+    },
+    "Today" : {
+
+    },
+    "Victor Hugo" : {
 
     },
     "W" : {

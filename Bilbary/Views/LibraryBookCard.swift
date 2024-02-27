@@ -33,7 +33,6 @@ struct LibraryBookCard: View {
         .padding(14)
         .background(.quaternary)
         .cornerRadius(12)
-        .padding([.horizontal, .vertical])
         .onTapGesture {
             onTap()
         }

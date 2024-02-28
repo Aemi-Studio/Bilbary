@@ -79,6 +79,8 @@
 		4656F4332B8CD920004DD8BB /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
 		4656F43B2B8CDF9D004DD8BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4656F43A2B8CDF9D004DD8BB /* Assets.xcassets */; };
 		4656F43C2B8CDF9D004DD8BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4656F43A2B8CDF9D004DD8BB /* Assets.xcassets */; };
+		468DD2DC2B8F3A71007EED65 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DD2DB2B8F3A71007EED65 /* Utils.swift */; };
+		468DD2DD2B8F3A71007EED65 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DD2DB2B8F3A71007EED65 /* Utils.swift */; };
 		46A485B12B87382B00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B02B87382B00C6C7E3 /* EPUBKit */; };
 		46A485B32B87383D00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B22B87383D00C6C7E3 /* EPUBKit */; };
 		46A485BA2B87392B00C6C7E3 /* EpubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A485B72B87392B00C6C7E3 /* EpubHelper.swift */; };
@@ -152,6 +154,7 @@
 		4656F4302B8CD920004DD8BB /* RButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
 		4656F4312B8CD920004DD8BB /* RPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPopover.swift; sourceTree = "<group>"; };
 		4656F43A2B8CDF9D004DD8BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Bilbary/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		468DD2DB2B8F3A71007EED65 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		46A485B72B87392B00C6C7E3 /* EpubHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpubHelper.swift; sourceTree = "<group>"; };
 		46A485B82B87392B00C6C7E3 /* EpubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpubView.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
@@ -264,6 +267,7 @@
 			children = (
 				4656F43A2B8CDF9D004DD8BB /* Assets.xcassets */,
 				462E0DE42B889CDD001D2161 /* Localizable.xcstrings */,
+				468DD2DB2B8F3A71007EED65 /* Utils.swift */,
 			);
 			path = Multiplatform;
 			sourceTree = "<group>";
@@ -666,6 +670,7 @@
 				462DD8E22B84946500ECF5D2 /* UNHelper.swift in Sources */,
 				462E0DDE2B8893A4001D2161 /* RReadingTimeMenu.swift in Sources */,
 				463CEDD22B853AE9001D951C /* RViewModel.swift in Sources */,
+				468DD2DC2B8F3A71007EED65 /* Utils.swift in Sources */,
 				462DD8E52B8497A000ECF5D2 /* Notification.Name.swift in Sources */,
 				462E0DCC2B87AC98001D2161 /* NavigationSplitViewVisibility.swift in Sources */,
 				463CEDCB2B85018E001D951C /* ContentView.swift in Sources */,
@@ -702,6 +707,7 @@
 				462E0DCD2B87AC98001D2161 /* NavigationSplitViewVisibility.swift in Sources */,
 				462E0DE32B88943C001D2161 /* ContentModel.swift in Sources */,
 				462E0DD32B87B172001D2161 /* ViewModel+PopoverType.swift in Sources */,
+				468DD2DD2B8F3A71007EED65 /* Utils.swift in Sources */,
 				462E0DD92B87E9B1001D2161 /* PressActions.swift in Sources */,
 				463CEDF22B855D00001D951C /* TabButtonItem.swift in Sources */,
 				463CEDF82B85676B001D951C /* ResizableView.swift in Sources */,

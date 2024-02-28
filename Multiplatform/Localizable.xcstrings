@@ -4,6 +4,9 @@
     "" : {
 
     },
+    " %@" : {
+
+    },
     " Read" : {
 
     },
@@ -229,7 +232,7 @@
     "Select a content length" : {
       "comment" : "Picker string for content length/duration"
     },
-    "Start small with a few sentences. All you have to do is scroll if you like what you see." : {
+    "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
 
     },
     "Streak" : {
@@ -256,11 +259,19 @@
     "W" : {
 
     },
-    "We offer a variety of genres for you to choose from. All you have to do is swipe." : {
+    "We offer a variety of genres for you to choose from.\nAll you have to do is swipe." : {
 
     },
-    "Welcome to Read" : {
-
+    "welcome.to.appName" : {
+      "comment" : "Text displayed in the onboarding view",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

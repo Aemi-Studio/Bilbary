@@ -10,6 +10,9 @@
     " Read" : {
 
     },
+    "%@" : {
+
+    },
     "%lld" : {
 
     },
@@ -25,13 +28,22 @@
     "Cater to Your Liking" : {
 
     },
+    "Content Directory: " : {
+
+    },
     "Continue" : {
 
     },
     "Customize your pace, time, and content" : {
 
     },
+    "Directory: " : {
+
+    },
     "F" : {
+
+    },
+    "Files: " : {
 
     },
     "goalModel.beNotified" : {
@@ -127,9 +139,6 @@
 
     },
     "History" : {
-
-    },
-    "Import ePub File" : {
 
     },
     "Informations" : {
@@ -231,6 +240,9 @@
     },
     "Select a content length" : {
       "comment" : "Picker string for content length/duration"
+    },
+    "Spine: " : {
+
     },
     "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
 

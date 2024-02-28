@@ -83,7 +83,7 @@ struct LibraryView: View {
                                 VStack(spacing: 0) {
                                     ForEach(0..<15, id: \.self) { _ in
                                         LibraryBookCard(onTap: {
-                                            view.libraryPath.append(Book())
+                                            view.libraryPath.append(Book(from: nil))
                                         }, number: Int.random(in: 0..<100))
                                         .padding(.all, 7)
                                     }
@@ -101,13 +101,6 @@ struct LibraryView: View {
 
                     CustomHStack(viewOption: $viewOption)
                 }
-                /*
-                 .overlay(LinearGradient(
-                 gradient: Gradient(colors: [.clear, .white]),
-                 startPoint: .top,
-                 endPoint: .bottom
-                 ))
-                 */
             }
             .searchable(text: $searchText)
         }

@@ -24,7 +24,7 @@ struct ContentView: View {
                     TopBar()
                     VStack {
                         ScrollView {
-                            BookView(book: book)
+                            EPUBView()
                         }
                     }
                     .padding(0)

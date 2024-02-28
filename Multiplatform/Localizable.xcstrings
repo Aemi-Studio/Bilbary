@@ -150,6 +150,9 @@
     "M" : {
 
     },
+    "Placeholder" : {
+
+    },
     "readTime.0min" : {
       "comment" : "No Reading Time Goal",
       "extractionState" : "stale",

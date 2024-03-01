@@ -83,7 +83,7 @@ struct LibraryView: View {
                                 VStack(spacing: 0) {
                                     ForEach(0..<15, id: \.self) { _ in
                                         LibraryBookCard(onTap: {
-                                            view.libraryPath.append(Book(from: nil))
+                                            view.libraryPath.append(BookPlaceholder(from: nil))
                                         }, number: Int.random(in: 0..<100))
                                         .padding(.all, 7)
                                     }
@@ -97,7 +97,7 @@ struct LibraryView: View {
                     .navigationTitle("Library")
                     .navigationBarTitleDisplayMode(.large)
                     .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: Book.self, destination: BookInformationView.init)
+                    .navigationDestination(for: BookPlaceholder.self, destination: BookInformationView.init)
 
                     CustomHStack(viewOption: $viewOption)
                 }

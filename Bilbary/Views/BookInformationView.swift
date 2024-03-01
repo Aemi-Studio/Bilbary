@@ -13,7 +13,7 @@ struct BookInformationView: View {
     @Environment(\.dismiss)
     private var dismiss: DismissAction
 
-    var book: Book?
+    var book: BookPlaceholder?
 
     var body: some View {
         ScrollView {

@@ -29,6 +29,8 @@ final class RViewModel {
     public var libraryPath: NavigationPath = .init()
     public var contentPath: NavigationPath = .init()
 
+    public var libraryWidth: CGFloat = 0
+
     public var interfaceVisibility: Bool = false
     public var libraryVisibility: Bool = false {
         didSet {

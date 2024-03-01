@@ -95,7 +95,7 @@ struct LibraryView: View {
                     .navigationTitle("Library")
                     .navigationBarTitleDisplayMode(.large)
                     .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: Book.self, destination: BookInformationView.init)
+                    .navigationDestination(for: BookPlaceholder.self, destination: BookInformationView.init)
 
                     CustomHStack(viewOption: $viewOption)
                 }

@@ -15,10 +15,9 @@ struct MainView: View {
 
     var body: some View {
         GeometryReader { proxy in
-            NavigationSplitView(columnVisibility: $view.libraryVisibility) {
+            HStack {
                 LibraryView()
                 ContentView()
-
             }
             .frame(minWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
             .frame(maxWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)

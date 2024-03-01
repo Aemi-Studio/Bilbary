@@ -15,15 +15,14 @@ struct MainView: View {
 
     var body: some View {
         GeometryReader { proxy in
-            NavigationSplitView(columnVisibility: $view.libraryVisibility) {
+            HStack {
                 LibraryView()
-            } detail: {
                 ContentView()
-
             }
-            .navigationSplitViewStyle(.balanced)
+            .frame(minWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
+            .frame(maxWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
             .onAppear {
-                self.view.screenWidth = proxy.size.width
+                view.proxy = proxy
             }
         }
         .preference(key: ScreenWidthKey.self, value: self.view.screenWidth)

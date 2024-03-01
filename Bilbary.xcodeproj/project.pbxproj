@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4606E06F2B92321D00D77205 /* BConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606E06E2B92321D00D77205 /* BConstants.swift */; };
+		4606E0702B92321D00D77205 /* BConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606E06E2B92321D00D77205 /* BConstants.swift */; };
+		4606E0782B9234FB00D77205 /* the-picture-of-dorian-gray.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0742B9234FB00D77205 /* the-picture-of-dorian-gray.epub */; };
+		4606E0792B9234FB00D77205 /* the-picture-of-dorian-gray.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0742B9234FB00D77205 /* the-picture-of-dorian-gray.epub */; };
+		4606E07A2B9234FB00D77205 /* the-great-gatsby.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0752B9234FB00D77205 /* the-great-gatsby.epub */; };
+		4606E07B2B9234FB00D77205 /* the-great-gatsby.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0752B9234FB00D77205 /* the-great-gatsby.epub */; };
+		4606E07C2B9234FB00D77205 /* 1984.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0762B9234FB00D77205 /* 1984.epub */; };
+		4606E07D2B9234FB00D77205 /* 1984.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0762B9234FB00D77205 /* 1984.epub */; };
+		4606E07E2B9234FB00D77205 /* the-trial.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0772B9234FB00D77205 /* the-trial.epub */; };
+		4606E07F2B9234FB00D77205 /* the-trial.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4606E0772B9234FB00D77205 /* the-trial.epub */; };
 		460B36252B7B7D8300D99FFF /* BilbaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B36242B7B7D8300D99FFF /* BilbaryApp.swift */; };
 		460B36272B7B7D8300D99FFF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B36262B7B7D8300D99FFF /* MainView.swift */; };
 		462739AE2B83A24A00B085FF /* GoalStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462739AD2B83A24A00B085FF /* GoalStreakView.swift */; };
@@ -126,14 +136,6 @@
 		464FE0AC2B7B86C70005590A /* build.yml in Resources */ = {isa = PBXBuildFile; fileRef = 464FE0AB2B7B86C70005590A /* build.yml */; };
 		4656F4322B8CD920004DD8BB /* RButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4302B8CD920004DD8BB /* RButton.swift */; };
 		4656F4332B8CD920004DD8BB /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
-		466313132B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4663130F2B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub */; };
-		466313142B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4663130F2B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub */; };
-		466313152B8FD4FC00854AFE /* the-trial.epub in Resources */ = {isa = PBXBuildFile; fileRef = 466313102B8FD4FC00854AFE /* the-trial.epub */; };
-		466313162B8FD4FC00854AFE /* the-trial.epub in Resources */ = {isa = PBXBuildFile; fileRef = 466313102B8FD4FC00854AFE /* the-trial.epub */; };
-		466313172B8FD4FC00854AFE /* the-great-gatsby.epub in Resources */ = {isa = PBXBuildFile; fileRef = 466313112B8FD4FC00854AFE /* the-great-gatsby.epub */; };
-		466313182B8FD4FC00854AFE /* the-great-gatsby.epub in Resources */ = {isa = PBXBuildFile; fileRef = 466313112B8FD4FC00854AFE /* the-great-gatsby.epub */; };
-		466313192B8FD4FC00854AFE /* 1984.epub in Resources */ = {isa = PBXBuildFile; fileRef = 466313122B8FD4FC00854AFE /* 1984.epub */; };
-		4663131A2B8FD4FC00854AFE /* 1984.epub in Resources */ = {isa = PBXBuildFile; fileRef = 466313122B8FD4FC00854AFE /* 1984.epub */; };
 		466313272B8FEC6B00854AFE /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 466313262B8FEC6B00854AFE /* SwiftSoup */; };
 		46A485B12B87382B00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B02B87382B00C6C7E3 /* EPUBKit */; };
 		46A485B32B87383D00C6C7E3 /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46A485B22B87383D00C6C7E3 /* EPUBKit */; };
@@ -144,6 +146,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4606E06E2B92321D00D77205 /* BConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BConstants.swift; sourceTree = "<group>"; };
+		4606E0742B9234FB00D77205 /* the-picture-of-dorian-gray.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the-picture-of-dorian-gray.epub"; sourceTree = "<group>"; };
+		4606E0752B9234FB00D77205 /* the-great-gatsby.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the-great-gatsby.epub"; sourceTree = "<group>"; };
+		4606E0762B9234FB00D77205 /* 1984.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1984.epub; sourceTree = "<group>"; };
+		4606E0772B9234FB00D77205 /* the-trial.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the-trial.epub"; sourceTree = "<group>"; };
 		460B36212B7B7D8300D99FFF /* Bilbary • iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bilbary • iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		460B36242B7B7D8300D99FFF /* BilbaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilbaryApp.swift; sourceTree = "<group>"; };
 		460B36262B7B7D8300D99FFF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -219,10 +226,6 @@
 		464FE0AB2B7B86C70005590A /* build.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = build.yml; sourceTree = "<group>"; };
 		4656F4302B8CD920004DD8BB /* RButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
 		4656F4312B8CD920004DD8BB /* RPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPopover.swift; sourceTree = "<group>"; };
-		4663130F2B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the-picture-of-dorian-gray.epub"; sourceTree = "<group>"; };
-		466313102B8FD4FC00854AFE /* the-trial.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the-trial.epub"; sourceTree = "<group>"; };
-		466313112B8FD4FC00854AFE /* the-great-gatsby.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "the-great-gatsby.epub"; path = "Multiplatform/Books/en/the-great-gatsby.epub"; sourceTree = SOURCE_ROOT; };
-		466313122B8FD4FC00854AFE /* 1984.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1984.epub; sourceTree = "<group>"; };
 		46A485B82B87392B00C6C7E3 /* EPUBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBView.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
 		A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLibraryStructs.swift; sourceTree = "<group>"; };
@@ -251,12 +254,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4606E0712B9234FB00D77205 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				4606E0722B9234FB00D77205 /* fr */,
+				4606E0732B9234FB00D77205 /* en */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		4606E0722B9234FB00D77205 /* fr */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fr;
+			sourceTree = "<group>";
+		};
+		4606E0732B9234FB00D77205 /* en */ = {
+			isa = PBXGroup;
+			children = (
+				4606E0742B9234FB00D77205 /* the-picture-of-dorian-gray.epub */,
+				4606E0752B9234FB00D77205 /* the-great-gatsby.epub */,
+				4606E0762B9234FB00D77205 /* 1984.epub */,
+				4606E0772B9234FB00D77205 /* the-trial.epub */,
+			);
+			path = en;
+			sourceTree = "<group>";
+		};
 		460B36182B7B7D8300D99FFF = {
 			isa = PBXGroup;
 			children = (
 				464FE0A62B7B80B60005590A /* README.md */,
-				462E0DBD2B8773F2001D2161 /* Multiplatform */,
-				460B36232B7B7D8300D99FFF /* Bilbary */,
+				462E0DBD2B8773F2001D2161 /* Bilbary */,
+				460B36232B7B7D8300D99FFF /* Bilbary for iPad */,
 				463CEDE42B8559E3001D951C /* Bilbary for iPhone */,
 				464FE0A92B7B86C70005590A /* .github */,
 				464FE0A72B7B842A0005590A /* sonar-project.properties */,
@@ -274,7 +304,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		460B36232B7B7D8300D99FFF /* Bilbary */ = {
+		460B36232B7B7D8300D99FFF /* Bilbary for iPad */ = {
 			isa = PBXGroup;
 			children = (
 				463CEDDE2B854BA2001D951C /* Views */,
@@ -283,7 +313,7 @@
 				460B362A2B7B7D8400D99FFF /* Bilbary.entitlements */,
 				464F8F112B90E034009102CB /* Bilbary-iPad-Info.plist */,
 			);
-			path = Bilbary;
+			path = "Bilbary for iPad";
 			sourceTree = "<group>";
 		};
 		462D50132B84078D001ED44E /* GoalModel */ = {
@@ -329,17 +359,17 @@
 			path = UNotifications;
 			sourceTree = "<group>";
 		};
-		462E0DBD2B8773F2001D2161 /* Multiplatform */ = {
+		462E0DBD2B8773F2001D2161 /* Bilbary */ = {
 			isa = PBXGroup;
 			children = (
 				4643104A2B8FD33D00B5B2CD /* Assets.xcassets */,
 				462E0DE42B889CDD001D2161 /* Localizable.xcstrings */,
-				4663130C2B8FD45800854AFE /* Books */,
+				4606E0712B9234FB00D77205 /* Books */,
 				464F8F222B913BB4009102CB /* Extensions */,
 				463CEDDC2B854B77001D951C /* Models */,
 				463CEDDD2B854B88001D951C /* Utilities */,
 			);
-			path = Multiplatform;
+			path = Bilbary;
 			sourceTree = "<group>";
 		};
 		462E0DE02B889433001D2161 /* Content */ = {
@@ -448,6 +478,7 @@
 				463EBC172B91CE9400BB9A57 /* Utilities.swift */,
 				462E0DD72B87E9B1001D2161 /* PressActions.swift */,
 				462E0DDA2B880098001D2161 /* ScreenWidthKey.swift */,
+				4606E06E2B92321D00D77205 /* BConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -544,34 +575,6 @@
 				464FE0AB2B7B86C70005590A /* build.yml */,
 			);
 			path = workflows;
-			sourceTree = "<group>";
-		};
-		4663130C2B8FD45800854AFE /* Books */ = {
-			isa = PBXGroup;
-			children = (
-				4663130E2B8FD46700854AFE /* fr */,
-				4663130D2B8FD46300854AFE /* en */,
-			);
-			name = Books;
-			path = Multiplatform/Books;
-			sourceTree = SOURCE_ROOT;
-		};
-		4663130D2B8FD46300854AFE /* en */ = {
-			isa = PBXGroup;
-			children = (
-				466313122B8FD4FC00854AFE /* 1984.epub */,
-				466313112B8FD4FC00854AFE /* the-great-gatsby.epub */,
-				4663130F2B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub */,
-				466313102B8FD4FC00854AFE /* the-trial.epub */,
-			);
-			path = en;
-			sourceTree = "<group>";
-		};
-		4663130E2B8FD46700854AFE /* fr */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = fr;
 			sourceTree = "<group>";
 		};
 		46A485B62B87392B00C6C7E3 /* EPUB */ = {
@@ -676,14 +679,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				466313132B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub in Resources */,
 				462E0DE52B889CDD001D2161 /* Localizable.xcstrings in Resources */,
-				466313152B8FD4FC00854AFE /* the-trial.epub in Resources */,
+				4606E07E2B9234FB00D77205 /* the-trial.epub in Resources */,
+				4606E07A2B9234FB00D77205 /* the-great-gatsby.epub in Resources */,
 				464FE0AC2B7B86C70005590A /* build.yml in Resources */,
 				464FE0A82B7B842A0005590A /* sonar-project.properties in Resources */,
-				466313192B8FD4FC00854AFE /* 1984.epub in Resources */,
 				4643104B2B8FD33E00B5B2CD /* Assets.xcassets in Resources */,
-				466313172B8FD4FC00854AFE /* the-great-gatsby.epub in Resources */,
+				4606E0782B9234FB00D77205 /* the-picture-of-dorian-gray.epub in Resources */,
+				4606E07C2B9234FB00D77205 /* 1984.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,13 +694,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				466313162B8FD4FC00854AFE /* the-trial.epub in Resources */,
-				4663131A2B8FD4FC00854AFE /* 1984.epub in Resources */,
+				4606E07D2B9234FB00D77205 /* 1984.epub in Resources */,
+				4606E07B2B9234FB00D77205 /* the-great-gatsby.epub in Resources */,
 				462E0DCA2B87AA52001D2161 /* .swiftlint.yml in Resources */,
 				4643104C2B8FD33E00B5B2CD /* Assets.xcassets in Resources */,
 				462E0DE62B889CDD001D2161 /* Localizable.xcstrings in Resources */,
-				466313142B8FD4FC00854AFE /* the-picture-of-dorian-gray.epub in Resources */,
-				466313182B8FD4FC00854AFE /* the-great-gatsby.epub in Resources */,
+				4606E07F2B9234FB00D77205 /* the-trial.epub in Resources */,
+				4606E0792B9234FB00D77205 /* the-picture-of-dorian-gray.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +812,7 @@
 				462E0DE22B88943C001D2161 /* ContentModel.swift in Sources */,
 				463EBC1B2B91DD4800BB9A57 /* Book+BookCover.swift in Sources */,
 				463CEDD82B854579001D951C /* Book.swift in Sources */,
+				4606E06F2B92321D00D77205 /* BConstants.swift in Sources */,
 				463CEDDA2B8545E0001D951C /* BookInformationView.swift in Sources */,
 				463EBC212B91FA3500BB9A57 /* Book+Equatable.swift in Sources */,
 				462D50192B8407E7001ED44E /* GoalStreakDuration.swift in Sources */,
@@ -889,6 +893,7 @@
 				463EBC382B9223E300BB9A57 /* GoalStreakDuration+String.swift in Sources */,
 				464F8F402B913EC4009102CB /* Logger.swift in Sources */,
 				463EBC1C2B91DD4800BB9A57 /* Book+BookCover.swift in Sources */,
+				4606E0702B92321D00D77205 /* BConstants.swift in Sources */,
 				463EBC3C2B9223EC00BB9A57 /* ReadTime+String.swift in Sources */,
 				464F8F482B9144DA009102CB /* NotificationCenter.swift in Sources */,
 				464F8F462B9144DA009102CB /* Notification.Name.swift in Sources */,

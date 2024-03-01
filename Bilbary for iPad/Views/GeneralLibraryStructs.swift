@@ -62,6 +62,11 @@ struct CustomButton: View {
             .background(.quaternary)
             .foregroundColor(colorScheme == .dark ? .white : .black) // Foreground color
             .cornerRadius(8)
+            .overlay(
+                 RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.primary, lineWidth: 0.2)
+             )
+            .padding(.all, 7)
         }
     }
 }
@@ -89,5 +94,31 @@ struct NumberCircle: View {
                 .foregroundColor(colorScheme == .dark ? .white : .black) // Use white text color in dark mode
                 .font(.system(size: fontSize, weight: .semibold))
         }
+    }
+}
+
+struct CardIconImage: View {
+
+    var nameImage: String
+
+    @Environment(\.colorScheme) var colorScheme
+
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.secondary.opacity(0.5)) // Background color
+                .frame(width: 50, height: 50) // Square dimensions
+                .cornerRadius(8)
+
+            Image(systemName: nameImage)
+                .foregroundColor(.foreground) // Image color
+        }
+        .shadow(radius: 4)
+    }
+}
+
+struct GeneralLibraryStructs_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomButton(action: {}, nameImage: "heart", text: "dskjf")
     }
 }

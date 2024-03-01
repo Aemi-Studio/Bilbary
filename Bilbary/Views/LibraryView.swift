@@ -29,17 +29,15 @@ struct LibraryView: View {
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
-        ZStack {
-            NavigationStack(path: $view.libraryPath) {
+        NavigationStack(path: $view.libraryPath) {
+            ScrollView(.horizontal) {
                 ZStack(alignment: .bottom) {
                     VStack(alignment: .leading, spacing: 16) {
-
                         HStack {
                             Text("Library")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                             Spacer()
-
                         }
 
                         HStack {
@@ -93,17 +91,28 @@ struct LibraryView: View {
                     }
                     .padding(0)
                     .safeAreaPadding()
-                    .frame(minWidth: 300)
+                    .frame(width: BConstants.libraryOpenWidth)
                     .navigationTitle("Library")
                     .navigationBarTitleDisplayMode(.large)
                     .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: BookPlaceholder.self, destination: BookInformationView.init)
+                    .navigationDestination(for: Book.self, destination: BookInformationView.init)
 
                     CustomHStack(viewOption: $viewOption)
                 }
+                .onTapGesture {
+                    withAnimation {
+                        if view.libraryVisibility {
+                            view.libraryVisibility.toggle()
+                        }
+                    }
+                }
             }
+            .contentShape(Rectangle())
+            .toolbar(.hidden, for: .navigationBar)
             .searchable(text: $searchText)
         }
+        .scrollDisabled(true)
+        .frame(width: view.libraryWidth) // Dynamically adjust the width
     }
 }
 

@@ -27,13 +27,13 @@ struct ContentView: View {
                 }
                 .padding(100)
                 .safeAreaPadding()
-                .frame(minWidth: self.view.screenWidth)
-                .frame(maxWidth: self.view.screenWidth)
+                .frame(minWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
+                .frame(maxWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
             }
             .scrollDisabled(true)
             .onTapGesture {
                 withAnimation {
-                    if view.libraryVisibility == .detailOnly {
+                    if !view.libraryVisibility {
                         logger.info("\(String(describing: view.isAnyPopoverDisplayed))")
                         logger.info("\(String(describing: view.activePopover))")
                         if !view.isAnyPopoverDisplayed {

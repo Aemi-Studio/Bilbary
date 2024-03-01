@@ -20,6 +20,8 @@ final class RViewModel {
         }
     }
 
+    public var proxy: GeometryProxy?
+
     private let logger: Logger = .init()
 
     public var screenWidth: CGFloat = 0
@@ -28,12 +30,17 @@ final class RViewModel {
     public var contentPath: NavigationPath = .init()
 
     public var interfaceVisibility: Bool = false
-    public var libraryVisibility: NavigationSplitViewVisibility = .detailOnly {
+    public var libraryVisibility: Bool = false {
         didSet {
-            switch self.libraryVisibility {
-            case .detailOnly:
+            if libraryVisibility {
+                withAnimation {
+                    self.libraryWidth = BConstants.libraryClosedWidth
+                }
                 self.setPopover(to: .none)
-            default:
+            }else{
+                withAnimation {
+                    self.libraryWidth = BConstants.libraryOpenWidth
+                }
                 self.setPopover(to: .library)
             }
         }
@@ -54,7 +61,7 @@ final class RViewModel {
     }
 
     public func isTogglable(_ type: PopoverType) -> Int {
-        if libraryVisibility == .doubleColumn {
+        if libraryVisibility {
             return -1
         }
         return switch self.activePopover {

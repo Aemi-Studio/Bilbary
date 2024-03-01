@@ -22,12 +22,7 @@ struct ContentView: View {
             ScrollView(.horizontal) {
                 VStack(spacing: 0) {
                     TopBar()
-                    VStack {
-                        ScrollView {
-                            BookView(book: book)
-                        }
-                    }
-                    .padding(0)
+                    EPUBView()
                     BottomBar()
                 }
                 .padding(100)

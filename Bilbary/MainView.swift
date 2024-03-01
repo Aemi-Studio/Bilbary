@@ -19,6 +19,7 @@ struct MainView: View {
                 LibraryView()
             } detail: {
                 ContentView()
+
             }
             .navigationSplitViewStyle(.balanced)
             .onAppear {

@@ -15,7 +15,6 @@ struct OnePageOnboardingView: View {
     @State
     private var view: RViewModel = .shared
 
-
     var body: some View {
 
         VStack(spacing: 32) {
@@ -38,7 +37,7 @@ struct OnePageOnboardingView: View {
                                         comment: "Text displayed in the onboarding view"
                                     )
                                 )
-                                + Text(" \(getAppName())")
+                                + Text(" \(Util.getAppName())")
                             }
                             .font(.largeTitle)
                             .fontWeight(.bold)
@@ -150,22 +149,22 @@ struct OnePageOnboardingView: View {
                     dismiss()
                 } label: {
                     Text("Continue")
-                    .padding()
-                    .padding(.horizontal, 16)
-                    .background(Color.accentColor)
-                    .overlay {
-                        Label("Continue", systemImage: "arrow.forward")
-                            .labelStyle(.titleOnly)
-                            .foregroundStyle(.white)
-                    }
-                    .fontWeight(.medium)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .font(.title2)
+                        .padding()
+                        .padding(.horizontal, 16)
+                        .background(Color.accentColor)
+                        .overlay {
+                            Label("Continue", systemImage: "arrow.forward")
+                                .labelStyle(.titleOnly)
+                                .foregroundStyle(.white)
+                        }
+                        .fontWeight(.medium)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .font(.title2)
                 }
                 .buttonStyle(.plain)
                 .padding(32)
             }
-            .padding([.bottom,.horizontal])
+            .padding([.bottom, .horizontal])
         }
 
     }

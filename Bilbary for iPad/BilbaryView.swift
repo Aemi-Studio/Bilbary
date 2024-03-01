@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  BilbaryView.swift
 //  iits
 //
 //  Created by Guillaume Coquard on 13/02/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import OSLog
 
-struct MainView: View {
+struct BilbaryView: View {
 
     @State
     private var view: RViewModel = .shared
@@ -36,5 +36,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    BilbaryView()
 }

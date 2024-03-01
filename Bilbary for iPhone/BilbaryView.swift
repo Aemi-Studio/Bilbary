@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct BilbaryView: View {
 
     @State
     private var detent: PresentationDetent = .height(64)
@@ -29,13 +29,6 @@ struct MainView: View {
             Text("Book Content")
             Spacer()
         }
-        //            .toolbar {
-        //                ToolbarItemGroup(placement: .bottomBar) {
-        //                    Button("Like", systemImage: "heart") {
-        //                        print("love")
-        //                    }
-        //                }
-        //            }
         .onTapGesture {
             tabBarShown.toggle()
         }
@@ -110,5 +103,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    BilbaryView()
 }

@@ -16,19 +16,22 @@ struct TopBar: View {
 
         RBarRow {
             RButton(
-                isShown: $view.interfaceVisibility,
-                title: NSLocalizedString("Library", comment: "Library"),
+                isShown: $view.isInterfaceVisible,
+                title: NSLocalizedString(
+                    "Library",
+                    comment: "Library"
+                ),
                 systemImage: "books.vertical",
                 systemImageActive: "books.vertical.fill",
                 linkedTo: .library
             ) {
-                view.libraryVisibility.toggle()
+                view.toggleLibrary()
             }
         } center: {
             RReadingTimeMenu()
         } trailing: {
             RPopover(
-                isShown: $view.interfaceVisibility,
+                isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString("Streak", comment: ""),
                 systemImage: "timer",
                 type: .goalStreak

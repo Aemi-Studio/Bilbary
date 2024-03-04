@@ -12,6 +12,7 @@ import OSLog
 final class RViewModel {
 
     static let shared: RViewModel = .init()
+    static let cachedBooks: [Book] = Book.localBooks
 
     private let storage: RVMStorage = .init()
     public var displayOnboarding: Bool {
@@ -20,70 +21,40 @@ final class RViewModel {
         }
     }
 
-    public var proxy: GeometryProxy?
-
     private let logger: Logger = .init()
 
-    public var screenWidth: CGFloat = 0
+    public var screenWidth: CGFloat = UIWindow.width
+    public var screenHeight: CGFloat = UIWindow.height
 
     public var libraryPath: NavigationPath = .init()
     public var contentPath: NavigationPath = .init()
 
     public var libraryWidth: CGFloat = 0
 
-    public var interfaceVisibility: Bool = false
-    public var libraryVisibility: Bool = false {
-        didSet {
-            if libraryVisibility {
-                withAnimation {
-                    self.libraryWidth = BConstants.libraryClosedWidth
+    public var isInterfaceVisible: Bool = false
+
+    public var selectedBooks: [Book] = RViewModel.cachedBooks
+
+    public var selectedBook: Book.ID? {
+        willSet {
+            if let old = self.selectedBooks.firstIndex(where: {$0.id == self.selectedBook}),
+               let new = self.selectedBooks.firstIndex(where: {$0.id == newValue}) {
+                if old < new {
+                    self.addBook(drop: new > 1)
                 }
-                self.setPopover(to: .none)
-            }else{
-                withAnimation {
-                    self.libraryWidth = BConstants.libraryOpenWidth
-                }
-                self.setPopover(to: .library)
             }
         }
     }
 
-    public private(set) var activePopover: PopoverType = .none {
-        didSet {
-            logger.info("\(String(describing: self.activePopover))")
-        }
-    }
-
-    public var isAnyPopoverDisplayed: Bool {
-        self.activePopover != .none
-    }
+    public internal(set) var isLibraryOpen: Bool = false
+    public internal(set) var activePopover: PopoverType = .none
 
     private init() {
         self.displayOnboarding = self.storage.displayOnboarding
     }
 
-    public func isTogglable(_ type: PopoverType) -> Int {
-        if libraryVisibility {
-            return -1
-        }
-        return switch self.activePopover {
-        case .none:
-            0
-        case type:
-            1
-        default:
-            -1
-        }
-    }
-
-    public func activePopover(is type: PopoverType) -> Bool {
-        type != .none && self.activePopover == type
-    }
-
-    public func setPopover(to type: PopoverType) {
-        withAnimation {
-            self.activePopover = type
-        }
+    public var isAnyPopoverDisplayed: Bool {
+        self.activePopover != .none
     }
 
 }

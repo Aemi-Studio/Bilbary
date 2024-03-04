@@ -13,7 +13,13 @@
     "%@" : {
 
     },
+    "%lf" : {
+
+    },
     "%lld" : {
+
+    },
+    "1" : {
 
     },
     "Aa" : {
@@ -25,7 +31,22 @@
     "Book Content" : {
 
     },
+    "book.notStartedYet" : {
+      "comment" : "Text that replaces the book reading duration if book hasn't been started yet."
+    },
+    "book.readEndDate" : {
+      "comment" : "Prefix text to read end date"
+    },
+    "book.readingDurationZero" : {
+      "comment" : "Text that replaces book reading duration when zero"
+    },
+    "book.readStartDate" : {
+      "comment" : "Prefix text to read start date"
+    },
     "Cater to Your Liking" : {
+
+    },
+    "Content Language" : {
 
     },
     "Continue" : {
@@ -144,6 +165,9 @@
     "Like for More" : {
 
     },
+    "Like this book" : {
+      "comment" : "Library like button"
+    },
     "Like what you see? We will recommend more of it" : {
 
     },
@@ -153,8 +177,14 @@
     "M" : {
 
     },
-    "Placeholder" : {
+    "metadata.unknown" : {
+      "comment" : "Text to display when metadata is known"
+    },
+    "Not started yet" : {
 
+    },
+    "onboarding.continue" : {
+      "comment" : "Continue text on onboarding button"
     },
     "readTime.0min" : {
       "comment" : "No Reading Time Goal",
@@ -232,6 +262,9 @@
     "Select a content length" : {
       "comment" : "Picker string for content length/duration"
     },
+    "Settings" : {
+
+    },
     "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
 
     },
@@ -247,11 +280,11 @@
     "Text Customization" : {
 
     },
-    "The Giant in Glee." : {
-
-    },
     "Today" : {
 
+    },
+    "Unlike this book" : {
+      "comment" : "Library like button is already filled"
     },
     "Victor Hugo" : {
 

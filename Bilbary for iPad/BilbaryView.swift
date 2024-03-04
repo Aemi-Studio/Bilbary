@@ -14,24 +14,20 @@ struct BilbaryView: View {
     private var view: RViewModel = .shared
 
     var body: some View {
-        GeometryReader { proxy in
-            HStack {
-                LibraryView()
-                ContentView()
-            }
-            .frame(minWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
-            .frame(maxWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
-            .onAppear {
-                view.proxy = proxy
-            }
+        HStack(spacing: 0) {
+            LibraryView()
+            Divider()
+                .padding(0)
+                .opacity(view.isLibraryOpen ? 1 : 0)
+            ContentView()
         }
-        .preference(key: ScreenWidthKey.self, value: self.view.screenWidth)
-        .onPreferenceChange(ScreenWidthKey.self) { value in
-            self.view.screenWidth = value
-        }
+        .padding(0)
+        .ignoresSafeArea()
+        .orientationUpdatesScreen()
         .sheet(isPresented: $view.displayOnboarding) {
-            OnePageOnboardingView()
+            OnboardingView()
         }
+
     }
 }
 

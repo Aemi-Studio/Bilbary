@@ -139,5 +139,6 @@ struct RButton<L>: RActionable, View {
         .onRelease {
             self.isActive = false
         }
+        .disabled(!isShown)
     }
 }

@@ -35,22 +35,7 @@ struct EPUBView: View {
     var body: some View {
         VStack {
             Spacer()
-            ScrollView {
-                VStack {
-                    ForEach((firstBook.content?.strings ?? []).prefix(10), id: \.self) { paragraph in
-                        VStack {
-                            Text(paragraph)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical)
-                    }
-                }
-                .font(.title2)
-                .fontDesign(.serif)
-                .frame(minHeight: 200)
-                .frame(maxWidth: .infinity)
-                .padding()
-            }
+            EPUBSwipeView()
             Spacer()
         }
         .frame(minHeight: 200)

@@ -20,7 +20,7 @@ struct RReadingTimeMenu: View {
 
     var body: some View {
         RButton(
-            isShown: $viewModel.interfaceVisibility,
+            isShown: $viewModel.isInterfaceVisible,
             linkedTo: .readingTime
         ) {
             logger.log("sds")

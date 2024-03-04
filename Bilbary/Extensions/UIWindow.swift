@@ -19,12 +19,12 @@ extension UIWindow {
         return nil
     }
 
-    static var width: CGFloat? {
-        self.current?.screen.bounds.width
+    static var width: CGFloat {
+        self.current?.screen.bounds.width ?? UIScreen.main.bounds.width
     }
 
-    static var height: CGFloat? {
-        self.current?.screen.bounds.height
+    static var height: CGFloat {
+        self.current?.screen.bounds.height ?? UIScreen.main.bounds.height
     }
 
 }

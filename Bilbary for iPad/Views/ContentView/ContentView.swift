@@ -18,37 +18,43 @@ struct ContentView: View {
     private let logger: Logger = .views
 
     var body: some View {
-        NavigationStack(path: $view.contentPath) {
-            ScrollView(.horizontal) {
+        ScrollView(.horizontal) {
+            NavigationStack(path: $view.contentPath) {
                 VStack(spacing: 0) {
                     TopBar()
+                        .padding(.horizontal, 74)
                     EPUBView()
                     BottomBar()
+                        .padding(.horizontal, 74)
                 }
-                .padding(100)
+                .padding(.vertical, 64)
                 .safeAreaPadding()
-                .frame(minWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
-                .frame(maxWidth: view.proxy?.size.width ?? UIWindow.current?.screen.bounds.width)
+                .frame(minWidth: view.screenWidth)
+                .frame(maxWidth: view.screenWidth)
+                .toolbar(.hidden, for: .navigationBar)
+                .toolbar(.hidden, for: .tabBar)
+                .toolbar(.hidden, for: .bottomBar)
             }
-            .scrollDisabled(true)
-            .onTapGesture {
-                withAnimation {
-                    if !view.libraryVisibility {
-                        logger.info("\(String(describing: view.isAnyPopoverDisplayed))")
-                        logger.info("\(String(describing: view.activePopover))")
-                        if !view.isAnyPopoverDisplayed {
-                            view.interfaceVisibility.toggle()
-                        }
-                    } else {
-                        view.libraryVisibility.toggle()
-                    }
+            .frame(minWidth: view.screenWidth)
+            .frame(maxWidth: view.screenWidth)
+            .fixedSize(horizontal: true, vertical: false)
+        }
+        .safeAreaPadding()
+        .scrollDisabled(true)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            withAnimation {
+                if !view.isAnyPopoverDisplayed {
+                    view.isInterfaceVisible.toggle()
+                } else
+                if view.isLibraryOpen {
+                    view.toggleLibrary()
                 }
             }
-            .contentShape(Rectangle())
-            .toolbar(.hidden, for: .navigationBar)
         }
     }
 }
+
 #Preview {
     ContentView(book: nil)
 }

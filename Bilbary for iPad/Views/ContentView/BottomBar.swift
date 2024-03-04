@@ -18,7 +18,7 @@ struct BottomBar: View {
     var body: some View {
         RBarRow {
             RPopover(
-                isShown: $view.interfaceVisibility,
+                isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString(
                     "Informations",
                     comment: "Information about the current open book"
@@ -41,7 +41,7 @@ struct BottomBar: View {
             }
         } trailing: {
             RPopover(
-                isShown: $view.interfaceVisibility,
+                isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString("Text Customization", comment: ""),
                 systemImage: "textformat.size",
                 type: .customization

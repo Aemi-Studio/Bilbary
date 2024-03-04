@@ -74,4 +74,8 @@ final class Util {
 
         return "the App"
     }
+
+    static func unknownMetadata(_ text: String?) -> String {
+        text ?? NSLocalizedString("metadata.unknown", comment: "Text to display when metadata is known")
+    }
 }

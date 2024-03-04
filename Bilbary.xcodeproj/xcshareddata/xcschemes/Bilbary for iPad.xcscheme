@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1520"
-   version = "2.2">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,19 +15,10 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "460B36202B7B7D8300D99FFF"
-               BuildableName = "Bilbary &#x2022; iPad.app"
-               BlueprintName = "Bilbary &#x2022; iPad"
+               BuildableName = "Bilbary for iPad.app"
+               BlueprintName = "Bilbary for iPad"
                ReferencedContainer = "container:Bilbary.xcodeproj">
             </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <AutocreatedTestPlanReference>
-            </AutocreatedTestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -42,7 +33,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "IDELaunchSchemeLanguageRLO"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -54,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "460B36202B7B7D8300D99FFF"
-            BuildableName = "Bilbary &#x2022; iPad.app"
-            BlueprintName = "Bilbary &#x2022; iPad"
+            BuildableName = "Bilbary for iPad.app"
+            BlueprintName = "Bilbary for iPad"
             ReferencedContainer = "container:Bilbary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "460B36202B7B7D8300D99FFF"
-            BuildableName = "Bilbary &#x2022; iPad.app"
-            BlueprintName = "Bilbary &#x2022; iPad"
+            BuildableName = "Bilbary for iPad.app"
+            BlueprintName = "Bilbary for iPad"
             ReferencedContainer = "container:Bilbary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

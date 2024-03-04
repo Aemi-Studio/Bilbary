@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "463CEDE22B8559E3001D951C"
-               BuildableName = "Bilbary &#x2022; iPhone.app"
-               BlueprintName = "Bilbary &#x2022; iPhone"
+               BuildableName = "Bilbary for iPhone.app"
+               BlueprintName = "Bilbary for iPhone"
                ReferencedContainer = "container:Bilbary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "463CEDE22B8559E3001D951C"
-            BuildableName = "Bilbary &#x2022; iPhone.app"
-            BlueprintName = "Bilbary &#x2022; iPhone"
+            BuildableName = "Bilbary for iPhone.app"
+            BlueprintName = "Bilbary for iPhone"
             ReferencedContainer = "container:Bilbary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "463CEDE22B8559E3001D951C"
-            BuildableName = "Bilbary &#x2022; iPhone.app"
-            BlueprintName = "Bilbary &#x2022; iPhone"
+            BuildableName = "Bilbary for iPhone.app"
+            BlueprintName = "Bilbary for iPhone"
             ReferencedContainer = "container:Bilbary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

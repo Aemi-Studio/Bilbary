@@ -80,11 +80,11 @@ struct RPopover<L, P>: RActionable, View {
         switch view.isTogglable(self.type) {
         case 0:
             self.isPresented.toggle()
-            view.setPopover(to: self.type)
+            view.updatePopover(to: self.type)
         case 1:
             self.isPresented.toggle()
         default:
-            view.setPopover(to: .none)
+            view.updatePopover(to: .none)
         }
     }
 
@@ -135,12 +135,13 @@ struct RPopover<L, P>: RActionable, View {
                 ) {
                     self.popover
                         .onAppear {
-                            view.setPopover(to: self.type)
+                            view.updatePopover(to: self.type)
                         }
                         .onDisappear {
-                            view.setPopover(to: .none)
+                            view.updatePopover(to: .none)
                         }
                 }
         )
+        .disabled(!view.isInterfaceVisible)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  BilbaryApp.swift
+//  Bilbary.swift
 //  iits
 //
 //  Created by Guillaume Coquard on 13/02/24.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct BilbaryApp: App {
+struct Bilbary: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            BilbaryView()
         }
     }
 }

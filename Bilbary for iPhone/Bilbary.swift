@@ -8,11 +8,10 @@
 import SwiftUI
 
 @main
-
-struct BilbaryApp: App {
+struct Bilbary: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            BilbaryView()
         }
     }
 }

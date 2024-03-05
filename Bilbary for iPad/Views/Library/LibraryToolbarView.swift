@@ -13,7 +13,7 @@ struct LibraryToolbarView: View {
     private var library: LibraryModel = .shared
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     var body: some View {
         HStack(spacing: 16) {

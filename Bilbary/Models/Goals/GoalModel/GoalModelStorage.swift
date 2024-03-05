@@ -13,15 +13,24 @@ extension GoalModel {
         var beNotified: Bool = false
 
         @AppStorage("readTime")
-        var readTime: Int = 1
+        var readTime: Double = 0.0
 
-        @AppStorage("readTime")
-        var streakDuration: Int = -1
+        @AppStorage("selectedReadTime")
+        var selectedReadTime: Int = 0
+
+        @AppStorage("selectedStreakDuration")
+        var selectedStreakDuration: Int = -1
+
+        @AppStorage("totalReadTime")
+        var totalReadTime: Double = 0.0
 
         @AppStorage("currentStreakStartDate")
-        var currentStreakStartDate: Int = -1
+        var currentStreakStartDate: Double = -1.0
+
+        @AppStorage("currentStreakEndDate")
+        var currentStreakEndDate: Double = -1.0
 
         @AppStorage("lastStreakEndDate")
-        var lastStreakEndDate: Int = -1
+        var lastStreakEndDate: Double = -1.0
     }
 }

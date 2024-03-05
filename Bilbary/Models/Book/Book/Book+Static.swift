@@ -39,21 +39,3 @@ extension Book {
         }
     }
 }
-
-import UniformTypeIdentifiers
-extension Book {
-    public static var localBooksUrls: [URL] {
-        guard let booksUrls = Bundle.main.urls(
-            forResourcesWithExtension: UTType.epub.preferredFilenameExtension,
-            subdirectory: nil
-        ) else {
-            return []
-        }
-        return booksUrls
-    }
-
-    public static var localBooks: [Book] {
-        self.localBooksUrls.compactMap(Book.init).filter { $0.content?.strings.count ?? 0 > 0 }
-    }
-
-}

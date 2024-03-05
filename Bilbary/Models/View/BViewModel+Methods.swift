@@ -1,5 +1,5 @@
 //
-//  RViewModel+Functions.swift
+//  BViewModel+Functions.swift
 //  Bilbary
 //
 //  Created by Guillaume Coquard on 01/03/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import OSLog
 
-extension RViewModel {
+extension BViewModel {
 
     public func isTogglable(_ type: PopoverType) -> Int {
         if self.isLibraryOpen {
@@ -72,18 +72,6 @@ extension RViewModel {
         } else {
             self.closeLibrary()
         }
-    }
-
-    public func shiftBook() {
-        var books = self.selectedBooks.dropFirst(1)
-        books.append(RViewModel.cachedBooks.randomElement()!)
-        self.selectedBooks = .init(books)
-    }
-
-    public func addBook(drop: Bool = false) {
-        var books = self.selectedBooks
-        books.append(RViewModel.cachedBooks.randomElement()!)
-        self.selectedBooks = .init(books)
     }
 
 }

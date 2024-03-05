@@ -9,7 +9,10 @@ import Foundation
 import OSLog
 
 extension Logger {
-
+    public static let data: Self = .init(
+        subsystem: Bundle.main.bundleIdentifier ?? "Bilbary",
+        category: "data"
+    )
     public static let book: Self = .init(
         subsystem: Bundle.main.bundleIdentifier ?? "Bilbary",
         category: "book"

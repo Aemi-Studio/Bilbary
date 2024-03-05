@@ -11,7 +11,7 @@ import OSLog
 struct BilbaryView: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     var body: some View {
         HStack(spacing: 0) {

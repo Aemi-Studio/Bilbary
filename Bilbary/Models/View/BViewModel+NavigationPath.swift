@@ -1,5 +1,5 @@
 //
-//  RViewModel+NavigationPath.swift
+//  BViewModel+NavigationPath.swift
 //  Bilbary
 //
 //  Created by Guillaume Coquard on 22/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension RViewModel {
+extension BViewModel {
     public func goTo<H: Hashable>(_ value: H, for columnType: ColumnType = .library) {
         switch columnType {
         case .library:

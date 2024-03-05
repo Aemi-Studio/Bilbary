@@ -9,7 +9,7 @@ import Foundation
 
 extension Book {
 
-    enum BookOpinion: Int, CaseIterable {
+    enum BookOpinion: Int, CaseIterable, Codable {
         case undefined = 0
         case liked = 1
         case skipped = 2

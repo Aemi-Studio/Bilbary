@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension RViewModel {
+extension BViewModel {
     internal struct RVMStorage {
 
         @AppStorage("displayOnboarding")

@@ -32,8 +32,11 @@ struct GoalStreakView: View {
 
                 HStack {
                     Picker(
-                        NSLocalizedString("goalModel.streakDurationPicker", comment: "Picker for Streak Duration"),
-                        selection: self.$goalModel.streakDuration
+                        NSLocalizedString(
+                            "goalModel.streakDurationPicker",
+                            comment: "Picker for Streak Duration"
+                        ),
+                        selection: self.$goalModel.selectedStreakDuration
                     ) {
                         ForEach(GoalStreakDuration.allCases, id: \.self) { duration in
                             Text(duration.asString).tag(duration.rawValue)
@@ -45,7 +48,10 @@ struct GoalStreakView: View {
                 HStack {
                     Toggle(isOn: $goalModel.beNotified) {
                         Text(
-                            NSLocalizedString("goalModel.beNotified", comment: "Be notified to achieve my goal")
+                            NSLocalizedString(
+                                "goalModel.beNotified",
+                                comment: "Be notified to achieve my goal"
+                            )
                         )
                     }
                 }

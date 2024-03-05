@@ -13,7 +13,7 @@ struct OnboardingView: View {
     private var dismiss: DismissAction
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     var body: some View {
 

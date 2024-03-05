@@ -16,7 +16,10 @@ extension Book {
                 .trim(from: 0, to: 100)
                 .stroke(
                     Color.foreground.tertiary,
-                    lineWidth: BConstants.coverCircularProgressStrokeWidth
+                    style: StrokeStyle(
+                        lineWidth: BConstants.coverCircularProgressStrokeWidth,
+                        lineCap: .round
+                    )
                 )
                 .frame(
                     width: BConstants.coverCircularProgressWidth,
@@ -24,10 +27,14 @@ extension Book {
                 )
 
             Circle()
-                .trim(from: 0, to: self.readingProgress / 100.0)
+                //                .trim(from: 0, to: self.readingProgress / 100.0)
+                .trim(from: 0, to: 72 / 100.0)
                 .stroke(
                     Color.primary,
-                    lineWidth: BConstants.coverCircularProgressStrokeWidth
+                    style: StrokeStyle(
+                        lineWidth: BConstants.coverCircularProgressStrokeWidth,
+                        lineCap: .round
+                    )
                 )
                 .frame(
                     width: BConstants.coverCircularProgressWidth,

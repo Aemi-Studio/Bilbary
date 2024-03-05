@@ -1,5 +1,5 @@
 //
-//  RVMScreenSizeUpdate.swift
+//  BVMScreenSizeUpdate.swift
 //  Bilbary
 //
 //  Created by Guillaume Coquard on 01/03/24.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct RVMScreenSizeUpdate: ViewModifier {
+struct BVMScreenSizeUpdate: ViewModifier {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     private let orientationChanged = NotificationCenter.default
         .publisher(for: UIDevice.orientationDidChangeNotification)
@@ -35,7 +35,7 @@ struct RVMScreenSizeUpdate: ViewModifier {
 extension View {
 
     func orientationUpdatesScreen() -> some View {
-        modifier(RVMScreenSizeUpdate())
+        modifier(BVMScreenSizeUpdate())
     }
 
 }

@@ -4,6 +4,9 @@
     "" : {
 
     },
+    " " : {
+
+    },
     " %@" : {
 
     },
@@ -42,6 +45,9 @@
     },
     "book.readStartDate" : {
       "comment" : "Prefix text to read start date"
+    },
+    "button.streak" : {
+      "comment" : "Streak word display on the interface UI"
     },
     "Cater to Your Liking" : {
 
@@ -268,7 +274,7 @@
     "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
 
     },
-    "Streak" : {
+    "Streak Validated" : {
 
     },
     "Swipe for Different Content" : {

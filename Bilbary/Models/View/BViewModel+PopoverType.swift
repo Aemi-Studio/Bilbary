@@ -1,5 +1,5 @@
 //
-//  RViewModel+PopoverType.swift
+//  BViewModel+PopoverType.swift
 //  Bilbary
 //
 //  Created by Guillaume Coquard on 22/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension RViewModel {
+extension BViewModel {
     enum PopoverType: Int, CaseIterable {
         case none           = -1
         case library        = 0

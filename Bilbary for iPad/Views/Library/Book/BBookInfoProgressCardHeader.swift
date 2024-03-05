@@ -31,7 +31,7 @@ struct BBookInfoProgressCardHeader: View {
                     .font(.title2)
                     .fontWeight(.bold)
                 } else {
-                    Text(Book.format(book.readingTime))
+                    Text(Duration.seconds(book.readingTime).formatted(.time(pattern: .hourMinute)))
                         .font(.title2)
                         .fontWeight(.bold)
                 }
@@ -61,14 +61,12 @@ struct BBookInfoProgressCardHeader: View {
                                 .fontWeight(.medium)
                         }
                         HStack {
-
                             Text(
                                 NSLocalizedString(
                                     "book.readEndDate",
                                     comment: "Prefix text to read end date"
                                 )
                             )
-
                             Text(Book.format(book.readingEndDate!))
                                 .font(.headline)
                                 .fontWeight(.medium)

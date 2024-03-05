@@ -15,4 +15,8 @@ enum GoalStreakDuration: Int, CaseIterable {
     case sixMonths = 180
     case aYear = 365
     case forever = -1
+
+    var timeInterval: TimeInterval {
+        TimeInterval(self.rawValue * 24 * 3600)
+    }
 }

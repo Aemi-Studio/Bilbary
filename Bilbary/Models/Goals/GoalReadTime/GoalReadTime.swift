@@ -15,4 +15,12 @@ enum GoalReadTime: Int, CaseIterable {
     case tenMin = 10
     case thirtyMin = 30
     case anHour = 60
+
+    var timeInterval: TimeInterval {
+        return if self == .none {
+            60.0
+        } else {
+            TimeInterval(self.rawValue * 60)
+        }
+    }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct EPUBScrollableContent: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     var book: Book
 
@@ -36,9 +36,6 @@ struct EPUBScrollableContent: View {
         }
         .padding(.vertical, 0)
         .padding(.horizontal, 64)
-        //        .frame(minWidth: view.screenWidth - 128)
-        //        .frame(width: view.screenWidth - 128)
-        //        .frame(maxWidth: view.screenWidth - 128)
         .containerRelativeFrame(
             .horizontal,
             count: 1,

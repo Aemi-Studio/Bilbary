@@ -26,16 +26,16 @@ struct RButton<L>: RActionable, View {
     private var action: (() -> Void)?
 
     internal var isUIActive: Bool {
-        self.isActive || RViewModel.shared.activePopover(is: self.type)
+        self.isActive || BViewModel.shared.activePopover(is: self.type)
     }
-    internal var type: RViewModel.PopoverType = .none
+    internal var type: BViewModel.PopoverType = .none
 
     init(
         isShown: Binding<Bool>,
         title: String = "Button",
         systemImage: String = "circle",
         systemImageActive: String? = "circle.fill",
-        linkedTo popoverType: RViewModel.PopoverType = .none,
+        linkedTo popoverType: BViewModel.PopoverType = .none,
         action: @escaping () -> Void = {}
     ) where L == AnyView {
         self._isShown = isShown
@@ -49,7 +49,7 @@ struct RButton<L>: RActionable, View {
 
     init(
         isShown: Binding<Bool>,
-        linkedTo popoverType: RViewModel.PopoverType = .none,
+        linkedTo popoverType: BViewModel.PopoverType = .none,
         action: @escaping () -> Void = {},
         @ViewBuilder label: @escaping () -> L
     ) where L == AnyView {
@@ -131,7 +131,7 @@ struct RButton<L>: RActionable, View {
         .opacity(self.isShown ? 1 : 0)
         .buttonStyle(.plain)
         .onPress {
-            if (self.type != .none && !RViewModel.shared.isAnyPopoverDisplayed)
+            if (self.type != .none && !BViewModel.shared.isAnyPopoverDisplayed)
                 || self.type == .none {
                 self.isActive = true
             }

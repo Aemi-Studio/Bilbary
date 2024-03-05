@@ -10,7 +10,7 @@ import SwiftUI
 struct LibraryView: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     @State
     private var library: LibraryModel = .shared

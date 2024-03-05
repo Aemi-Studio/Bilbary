@@ -9,7 +9,7 @@ import Foundation
 
 extension Book {
 
-    enum BookReadingStatus: Int, CaseIterable {
+    enum BookReadingStatus: Int, CaseIterable, Codable {
         case undefined = 0
         case started = 1
         case finished = 2

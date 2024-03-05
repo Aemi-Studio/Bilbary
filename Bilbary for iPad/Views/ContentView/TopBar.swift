@@ -10,7 +10,7 @@ import SwiftUI
 struct TopBar: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     var body: some View {
 
@@ -30,14 +30,7 @@ struct TopBar: View {
         } center: {
             RReadingTimeMenu()
         } trailing: {
-            RPopover(
-                isShown: $view.isInterfaceVisible,
-                title: NSLocalizedString("Streak", comment: ""),
-                systemImage: "timer",
-                type: .goalStreak
-            ) {
-                GoalStreakView()
-            }
+            BStreakPopover()
         }
     }
 }

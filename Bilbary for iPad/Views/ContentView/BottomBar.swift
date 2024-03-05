@@ -11,13 +11,13 @@ import OSLog
 struct BottomBar: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     private var logger: Logger = .init()
 
     var body: some View {
         RBarRow {
-            RPopover(
+            BPopover(
                 isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString(
                     "Informations",
@@ -40,7 +40,7 @@ struct BottomBar: View {
                 logger.log("I like that.")
             }
         } trailing: {
-            RPopover(
+            BPopover(
                 isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString("Text Customization", comment: ""),
                 systemImage: "textformat.size",

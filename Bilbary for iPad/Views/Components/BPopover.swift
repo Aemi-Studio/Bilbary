@@ -1,5 +1,5 @@
 //
-//  RPopover.swift
+//  BPopover.swift
 //  iits
 //
 //  Created by Guillaume Coquard on 19/02/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import OSLog
 
-struct RPopover<L, P>: RActionable, View {
+struct BPopover<L, P>: RActionable, View {
 
     private let logger: Logger = .init()
 
@@ -19,7 +19,7 @@ struct RPopover<L, P>: RActionable, View {
     private var isPresented: Bool = false
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     private var hasCustomLabel: Bool = false
 
@@ -33,9 +33,9 @@ struct RPopover<L, P>: RActionable, View {
     private var anchor: PopoverAttachmentAnchor = .point(.bottom)
     private var arrowEdge: Edge = .bottom
 
-    internal let type: RViewModel.PopoverType
+    internal let type: BViewModel.PopoverType
     internal var isUIActive: Bool {
-        self.isPresented || RViewModel.shared.activePopover(is: self.type)
+        self.isPresented || BViewModel.shared.activePopover(is: self.type)
     }
 
     init(
@@ -45,7 +45,7 @@ struct RPopover<L, P>: RActionable, View {
         systemImageActive: String? = nil,
         anchor: PopoverAttachmentAnchor = .point(.bottom),
         arrowEdge: Edge = .bottom,
-        type: RViewModel.PopoverType,
+        type: BViewModel.PopoverType,
         @ViewBuilder popover: @escaping () -> P
     ) where L == any View, P == any View {
         self._isShown = isShown
@@ -63,7 +63,7 @@ struct RPopover<L, P>: RActionable, View {
         isShown: Binding<Bool>,
         anchor: PopoverAttachmentAnchor = .point(.bottom),
         arrowEdge: Edge = .bottom,
-        type: RViewModel.PopoverType,
+        type: BViewModel.PopoverType,
         @ViewBuilder label: @escaping () -> L,
         @ViewBuilder popover: @escaping () -> P
     ) where L == any View, P == any View {

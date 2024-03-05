@@ -10,19 +10,23 @@ import SwiftUI
 struct EPUBSwipeView: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
+
+    @State
+    private var readModel: BReadModel = .shared
 
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack {
-                ForEach(view.selectedBooks, id: \.self) { book in
+                ForEach(readModel.selectedBooks, id: \.self) { book in
                     EPUBScrollableContent(book: book)
                         .id( book.id )
                 }
             }
             .scrollTargetLayout()
         }
-        .scrollPosition(id: $view.selectedBook, anchor: .center)
+        .scrollDisabled(view.isAnyPopoverDisplayed)
+        .scrollPosition(id: $readModel.selectedBook, anchor: .center)
         .scrollClipDisabled()
         .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
         .scrollIndicators(.never)

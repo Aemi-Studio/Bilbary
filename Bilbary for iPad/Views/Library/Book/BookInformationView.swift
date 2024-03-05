@@ -14,7 +14,7 @@ struct BookInformationView: View {
     private var dismiss: DismissAction
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     @State
     private var size: CGFloat?

@@ -11,31 +11,30 @@ import OSLog
 struct RReadingTimeMenu: View {
 
     @State
-    private var contentModel: ContentModel = .shared
+    private var readModel: BReadModel = .shared
 
     @State
-    private var viewModel: RViewModel = .shared
+    private var viewModel: BViewModel = .shared
 
     private var logger: Logger = .init()
 
     var body: some View {
         RButton(
             isShown: $viewModel.isInterfaceVisible,
-            linkedTo: .readingTime
+            linkedTo: .readingTime,
+            action: {}
         ) {
-            logger.log("sds")
-        } label: {
             AnyView(
                 Menu {
                     Picker(
                         NSLocalizedString(
                             "Select a content length",
                             comment: "Picker string for content length/duration"),
-                        selection: $contentModel.contentLength
+                        selection: $readModel.contentLength
                     ) {
                         ForEach(ReadTime.allCases, id: \.self) { time in
                             Button {
-                                contentModel.contentLength = time
+                                readModel.contentLength = time
                             } label: {
                                 Text(time.asString)
                             }
@@ -46,7 +45,7 @@ struct RReadingTimeMenu: View {
                 label: {
                     HStack(spacing: 0) {
                         Group {
-                            Text(contentModel.contentLength.asString)
+                            Text(readModel.contentLength.asString)
                             Text(" Read")
                                 .opacity(0.5)
                                 .padding(.leading, 4)

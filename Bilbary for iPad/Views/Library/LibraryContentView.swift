@@ -32,6 +32,7 @@ struct LibraryContentView: View {
             }
             Spacer()
         }
+        .scrollClipDisabled()
         .padding(.horizontal)
         .navigationTitle("Library")
         .navigationBarTitleDisplayMode(.automatic)

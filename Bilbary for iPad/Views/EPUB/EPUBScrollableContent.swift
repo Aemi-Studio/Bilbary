@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 struct EPUBScrollableContent: View {
 
@@ -16,36 +17,82 @@ struct EPUBScrollableContent: View {
 
     var book: Book
 
-    private var session: BookProgress? {
+    private var session: BookSession? {
         read.currentSession
     }
 
     var body: some View {
         VStack {
-            ScrollView {
-                VStack {
-                    ForEach(book.content.strings.prefix(10), id: \.self) { paragraph in
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(
-                                cust.style.present(
-                                    paragraph
-                                )
-                            )
-                            .lineSpacing( cust.lineHeight )
-                            .padding(.bottom, cust.paragraphSpacing)
+            VStack(alignment: .leading) {
+                if read.selectedBook != nil {
+                    ScrollView(.vertical) {
+                        LazyVStack(alignment: .leading, spacing: cust.paragraphSpacing) {
+                            ForEach(book.content.formatted, id: \.id) { paragraph in
+                                HStack {
+                                    Text(
+                                        cust.style.present(
+                                            paragraph.content
+                                        )
+                                    )
+                                    .lineSpacing( cust.lineHeight )
+                                    .multilineTextAlignment(.leading)
+
+                                    Spacer()
+                                }
+                                .padding(.horizontal, 80)
+                                .frame(width: view.screenWidth)
+                                .scrollTransition(axis: .vertical, transition: {
+                                    $0
+                                        .blur(radius: $1.isIdentity ? 0 : 10)
+                                        .opacity( $1.isIdentity ? 1 : 0.5 )
+                                })
+                                .tag(paragraph.id)
+                                .id(paragraph.id)
+                            }
                         }
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical)
+                        .scrollTargetLayout()
                     }
+                    .overlay {
+                        ZStack {
+                            VStack {
+                                LinearGradient(colors: [
+                                    Color.userDefinedBackground,
+                                    Color.clear,
+                                    Color.clear,
+                                    Color.clear
+                                ], startPoint: .top, endPoint: .center)
+                                Spacer()
+                            }
+                            .frame(maxWidth: .infinity)
+
+                            VStack {
+                                Spacer()
+                                LinearGradient(colors: [
+                                    Color.userDefinedBackground,
+                                    Color.clear,
+                                    Color.clear
+                                ], startPoint: .bottom, endPoint: .center)
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .allowsHitTesting(false)
+                    }
+                    .defaultScrollAnchor(.top)
+                    .scrollPosition(id: $read.currentParagraphId, anchor: .center)
+                    .scrollIndicators(.never)
+                    .frame(minHeight: 200)
+                    .padding(0)
+                    .padding(.vertical)
+                } else {
+                    Spacer()
+                    EmptyView()
+                    Spacer()
                 }
-                .frame(minHeight: 200)
-                .frame(maxWidth: .infinity)
-                .padding(0)
             }
             .padding(0)
         }
+        .defersSystemGestures(on: .horizontal)
         .padding(.vertical, 0)
-        .padding(.horizontal, 80)
         .frame(width: view.screenWidth)
         .onAppear {
             if let session = self.session {

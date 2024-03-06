@@ -17,7 +17,7 @@ struct Bilbary: App {
 
     init() {
         do {
-            dataModel.container = try ModelContainer(for: Book.self, BookProgress.self)
+            dataModel.container = try ModelContainer(for: Book.self, BookSession.self)
         } catch {
             fatalError(
                 "Something happened when creating the model container."

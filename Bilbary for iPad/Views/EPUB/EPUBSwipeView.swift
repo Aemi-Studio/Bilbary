@@ -26,7 +26,7 @@ struct EPUBSwipeView: View {
             .scrollTargetLayout()
         }
         .scrollDisabled(view.isAnyPopoverDisplayed)
-        .scrollPosition(id: $readModel.selectedBookHashValue, anchor: .center)
+        .scrollPosition(id: $readModel.selectedBookHashValue, anchor: .trailing)
         .scrollClipDisabled()
         .scrollTargetBehavior(.paging)
         .scrollIndicators(.never)

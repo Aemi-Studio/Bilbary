@@ -24,9 +24,9 @@ final class BReadModel {
 
     private let storage: BRMStorage = .init()
 
-    internal var currentSession: BookProgress?
+    internal var currentSession: BookSession?
 
-    public var sessions: [BookProgress]?
+    public var sessions: [BookSession]?
     public var contentLength: ReadTime.ID = ReadTime.aMin.id {
         didSet {
             self.storage.brmContentLength = self.contentLength
@@ -45,11 +45,19 @@ final class BReadModel {
             }
         }
     }
+    public var currentParagraphId: Int? {
+        get {
+            self.selectedBook?.currentParagraph
+        }
+        set {
+            self.selectedBook?.currentParagraph = newValue
+        }
+    }
 
     private init() {
         self.selectedBook = self.selectedBooks.first
         if self.selectedBook != nil {
-            self.currentSession = BookProgress(for: self.selectedBook!, startedAt: .now)
+            self.currentSession = BookSession(for: self.selectedBook!, startedAt: .now)
         }
         self.contentLength = self.storage.brmContentLength
     }

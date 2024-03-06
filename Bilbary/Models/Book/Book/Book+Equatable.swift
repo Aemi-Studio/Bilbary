@@ -9,6 +9,7 @@ import Foundation
 
 extension Book: Equatable {
     static func == (lhs: Book, rhs: Book) -> Bool {
-        lhs.url == rhs.url
+        lhs.url == rhs.url &&
+            lhs.content == rhs.content
     }
 }

@@ -10,16 +10,20 @@ import SwiftData
 import OSLog
 
 @Model
-final class BookProgress: Identifiable, Hashable {
+final class BookSession: Identifiable, Hashable {
 
     @Attribute(.unique)
     public let id: UUID = UUID()
 
+    @Relationship(inverse: \Book.readingSessions)
     public internal(set) var book: Book
+
     public var startDate: Date = Date.now
     public var endDate: Date = Date.now
     public var startProgress: CGFloat = 0.0
     public var endProgress: CGFloat = 0.0
+    public var paragraph: Int = 0
+
     public private(set) var readTime: TimeInterval = 0.0
 
     @discardableResult

@@ -11,5 +11,7 @@ extension Book: Hashable {
         hasher.combine(self.title)
         hasher.combine(self.author)
         hasher.combine(self.publisher)
+        hasher.combine(self.content)
+        hasher.combine(self.readingSessions)
     }
 }

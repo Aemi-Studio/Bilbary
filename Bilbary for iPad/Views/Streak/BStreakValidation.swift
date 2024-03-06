@@ -49,7 +49,7 @@ struct BStreakValidation: View {
             if !goalModel.isStreakValidated {
                 DispatchQueue.main.async {
                     withAnimation(.linear(duration: BReadModel.timerIncrement)) {
-                        goalModel.streakValidationProgressRemaining = goalModel.streakValidationProgressRemaining - BReadModel.timerIncrement
+                        goalModel.streakValidationProgressRemaining -= BReadModel.timerIncrement
                     }
                 }
             }

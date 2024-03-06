@@ -13,6 +13,9 @@ struct LibraryContentView: View {
     private var view: BViewModel = .shared
 
     @State
+    private var customizer: RCustomizerModel = .shared
+
+    @State
     private var library: LibraryModel = .shared
 
     var body: some View {

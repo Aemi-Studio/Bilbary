@@ -30,7 +30,7 @@ struct OnboardingRow: View {
 
                 Text(subtitle)
                     .font(.title3)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(Color.userDefinedForeground.secondary)
 
             }
             .frame(maxWidth: .infinity, alignment: .leading)

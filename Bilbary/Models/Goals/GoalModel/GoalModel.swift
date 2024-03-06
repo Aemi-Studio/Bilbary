@@ -39,7 +39,8 @@ final class GoalModel {
     }
 
     var streakValidationProgress: Double {
-        (self.selectedReadTime.timeInterval - self.streakValidationProgressRemaining) / self.selectedReadTime.timeInterval
+        let readTime = GoalReadTime(from: self.selectedReadTime)!
+        return (readTime.timeInterval - self.streakValidationProgressRemaining) / readTime.timeInterval
     }
 
     var isStreakValidated: Bool = false {
@@ -48,15 +49,15 @@ final class GoalModel {
         }
     }
 
-    var selectedStreakDuration: GoalStreakDuration = .forever {
+    var selectedStreakDuration: GoalStreakDuration.ID = 0 {
         didSet {
-            self.storage.selectedStreakDuration = self.selectedStreakDuration.rawValue
+            self.storage.selectedStreakDuration = self.selectedStreakDuration
         }
     }
 
-    var selectedReadTime: GoalReadTime = .none {
+    var selectedReadTime: GoalReadTime.ID = 0 {
         didSet {
-            self.storage.selectedReadTime = self.selectedReadTime.rawValue
+            self.storage.selectedReadTime = self.selectedReadTime
         }
     }
 
@@ -124,12 +125,12 @@ final class GoalModel {
         }
         self.readTime = self.storage.readTime
         self.totalReadTime = self.storage.totalReadTime
-        self.selectedReadTime = GoalReadTime(rawValue: self.storage.selectedReadTime)!
-        self.selectedStreakDuration = GoalStreakDuration(rawValue: self.storage.selectedStreakDuration)!
+        self.selectedReadTime = self.storage.selectedReadTime
+        self.selectedStreakDuration = self.storage.selectedStreakDuration
         self.currentStreakStartDate = Self.from(timestamp: self.storage.currentStreakStartDate)
         self.currentStreakEndDate = Self.from(timestamp: self.storage.currentStreakEndDate)
         self.lastStreakEndDate = Self.from(timestamp: self.storage.lastStreakEndDate)
-        self.streakValidationProgressRemaining = self.selectedReadTime.timeInterval
+        self.streakValidationProgressRemaining = GoalReadTime(from: self.selectedReadTime)!.timeInterval
     }
 
 }

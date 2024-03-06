@@ -16,17 +16,17 @@ extension RCustomizerModel {
         @AppStorage("darkBackgroundColor")
         var darkBackgroundColor: String = ""
 
-        @AppStorage("lightFontColor")
-        var lightFontColor: String = ""
+        @AppStorage("lightForegroundColor")
+        var lightForegroundColor: String = ""
 
-        @AppStorage("darkFontColor")
-        var darkFontColor: String = ""
+        @AppStorage("darkForegroundColor")
+        var darkForegroundColor: String = ""
 
         @AppStorage("fontFace")
         var fontFace: String = ""
 
         @AppStorage("fontSize")
-        var fontSize: String = ""
+        var fontSize: Double = 16.0
 
         @AppStorage("fontWeight")
         var fontWeight: Int = 0
@@ -37,8 +37,8 @@ extension RCustomizerModel {
         @AppStorage("paragraphSpacing")
         var paragraphSpacing: Double = 1.0
 
-        @AppStorage("wordSpacing")
-        var wordSpacing: Double = 1.0
+        @AppStorage("kerning")
+        var kerning: Double = 1.0
 
         @AppStorage("scheme")
         var scheme: Int = 2

@@ -40,7 +40,7 @@ extension GoalStreakDuration {
                 "goalStreakDuration.365days",
                 comment: "Goal Streak Duration of 365 days or 1 year"
             )
-        case .forever:
+        case .none:
             NSLocalizedString(
                 "goalStreakDuration.unlimited",
                 comment: "No Goal Streak Duration or forever"

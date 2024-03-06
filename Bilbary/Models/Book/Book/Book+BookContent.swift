@@ -9,11 +9,10 @@ import Foundation
 
 extension Book {
     struct BookContent {
+
         private let rawContent: [String]
-        init?(from content: [String]?) {
-            guard let content = content else {
-                return nil
-            }
+
+        init(from content: [String]) {
             self.rawContent = content
         }
 

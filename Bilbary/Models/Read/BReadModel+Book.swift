@@ -13,14 +13,26 @@ extension BReadModel {
 
     public func shiftBook() {
         var books = self.selectedBooks.dropFirst(1)
-        books.append(Self.cachedBooks.randomElement()!)
+        books.append(Book(from: Self.cachedBooks.randomElement()!)!)
         self.selectedBooks = .init(books)
     }
 
     public func addBook(drop: Bool = false) {
-        var books = self.selectedBooks
-        books.append(Self.cachedBooks.randomElement()!)
-        self.selectedBooks = .init(books)
+        var book: Book?
+
+        let baseSet = Set(Self.cachedBooks)
+        let exclusionSet = Set(self.selectedBooks.compactMap {$0.url})
+        let uniqueSet = baseSet.subtracting(exclusionSet)
+
+        repeat {
+            book = Book(from: uniqueSet.randomElement())
+        } while book == nil
+
+        var books: [Book] = drop ? .init(self.selectedBooks.dropFirst()) : .init(self.selectedBooks)
+
+        books.append(book!)
+
+        self.selectedBooks = books
     }
 
     @discardableResult
@@ -74,7 +86,7 @@ extension BReadModel {
         oldBook: Book? = nil
     ) -> Bool {
         if let book = oldBook {
-            if var session = self.currentSession {
+            if let session = self.currentSession {
                 if session.save(
                     upTo: book.readingProgress,
                     into: context
@@ -84,7 +96,7 @@ extension BReadModel {
             }
         } else {
             if let book = self.selectedBook,
-               var session = self.currentSession {
+               let session = self.currentSession {
                 if session.save(
                     upTo: book.readingProgress,
                     into: context

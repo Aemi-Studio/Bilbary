@@ -9,19 +9,28 @@ import SwiftUI
 
 import UniformTypeIdentifiers
 extension Book {
+
     public static var localBooksUrls: [URL] {
-        guard let booksUrls = Bundle.main.urls(
+        Bundle.main.urls(
             forResourcesWithExtension: UTType.epub.preferredFilenameExtension,
             subdirectory: nil
-        ) else {
-            return []
-        }
-        return booksUrls
+        ) ?? []
     }
 
     public static var localBooks: [Book] {
         self.localBooksUrls
             .compactMap({Book(from: $0)})
-            .filter({ $0.content?.strings.count ?? 0 > 0 })
+    }
+
+    public static func randomBooksURL(_ count: Int) -> [URL] {
+        let uniqueURLs = Set(Self.localBooksUrls)
+        let finalCount = min(count, uniqueURLs.count)
+        return Array(uniqueURLs.shuffled().prefix(finalCount))
+    }
+
+    public static func books(from urls: [URL], count: Int = 3) -> [Book] {
+        urls.shuffled().prefix(count).compactMap {
+            Book(from: $0)
+        }
     }
 }

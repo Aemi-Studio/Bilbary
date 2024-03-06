@@ -15,7 +15,7 @@ struct BBookCoverViewStyle: ViewModifier {
             .clipShape(.rect(cornerRadius: 8))
             .overlay {
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(.foreground.opacity(0.15), lineWidth: 0.5)
+                    .stroke(Color.userDefinedForeground.opacity(0.15), lineWidth: 0.5)
                     .foregroundStyle(.clear)
             }
             .shadow(color: .black.opacity(0.1), radius: 5, y: 2)

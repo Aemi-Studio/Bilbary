@@ -15,7 +15,7 @@ struct BBookInfoProgressCardHeader: View {
         HStack(spacing: 16) {
 
             ZStack {
-                book.progressCircle
+                BBookProgressCircle(book: book)
             }
             .cardHeaderImageStyle()
 
@@ -54,7 +54,7 @@ struct BBookInfoProgressCardHeader: View {
                             )
                             .font(.headline)
                             .fontWeight(.medium)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Color.userDefinedForeground.secondary)
 
                             Text(Book.format(book.readingStartDate!))
                                 .font(.headline)

@@ -25,6 +25,8 @@ extension RCFontFace {
             Font.custom("Avenir", size: UIFont.systemFontSize, relativeTo: .body)
         case .palatino:
             Font.custom("Palatino", size: UIFont.systemFontSize, relativeTo: .body)
+        case .publico:
+            Font.custom("Publico", size: UIFont.systemFontSize, relativeTo: .body)
         default:
             Font.body
         }

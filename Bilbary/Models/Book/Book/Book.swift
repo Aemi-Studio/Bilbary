@@ -22,24 +22,20 @@ final class Book: Identifiable {
 
     @Transient internal var document: EPUBDocument?
     @Transient public private(set) var cover: BookCover?
-    @Transient public private(set) var content: BookContent = .init(from: [])
+    @Transient public private(set) var content: BookContent = .init()
+    @Transient public var currentParagraph: Int?
 
-    @Relationship(inverse: \BookProgress.book)
-    public var readingSessions: [BookProgress]
+    public var readingSessions: [BookSession] = []
     public var readingStatus: BookReadingStatus
     public var opinion: BookOpinion
 
     init?(from url: URL?, id: UUID = .init()) {
-
         self.id = id
-
         guard let url = url else {
             Logger.book.warning("<\(String(describing: url))> is nil")
             return nil
         }
-
         self.url = url
-
         do {
             Self.parser.delegate = Self.delegate
             self.document = try Self.parser.parse(documentAt: url)
@@ -48,10 +44,9 @@ final class Book: Identifiable {
             return nil
         }
 
-        self.cover = BookCover(url: document!.cover)
-        self.content = BookContent(from: document!.content)
-
-        self.readingSessions = .init()
+        self.cover = BookCover(document!.cover)
+        self.content = BookContent(document!.content)
+        self.currentParagraph = self.content.formatted.first?.index
         self.readingStatus = BookReadingStatus.undefined
         self.opinion = BookOpinion.undefined
     }

@@ -36,16 +36,16 @@ extension BReadModel {
     }
 
     @discardableResult
-    public func create(for book: Book? = nil) -> BookProgress? {
+    public func create(for book: Book? = nil) -> BookSession? {
         if let book = book {
-            book.readingSessions.append(BookProgress(
+            book.readingSessions.append(BookSession(
                 for: book,
                 startedAt: .now,
                 from: book.readingProgress
             ))
         } else {
             if let book = self.selectedBook {
-                book.readingSessions.append(BookProgress(
+                book.readingSessions.append(BookSession(
                     for: book,
                     startedAt: .now,
                     from: book.readingProgress

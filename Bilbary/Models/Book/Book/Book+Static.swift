@@ -1,41 +1,40 @@
 //
-//  Book+Static.swift
+//  Book+Static+Local.swift
 //  Bilbary
 //
-//  Created by Guillaume Coquard on 29/02/24.
+//  Created by Guillaume Coquard on 05/03/24.
 //
 
-import Foundation
-import OSLog
+import SwiftUI
 import EPUBKit
+import UniformTypeIdentifiers
 
 extension Book {
+
     static internal let parser: EPUBParser = .init()
     static internal let delegate: BookDelegate = .default
 
-    static private var timeIntervalFomatter: DateComponentsFormatter {
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .abbreviated
-        formatter.zeroFormattingBehavior = .dropAll
-        formatter.allowedUnits = [.hour, .minute]
-        return formatter
+    public static var localBooksUrls: [URL] {
+        Bundle.main.urls(
+            forResourcesWithExtension: UTType.epub.preferredFilenameExtension,
+            subdirectory: nil
+        ) ?? []
     }
 
-    static private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: Locale.preferredLanguages[0])
-        formatter.dateStyle = .short
-        return formatter
+    public static var localBooks: [Book] {
+        self.localBooksUrls
+            .compactMap({Book(from: $0)})
     }
 
-    static func format(_ component: Any) -> String {
-        return switch component.self {
-        case is TimeInterval:
-            Self.timeIntervalFomatter.string(for: component) ?? ""
-        case is Date:
-            Self.dateFormatter.string(from: component as! Date)
-        default:
-            String(describing: component)
+    public static func randomBooksURL(_ count: Int) -> [URL] {
+        let uniqueURLs = Set(Self.localBooksUrls)
+        let finalCount = min(count, uniqueURLs.count)
+        return Array(uniqueURLs.shuffled().prefix(finalCount))
+    }
+
+    public static func books(from urls: [URL], count: Int = 3) -> [Book] {
+        urls.shuffled().prefix(count).compactMap {
+            Book(from: $0)
         }
     }
 }

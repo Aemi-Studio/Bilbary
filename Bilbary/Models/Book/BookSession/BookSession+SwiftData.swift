@@ -1,5 +1,5 @@
 //
-//  BookProgress+SwiftData.swift
+//  BookSession+SwiftData.swift
 //  Bilbary
 //
 //  Created by Guillaume Coquard on 05/03/24.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 import OSLog
 
-extension BookProgress {
+extension BookSession {
 
     @discardableResult
     public func update(to book: Book) -> Self {

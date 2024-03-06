@@ -9,6 +9,6 @@ import SwiftUI
 
 struct RCScheme: Equatable, Hashable {
     var type: ColorScheme = .dark
-    var fontColor: Color = .black
-    var backgroundColor: Color = .white
+    var foregroundColor: Color = .userDefinedForeground
+    var backgroundColor: Color = .userDefinedForeground
 }

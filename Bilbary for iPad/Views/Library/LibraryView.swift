@@ -29,6 +29,8 @@ struct LibraryView: View {
                                 LibraryToolbarView()
                             }
                         }
+                        .background(Color.userDefinedBackground)
+                        .foregroundStyle(Color.userDefinedForeground)
                 }
             }
             .frame(width: BConstants.libraryOpenWidth, alignment: .trailing)

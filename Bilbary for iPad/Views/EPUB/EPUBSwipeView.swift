@@ -18,21 +18,20 @@ struct EPUBSwipeView: View {
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack {
-                ForEach(readModel.selectedBooks, id: \.self) { book in
+                ForEach(readModel.selectedBooks) { book in
                     EPUBScrollableContent(book: book)
-                        .id( book.id )
+                        .id( book.hashValue )
                 }
             }
             .scrollTargetLayout()
         }
         .scrollDisabled(view.isAnyPopoverDisplayed)
-        .scrollPosition(id: $readModel.selectedBook, anchor: .center)
+        .scrollPosition(id: $readModel.selectedBookHashValue, anchor: .center)
         .scrollClipDisabled()
-        .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
+        .scrollTargetBehavior(.paging)
         .scrollIndicators(.never)
         .contentMargins(.horizontal, 0)
         .padding(0)
-        .padding(.horizontal, 64)
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(minWidth: view.screenWidth)
         .frame(width: view.screenWidth)

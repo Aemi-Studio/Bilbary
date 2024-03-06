@@ -29,4 +29,8 @@ extension Book {
     public var description: String {
         Util.unknownMetadata(self.metadata?.description)
     }
+
+    public var date: String {
+        Util.unknownMetadata(self.metadata?.date)
+    }
 }

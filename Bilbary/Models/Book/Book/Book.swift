@@ -22,7 +22,7 @@ final class Book: Identifiable {
 
     @Transient internal var document: EPUBDocument?
     @Transient public private(set) var cover: BookCover?
-    @Transient public private(set) var content: BookContent?
+    @Transient public private(set) var content: BookContent = .init(from: [])
 
     @Relationship(inverse: \BookProgress.book)
     public var readingSessions: [BookProgress]

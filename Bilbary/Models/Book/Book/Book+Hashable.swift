@@ -8,6 +8,8 @@
 import Foundation
 extension Book: Hashable {
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(self.url)
+        hasher.combine(self.title)
+        hasher.combine(self.author)
+        hasher.combine(self.publisher)
     }
 }

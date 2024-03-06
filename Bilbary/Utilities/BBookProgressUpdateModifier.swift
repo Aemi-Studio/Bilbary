@@ -28,18 +28,6 @@ struct BDataModifier: ViewModifier {
             .onAppear {
                 dataModel.context = context
             }
-            .onChange(of: phase) { _, newValue in
-                switch newValue {
-                case .active:
-                    readModel.refresh(into: context)
-                case .inactive, .background:
-                    readModel.save(into: context)
-                @unknown default:
-                    Logger.views.error(
-                        "I really don't know what I should do."
-                    )
-                }
-            }
     }
 }
 

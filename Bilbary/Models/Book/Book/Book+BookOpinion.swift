@@ -24,6 +24,10 @@ extension Book {
             }
             return self
         }
+
+        var icon: String {
+            self == .liked ? "heart.fill" : "heart"
+        }
     }
 
 }

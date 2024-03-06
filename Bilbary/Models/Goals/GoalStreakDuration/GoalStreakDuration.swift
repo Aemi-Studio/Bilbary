@@ -7,16 +7,20 @@
 
 import Foundation
 
-enum GoalStreakDuration: Int, CaseIterable {
+enum GoalStreakDuration: Int, Identifiable, CaseIterable {
+
+    case none = 0
     case aWeek = 7
     case twoWeeks = 14
     case aMonth = 30
     case threeMonths = 90
     case sixMonths = 180
     case aYear = 365
-    case forever = -1
 
-    var timeInterval: TimeInterval {
-        TimeInterval(self.rawValue * 24 * 3600)
+    init?(from id: Int) {
+        guard let goal: Self = Self.from(id) else {
+            return nil
+        }
+        self = goal
     }
 }

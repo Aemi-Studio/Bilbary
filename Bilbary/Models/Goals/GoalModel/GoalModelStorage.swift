@@ -19,7 +19,7 @@ extension GoalModel {
         var selectedReadTime: Int = 0
 
         @AppStorage("selectedStreakDuration")
-        var selectedStreakDuration: Int = -1
+        var selectedStreakDuration: Int = 0
 
         @AppStorage("totalReadTime")
         var totalReadTime: Double = 0.0

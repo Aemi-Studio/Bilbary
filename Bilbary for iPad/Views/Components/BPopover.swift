@@ -143,5 +143,7 @@ struct BPopover<L, P>: RActionable, View {
                 }
         )
         .disabled(!view.isInterfaceVisible)
+        .background(Color.userDefinedBackground)
+        .foregroundStyle(Color.userDefinedForeground)
     }
 }

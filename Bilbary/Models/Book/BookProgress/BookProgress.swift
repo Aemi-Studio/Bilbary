@@ -22,14 +22,15 @@ final class BookProgress: Identifiable, Hashable {
     public var endProgress: CGFloat = 0.0
     public private(set) var readTime: TimeInterval = 0.0
 
+    @discardableResult
     init(
         for book: Book,
         startedAt startDate: Date,
-        from startProgress: CGFloat
+        from startProgress: CGFloat? = nil
     ) {
         self.book = book
         self.startDate = startDate
-        self.startProgress = startProgress
+        self.startProgress = startProgress ?? book.readingProgress
     }
 
     public func increment(_ step: TimeInterval) {

@@ -32,20 +32,17 @@ struct RReadingTimeMenu: View {
                             comment: "Picker string for content length/duration"),
                         selection: $readModel.contentLength
                     ) {
-                        ForEach(ReadTime.allCases, id: \.self) { time in
-                            Button {
-                                readModel.contentLength = time
-                            } label: {
-                                Text(time.asString)
-                            }
-
+                        ForEach(ReadTime.allCases, id: \.id) { (time: ReadTime) in
+                            Text(time.asString)
+                                .tag(time.id)
+                                .id(time.id)
                         }
                     }
                 }
                 label: {
                     HStack(spacing: 0) {
                         Group {
-                            Text(readModel.contentLength.asString)
+                            Text(ReadTime(from: readModel.contentLength)!.asString)
                             Text(" Read")
                                 .opacity(0.5)
                                 .padding(.leading, 4)

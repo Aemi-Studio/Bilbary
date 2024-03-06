@@ -14,13 +14,13 @@ struct LibraryBookCard: View {
     var body: some View {
         HStack(spacing: 16) {
 
-            book.progressAsView
+            BBookProgressCover(book: book)
 
             VStack(alignment: .leading, spacing: 8) {
-                Text(book.title ?? "Unknown")
+                Text(book.title)
                     .fontWeight(.bold)
                     .font(.title3)
-                Text(book.author ?? "Unknown")
+                Text(book.author)
                     .fontWeight(.medium)
                     .font(.headline)
             }
@@ -56,10 +56,6 @@ struct LibraryBookCard: View {
             }
             .buttonStyle(.plain)
         }
-        .padding()
-        .background(.regularMaterial)
-        .contentShape(.rect(cornerRadius: 10))
-        .clipShape(.rect(cornerRadius: 10))
+        .cardStyle()
     }
-
 }

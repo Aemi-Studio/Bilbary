@@ -112,7 +112,7 @@ struct RButton<L>: RActionable, View {
                 .background {
                     if self.isUIActive {
                         Rectangle()
-                            .foregroundStyle(.quaternary.opacity(0.5))
+                            .foregroundStyle(Color.userDefinedForeground.quaternary.opacity(0.5))
                             .background(.regularMaterial)
                     } else {
                         Rectangle()
@@ -127,6 +127,7 @@ struct RButton<L>: RActionable, View {
                     RoundedRectangle(cornerRadius: 8)
                 )
             )
+            .contentShape(.rect())
         }
         .opacity(self.isShown ? 1 : 0)
         .buttonStyle(.plain)
@@ -139,6 +140,7 @@ struct RButton<L>: RActionable, View {
         .onRelease {
             self.isActive = false
         }
+        .contentShape(.rect())
         .disabled(!isShown)
     }
 }

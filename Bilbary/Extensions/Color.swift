@@ -76,4 +76,12 @@ extension Color {
         }
     }
 
+    static public var userDefinedBackground: Color {
+        RCustomizerModel.shared.backgroundColor
+    }
+
+    static public var userDefinedForeground: Color {
+        RCustomizerModel.shared.foregroundColor
+    }
+
 }

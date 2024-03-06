@@ -21,8 +21,6 @@ final class BViewModel {
         }
     }
 
-    private let logger: Logger = .init()
-
     public var screenWidth: CGFloat = UIWindow.width
     public var screenHeight: CGFloat = UIWindow.height
 

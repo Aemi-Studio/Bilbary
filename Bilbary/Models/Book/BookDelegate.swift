@@ -83,8 +83,14 @@ internal class BookDelegate: EPUBParserDelegate {
 
 extension BookDelegate {
     static var `default`: BookDelegate = .init(
-        didBeginParsingDocumentAt: { url in
-            Logger.book.info("didBeginParsingDocumentAt: <\(String(describing: url))>")
-        }
+        //        didBeginParsingDocumentAt: { url in
+        //            Logger.book.info("didBeginParsingDocumentAt: <\(String(describing: url))>")
+        //        },
+        //        didLocateContentAt: { url in
+        //            Logger.book.info("didLocateContentAt: <\(String(describing: url))>")
+        //        },
+        //        didFinishParsingSpine: { _ in
+        //            Logger.book.info("didFinishParsingSpine: <\(String(describing: spine))>")
+        //        }
     )
 }

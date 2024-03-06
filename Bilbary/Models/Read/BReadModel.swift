@@ -8,45 +8,49 @@
 import Foundation
 import Combine
 import SwiftData
+import OSLog
 
 @Observable
 final class BReadModel {
     public static let shared: BReadModel = .init()
+
     public static let timerIncrement: TimeInterval = 1
     public static let timer: Publishers.Autoconnect = Timer.publish(
         every: BReadModel.timerIncrement,
         on: .main,
         in: .common
     ).autoconnect()
-    public static let cachedBooks: [Book] = Book.localBooks
-    internal var currentSession: BookProgress? {
-        self.selectedBook?.readingSessions.last
-    }
+    public static let cachedBooks: [URL] = Book.randomBooksURL(30)
+
+    private let storage: BRMStorage = .init()
+
+    internal var currentSession: BookProgress?
+
     public var sessions: [BookProgress]?
-    public var contentLength: ReadTime = .aMin
-    public var selectedBooks: [Book] = BReadModel.cachedBooks
-    public var selectedBook: Book? = BReadModel.cachedBooks.first
-    public var selectedBookID: UUID? {
+    public var contentLength: ReadTime.ID = ReadTime.aMin.id {
+        didSet {
+            self.storage.brmContentLength = self.contentLength
+        }
+    }
+    public var selectedBooks: [Book] = Book.books(from: BReadModel.cachedBooks)
+    public var selectedBook: Book?
+    public var selectedBookHashValue: Int? {
         get {
-            self.selectedBook?.id
+            self.selectedBook?.hashValue
         }
         set {
-            if let old = self.selectedBooks.firstIndex(where: {$0.id == self.selectedBookID}),
-               let new = self.selectedBooks.firstIndex(where: {$0.id == newValue}) {
-                if old < new {
-                    self.addBook(drop: new > 1)
-                }
-            }
             let book = self.selectedBook
-            self.selectedBook = Self.cachedBooks.first(where: { $0.id == newValue })
-            if DataModel.context != nil {
-                self.refresh(
-                    into: DataModel.context!,
-                    oldBook: book,
-                    newBook: self.selectedBook
-                )
+            if newValue != book?.hashValue {
+                self.selectedBook = self.selectedBooks.first(where: { $0.hashValue == newValue })
             }
         }
     }
-    private init() {}
+
+    private init() {
+        self.selectedBook = self.selectedBooks.first
+        if self.selectedBook != nil {
+            self.currentSession = BookProgress(for: self.selectedBook!, startedAt: .now)
+        }
+        self.contentLength = self.storage.brmContentLength
+    }
 }

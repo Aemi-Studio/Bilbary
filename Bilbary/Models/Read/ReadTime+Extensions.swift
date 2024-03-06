@@ -1,5 +1,5 @@
 //
-//  BilbaryTime+String.swift
+//  BilbaryTime+Extensions.swift
 //  iits
 //
 //  Created by Guillaume Coquard on 19/02/24.
@@ -35,6 +35,38 @@ extension ReadTime {
                 "readTime.60min",
                 comment: "Reading Time Goal of 60 minutes"
             )
+        }
+    }
+
+    var id: Int {
+        return switch self {
+        case Self.aMin:
+            0
+        case Self.fiveMin:
+            1
+        case Self.tenMin:
+            2
+        case Self.thirtyMin:
+            3
+        case Self.anHour:
+            4
+        }
+    }
+
+    static func from(_ id: Int) -> Self? {
+        return switch id {
+        case 0:
+            Self.aMin
+        case 1:
+            Self.fiveMin
+        case 2:
+            Self.tenMin
+        case 3:
+            Self.thirtyMin
+        case 4:
+            Self.anHour
+        default:
+            nil
         }
     }
 }

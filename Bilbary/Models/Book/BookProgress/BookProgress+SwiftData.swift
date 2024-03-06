@@ -46,8 +46,7 @@ extension BookProgress {
     ) -> Bool {
         self.endDate = Date.now
         self.endProgress = endProgress
-        self.book.readingSessions.append(self)
-        context.insert(self.book)
+        context.insert(self)
         do {
             try context.save()
         } catch {

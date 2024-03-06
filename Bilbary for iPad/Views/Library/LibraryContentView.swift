@@ -10,7 +10,10 @@ import SwiftUI
 struct LibraryContentView: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
+
+    @State
+    private var customizer: RCustomizerModel = .shared
 
     @State
     private var library: LibraryModel = .shared
@@ -29,6 +32,7 @@ struct LibraryContentView: View {
             }
             Spacer()
         }
+        .scrollClipDisabled()
         .padding(.horizontal)
         .navigationTitle("Library")
         .navigationBarTitleDisplayMode(.automatic)

@@ -11,7 +11,7 @@ struct BBookInfoCardHeaderImageStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .foregroundColor(.foreground)
+            .foregroundStyle(Color.userDefinedForeground)
             .background(.regularMaterial)
             .clipShape(.rect(cornerRadius: 8))
             .shadow(radius: 10)

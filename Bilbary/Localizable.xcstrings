@@ -4,6 +4,9 @@
     "" : {
 
     },
+    " " : {
+
+    },
     " %@" : {
 
     },
@@ -19,9 +22,6 @@
     "%lld" : {
 
     },
-    "1" : {
-
-    },
     "Aa" : {
 
     },
@@ -32,16 +32,59 @@
 
     },
     "book.notStartedYet" : {
-      "comment" : "Text that replaces the book reading duration if book hasn't been started yet."
+      "comment" : "Text that replaces the book reading duration if book hasn't been started yet.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not started yet"
+          }
+        }
+      }
     },
     "book.readEndDate" : {
-      "comment" : "Prefix text to read end date"
+      "comment" : "Prefix text to read end date",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last day"
+          }
+        }
+      }
     },
     "book.readingDurationZero" : {
-      "comment" : "Text that replaces book reading duration when zero"
+      "comment" : "Text that replaces book reading duration when zero",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not started yet"
+          }
+        }
+      }
     },
     "book.readStartDate" : {
-      "comment" : "Prefix text to read start date"
+      "comment" : "Prefix text to read start date",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First day"
+          }
+        }
+      }
+    },
+    "button.streak" : {
+      "comment" : "Streak word display on the interface UI",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Streak"
+          }
+        }
+      }
     },
     "Cater to Your Liking" : {
 
@@ -50,7 +93,14 @@
 
     },
     "Continue" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
     },
     "Customize your pace, time, and content" : {
 
@@ -58,17 +108,52 @@
     "F" : {
 
     },
+    "Font Size" : {
+
+    },
     "goalModel.beNotified" : {
-      "comment" : "Be notified to achieve my goal"
+      "comment" : "Be notified to achieve my goal",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Be notified"
+          }
+        }
+      }
     },
     "goalModel.readTimePicker" : {
-      "comment" : "Picker for Reading Time"
+      "comment" : "Picker for Reading Time",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read for"
+          }
+        }
+      }
     },
     "goalModel.streakDurationPicker" : {
-      "comment" : "Picker for Streak Duration"
+      "comment" : "Picker for Streak Duration",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Streak"
+          }
+        }
+      }
     },
     "goalReadTime.none" : {
-      "comment" : "No reading time goal"
+      "comment" : "No reading time goal",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No goal"
+          }
+        }
+      }
     },
     "goalStreakDuration.7days" : {
       "comment" : "Goal Streak Duration of 7 days or 1 week",
@@ -142,7 +227,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Not set"
+            "value" : "No goal"
           }
         }
       }
@@ -151,16 +236,56 @@
 
     },
     "History" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History"
+          }
+        }
+      }
     },
     "Informations" : {
-      "comment" : "Information about the current open book"
+      "comment" : "Information about the current open book",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informations"
+          }
+        }
+      }
+    },
+    "Kerning" : {
+
+    },
+    "Larger Font Size" : {
+
     },
     "Library" : {
       "comment" : "Library"
     },
+    "library.book.information.view" : {
+      "comment" : "Library pane title when looking at a specific book information",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Book Details"
+          }
+        }
+      }
+    },
     "Like" : {
-      "comment" : "Action of liking, in the context of the current book"
+      "comment" : "Action of liking, in the context of the current book",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like"
+          }
+        }
+      }
     },
     "Like for More" : {
 
@@ -174,17 +299,42 @@
     "Likes" : {
 
     },
+    "Line Height" : {
+
+    },
+    "Looser Kerning" : {
+
+    },
     "M" : {
 
     },
     "metadata.unknown" : {
-      "comment" : "Text to display when metadata is known"
+      "comment" : "Text to display when metadata is known",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown"
+          }
+        }
+      }
     },
     "Not started yet" : {
-
+      "comment" : "Accessibility label for the closed book icon when a book is not started yet"
     },
     "onboarding.continue" : {
-      "comment" : "Continue text on onboarding button"
+      "comment" : "Continue text on onboarding button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "Paragraph Spacing" : {
+
     },
     "readTime.0min" : {
       "comment" : "No Reading Time Goal",
@@ -193,7 +343,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No Limit"
+            "value" : "No goal"
           }
         }
       }
@@ -265,10 +415,16 @@
     "Settings" : {
 
     },
+    "Smaller" : {
+
+    },
+    "Smaller Font Size" : {
+
+    },
     "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
 
     },
-    "Streak" : {
+    "Streak Validated" : {
 
     },
     "Swipe for Different Content" : {
@@ -277,7 +433,13 @@
     "T" : {
 
     },
+    "Taller" : {
+
+    },
     "Text Customization" : {
+
+    },
+    "Tighter Kerning" : {
 
     },
     "Today" : {
@@ -285,9 +447,6 @@
     },
     "Unlike this book" : {
       "comment" : "Library like button is already filled"
-    },
-    "Victor Hugo" : {
-
     },
     "W" : {
 

@@ -15,7 +15,7 @@ struct BBookInfoProgressCardHeader: View {
         HStack(spacing: 16) {
 
             ZStack {
-                book.progressCircle
+                BBookProgressCircle(book: book)
             }
             .cardHeaderImageStyle()
 
@@ -31,7 +31,7 @@ struct BBookInfoProgressCardHeader: View {
                     .font(.title2)
                     .fontWeight(.bold)
                 } else {
-                    Text(Book.format(book.readingTime))
+                    Text(Duration.seconds(book.readingTime).formatted(.time(pattern: .hourMinute)))
                         .font(.title2)
                         .fontWeight(.bold)
                 }
@@ -54,21 +54,19 @@ struct BBookInfoProgressCardHeader: View {
                             )
                             .font(.headline)
                             .fontWeight(.medium)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Color.userDefinedForeground.secondary)
 
                             Text(Book.format(book.readingStartDate!))
                                 .font(.headline)
                                 .fontWeight(.medium)
                         }
                         HStack {
-
                             Text(
                                 NSLocalizedString(
                                     "book.readEndDate",
                                     comment: "Prefix text to read end date"
                                 )
                             )
-
                             Text(Book.format(book.readingEndDate!))
                                 .font(.headline)
                                 .fontWeight(.medium)

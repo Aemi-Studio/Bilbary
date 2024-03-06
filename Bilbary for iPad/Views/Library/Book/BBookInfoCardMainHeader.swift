@@ -24,7 +24,8 @@ struct BBookInfoCardMainHeader: View {
             .bookCoverStyle()
 
             BBookInfoCardHeaderText(
-                title: book.title
+                title: book.title,
+                subtitle: book.author
             )
 
             Spacer()

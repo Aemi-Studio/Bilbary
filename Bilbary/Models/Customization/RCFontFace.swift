@@ -10,6 +10,7 @@ import Foundation
 enum RCFontFace: String, CaseIterable {
     case newYork = "New York"
     case georgia = "Georgia"
+    case publico = "Publico"
     case charter = "Charter"
     case timesNewRoman = "Times New Roman"
     case canela = "Canela"

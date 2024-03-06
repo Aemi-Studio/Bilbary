@@ -11,13 +11,16 @@ import OSLog
 struct BottomBar: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
+
+    @State
+    private var readModel: BReadModel = .shared
 
     private var logger: Logger = .init()
 
     var body: some View {
         RBarRow {
-            RPopover(
+            BPopover(
                 isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString(
                     "Informations",
@@ -28,19 +31,28 @@ struct BottomBar: View {
                 type: .information
 
             ) {
-                HStack {}.frame(width: 200, height: 100)
+                if let book = readModel.selectedBook {
+                    BBookInformationPopover(book: book)
+                } else {
+                    EmptyView()
+                }
             }
         } center: {
             RButton(
-                isShown: .constant(true),
-                title: NSLocalizedString("Like", comment: "Action of liking, in the context of the current book"),
-                systemImage: "heart",
-                systemImageActive: "heart.fill"
+                isShown: .constant(true)
             ) {
-                logger.log("I like that.")
+                readModel.selectedBook?.opinion.toggle()
+            } label: {
+                AnyView(
+                    Label(
+                        NSLocalizedString("Like", comment: "Action of liking, in the context of the current book"),
+                        systemImage: readModel.selectedBook?.opinion == .liked ? "heart.fill" : "heart"
+                    )
+                    .labelStyle(.iconOnly)
+                )
             }
         } trailing: {
-            RPopover(
+            BPopover(
                 isShown: $view.isInterfaceVisible,
                 title: NSLocalizedString("Text Customization", comment: ""),
                 systemImage: "textformat.size",

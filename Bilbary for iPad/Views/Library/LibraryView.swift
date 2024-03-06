@@ -10,7 +10,7 @@ import SwiftUI
 struct LibraryView: View {
 
     @State
-    private var view: RViewModel = .shared
+    private var view: BViewModel = .shared
 
     @State
     private var library: LibraryModel = .shared
@@ -29,6 +29,8 @@ struct LibraryView: View {
                                 LibraryToolbarView()
                             }
                         }
+                        .background(Color.userDefinedBackground)
+                        .foregroundStyle(Color.userDefinedForeground)
                 }
             }
             .frame(width: BConstants.libraryOpenWidth, alignment: .trailing)

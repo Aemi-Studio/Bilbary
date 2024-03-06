@@ -19,24 +19,41 @@ struct GoalStreakView: View {
 
             VStack {
                 HStack {
+                    #if os(iOS)
+                    Text(LocalizedStringKey("goalModel.readTimePicker"))
+                        .fontWeight(.semibold)
+                    Spacer()
+                    #endif
                     Picker(
                         NSLocalizedString("goalModel.readTimePicker", comment: "Picker for Reading Time"),
-                        selection: self.$goalModel.readTime
+                        selection: self.$goalModel.selectedReadTime
                     ) {
-                        ForEach(ReadTime.allCases, id: \.self) { time in
-                            Text(time.asString).tag(time.rawValue)
+                        ForEach(GoalReadTime.allCases, id: \.id) { (time: GoalReadTime) in
+                            Text("\(time.asString)")
+                                .tag(time.id)
+                                .id(time.id)
                         }
                     }
                     .pickerStyle(.menu)
                 }
 
                 HStack {
+                    #if os(iOS)
+                    Text(LocalizedStringKey("goalModel.streakDurationPicker"))
+                        .fontWeight(.semibold)
+                    Spacer()
+                    #endif
                     Picker(
-                        NSLocalizedString("goalModel.streakDurationPicker", comment: "Picker for Streak Duration"),
-                        selection: self.$goalModel.streakDuration
+                        NSLocalizedString(
+                            "goalModel.streakDurationPicker",
+                            comment: "Picker for Streak Duration"
+                        ),
+                        selection: self.$goalModel.selectedStreakDuration
                     ) {
-                        ForEach(GoalStreakDuration.allCases, id: \.self) { duration in
-                            Text(duration.asString).tag(duration.rawValue)
+                        ForEach(GoalStreakDuration.allCases, id: \.id) { (duration: GoalStreakDuration) in
+                            Text("\(duration.asString)")
+                                .tag(duration.id)
+                                .id(duration.id)
                         }
                     }
                     .pickerStyle(.menu)
@@ -45,9 +62,14 @@ struct GoalStreakView: View {
                 HStack {
                     Toggle(isOn: $goalModel.beNotified) {
                         Text(
-                            NSLocalizedString("goalModel.beNotified", comment: "Be notified to achieve my goal")
+                            NSLocalizedString(
+                                "goalModel.beNotified",
+                                comment: "Be notified to achieve my goal"
+                            )
                         )
+                        .fontWeight(.semibold)
                     }
+                    .tint(Color.userDefinedForeground.secondary)
                 }
             }
         }

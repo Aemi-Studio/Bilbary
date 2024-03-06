@@ -10,12 +10,8 @@ import OSLog
 
 struct ContentView: View {
 
-    var book: Book?
-
     @State
-    private var view: RViewModel = .shared
-
-    private let logger: Logger = .views
+    private var view: BViewModel = .shared
 
     var body: some View {
         ScrollView(.horizontal) {
@@ -29,6 +25,8 @@ struct ContentView: View {
                 }
                 .padding(.vertical, 64)
                 .safeAreaPadding()
+                .background(Color.userDefinedBackground)
+                .foregroundStyle(Color.userDefinedForeground)
                 .frame(minWidth: view.screenWidth)
                 .frame(maxWidth: view.screenWidth)
                 .toolbar(.hidden, for: .navigationBar)
@@ -39,7 +37,7 @@ struct ContentView: View {
             .frame(maxWidth: view.screenWidth)
             .fixedSize(horizontal: true, vertical: false)
         }
-        .safeAreaPadding()
+        .scrollContentBackground(.hidden)
         .scrollDisabled(true)
         .contentShape(Rectangle())
         .onTapGesture {
@@ -53,8 +51,4 @@ struct ContentView: View {
             }
         }
     }
-}
-
-#Preview {
-    ContentView(book: nil)
 }

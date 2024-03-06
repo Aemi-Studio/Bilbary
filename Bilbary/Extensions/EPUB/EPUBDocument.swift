@@ -11,71 +11,50 @@ import SwiftSoup
 import OSLog
 
 extension EPUBDocument {
-
-    public var contentDirectoryFiles: [URL]? {
-
-        let url = self.contentDirectory
-        var list: [URL] = []
-
-        guard let bookBundle = Bundle(path: url.path()) else {
-            Logger.epub.error("EPUB bundle at <path:\(url.path())> unresolved.")
-            return nil
-        }
-
-        for ext in ["xhtml", "xhtm", "htm", "html"] {
-            if let urls = bookBundle.urls(
-                forResourcesWithExtension: ".\(ext)",
-                subdirectory: nil
-            ) {
-                list.append(contentsOf: urls)
-            }
-        }
-
-        return list.compactMap { $0.absoluteURL }
-    }
-
-    public var spineFiles: [URL]? {
-
-        guard let files = self.contentDirectoryFiles else {
-            Logger.epub.warning("<\(self.contentDirectory)> Not able to be explored.")
-            return nil
-        }
-
-        return self.spine.items.compactMap { item in
-            files.first(where: { url in
-                do {
-                    return !(
-                        url
-                            .path()
-                            .matches(
-                                of: try Regex(".*(?<file>\(item.idref)\\.(?:x?html?))$")
-                            )
-                            .isEmpty
-                    )
-                } catch {
-                    return false
-                }
-            })
-        }
-    }
-
-    public var content: [String]? {
-        guard let files = self.spineFiles else {
-            Logger.epub.warning("<\(self.contentDirectory)> Mapping with spine not possible.")
-            return nil
-        }
-
-        return files.flatMap { url in
-            do {
-                return try SwiftSoup
-                    .parse(String(contentsOf: url, encoding: .utf8))
-                    .select("p,h1,h2,h3,h4,h5,h6,pre")
-                    .compactMap { try $0.text() }
-            } catch {
-                Logger.epub.error("XML File not loaded")
-            }
+    private var contentFiles: [URL] {
+        guard let bundle = Bundle(path: self.contentDirectory.path()) else {
+            Logger.epub.error("EPUB bundle at <path:\(self.contentDirectory)> unresolved.")
             return []
         }
+        return self.spine.items.compactMap { item in
+            return if let manifestItem = self.manifest.items.first(where: { (_, value) in item.idref == value.id }) {
+                bundle.bundleURL.appendingPathComponent(manifestItem.value.path)
+            } else {
+                nil
+            }
+        }
     }
-
+    public var content: [String] {
+        self.contentFiles
+            .filter {
+                let strippedSections: [String] = [
+                    "title",
+                    "section",
+                    "cover",
+                    "colophon",
+                    "imprint",
+                    "endnote",
+                    "copyright"
+                ]
+                let lastPathComponent = $0.deletingPathExtension().lastPathComponent.lowercased()
+                for strippedSection in strippedSections {
+                    if lastPathComponent.contains(strippedSection) {
+                        return false
+                    }
+                }
+                return true
+            }
+            .flatMap { url in
+                do {
+                    return try SwiftSoup
+                        .parse(String(contentsOf: url, encoding: .utf8))
+                        .select("p,h1,h2,h3,h4,h5,h6,pre")
+                        .compactMap { try $0.text().trimmingCharacters(in: .whitespacesAndNewlines) }
+                        .filter { !$0.isEmpty }
+                } catch {
+                    Logger.epub.error("XML File not loaded")
+                }
+                return []
+            }
+    }
 }

@@ -141,6 +141,8 @@
 		46A5FE4C2B92381C00C46368 /* Bilbary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464F8F112B90E034009102CB /* Bilbary.plist */; };
 		46A5FE4D2B92381C00C46368 /* Bilbary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464F8F112B90E034009102CB /* Bilbary.plist */; };
 		46A5FE502B923CBD00C46368 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 46A5FE4F2B923CBD00C46368 /* SwiftSoup */; };
+		650AFE102C3E8B4700FEA8D0 /* determineHigherValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */; };
+		650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE112C3E8B7B00FEA8D0 /* timerView.swift */; };
 		A07E40472B8CAACE00E5E1F2 /* GenericInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */; };
 		A08CE2952B8CA0960054400D /* GeneralLibraryStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */; };
 		A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
@@ -226,6 +228,8 @@
 		4656F4302B8CD920004DD8BB /* RButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RButton.swift; sourceTree = "<group>"; };
 		4656F4312B8CD920004DD8BB /* RPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPopover.swift; sourceTree = "<group>"; };
 		46A485B82B87392B00C6C7E3 /* EPUBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBView.swift; sourceTree = "<group>"; };
+		650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = determineHigherValue.swift; sourceTree = "<group>"; };
+		650AFE112C3E8B7B00FEA8D0 /* timerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerView.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
 		A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLibraryStructs.swift; sourceTree = "<group>"; };
 		A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookCard.swift; sourceTree = "<group>"; };
@@ -508,6 +512,8 @@
 			isa = PBXGroup;
 			children = (
 				463CEDE52B8559E3001D951C /* Bilbary.swift */,
+				650AFE112C3E8B7B00FEA8D0 /* timerView.swift */,
+				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
 				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
 				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
 			);
@@ -902,7 +908,9 @@
 				463EBC402B9223F300BB9A57 /* ViewModel+ViewModelStorage.swift in Sources */,
 				462E0DFF2B8CD6EE001D2161 /* OnePageOnboardingView.swift in Sources */,
 				463EBC282B92011400BB9A57 /* BookDelegate.swift in Sources */,
+				650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */,
 				463EBC3D2B9223EF00BB9A57 /* UNHelper.swift in Sources */,
+				650AFE102C3E8B4700FEA8D0 /* determineHigherValue.swift in Sources */,
 				463EBC302B9223D900BB9A57 /* RCColor.swift in Sources */,
 				463EBC352B9223D900BB9A57 /* RCFontFace.swift in Sources */,
 				463EBC252B91FA5900BB9A57 /* Book+Hashable.swift in Sources */,
@@ -1156,7 +1164,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = NP94WB3P75;
+				DEVELOPMENT_TEAM = NNZWWH5M7V;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1194,7 +1202,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = NP94WB3P75;
+				DEVELOPMENT_TEAM = NNZWWH5M7V;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

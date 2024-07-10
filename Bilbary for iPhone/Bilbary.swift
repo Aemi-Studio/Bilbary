@@ -9,9 +9,32 @@ import SwiftUI
 
 @main
 struct Bilbary: App {
-    var body: some Scene {
-        WindowGroup {
-            BilbaryView()
-        }
-    }
-}
+    @StateObject private var appUsageTracker = AppUsageTracker()
+
+      @Environment(\.scenePhase) private var scenePhase
+
+      var body: some Scene {
+          WindowGroup {
+              TimerView()
+                  .environmentObject(appUsageTracker)
+                  .onAppear {
+                      appUsageTracker.startSession()
+                  }
+                  .onDisappear {
+                      appUsageTracker.endSession()
+                  }
+          }
+          .onChange(of: scenePhase) { newPhase in
+              switch newPhase {
+              case .active:
+                  appUsageTracker.resumeSession()
+              case .inactive:
+                  appUsageTracker.pauseSession()
+              case .background:
+                  appUsageTracker.pauseSession()
+              @unknown default:
+                  break
+              }
+          }
+      }
+  }

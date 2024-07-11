@@ -1,0 +1,42 @@
+//
+//  AppModel.swift
+//  Bilbary for iPhone
+//
+//  Created by Guillaume Coquard on 11/07/24.
+//
+
+import Foundation
+import SwiftUI
+import SwiftData
+
+@Model
+class ReadSession: Identifiable {
+
+    typealias ID = UUID
+
+    @Attribute(.unique)
+    let id: ID = ID()
+
+    let startTime: Date
+    private(set) var endTime: Date?
+
+    init() {
+        self.startTime = .now
+    }
+
+    func end() -> Self {
+        self.endTime = .now
+        return self
+    }
+
+}
+
+@MainActor
+let AppModelContainer: ModelContainer = {
+    do {
+        let container = try ModelContainer(for: ReadSession.self)
+        return container
+    } catch {
+        fatalError("Failed to create container")
+    }
+}()

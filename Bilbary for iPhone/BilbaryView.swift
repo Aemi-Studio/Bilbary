@@ -6,14 +6,32 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct BilbaryView: View {
+
+    @Environment(\.modelContext)
+    private var context
+
+    @Environment(AppUsageTracker.self)
+    private var appUsageTracker
 
     @State
     private var detent: PresentationDetent = .height(64)
 
     @State
     private var tabBarShown: Bool = false
+
+    @Environment(\.scenePhase)
+    private var scenePhase
+
+    @Query
+    private var sessions: [ReadSession]
+
+    private var timer = Timer.publish(every: 0.1, on: .main, in: .default).autoconnect()
+
+    @State
+    private var timeSpent: TimeInterval?
 
     let columns: [GridItem] = [
         .init(.flexible(minimum: 0, maximum: .infinity), alignment: .center),
@@ -70,7 +88,16 @@ struct BilbaryView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
 
                     ScrollView {
+
                         VStack {
+                            if let timeSpent = timeSpent {
+                                VStack {
+                                    Text(timeSpent, format: .number.rounded(rule: .toNearestOrEven, increment: 1))
+                                        .padding()
+                                    Text("\(sessions.count) sessions")
+                                        .padding()
+                                }
+                            }
                             HStack {
                                 Text("Library")
                                     .font(.largeTitle)
@@ -98,7 +125,23 @@ struct BilbaryView: View {
             .presentationCompactAdaptation(.automatic)
             .interactiveDismissDisabled()
         }
-
+        .onReceive(self.timer) { _ in
+            timeSpent = appUsageTracker.computeTimeSpentToday(sessions)
+        }
+        .onAppear {
+            appUsageTracker.startSession(to: context)
+        }
+        .onDisappear {
+            appUsageTracker.endSession(to: context)
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            switch newPhase {
+            case .active:
+                appUsageTracker.startSession(to: context)
+            default:
+                appUsageTracker.endSession(to: context)
+            }
+        }
     }
 }
 

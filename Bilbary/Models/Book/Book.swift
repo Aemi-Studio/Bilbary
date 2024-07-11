@@ -53,7 +53,7 @@ struct Book: Identifiable {
             Logger.book.warning("EPUB could not be created for <\(String(describing: url))>")
             return nil
         }
-        
+
         self.cover = BookCover(url: document.cover)
         self.content = BookContent(from: document.content)
     }

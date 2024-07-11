@@ -6,62 +6,45 @@
 //
 import SwiftUI
 import Combine
+import SwiftData
 
-class AppUsageTracker: ObservableObject {
-    private var timer: Timer?
-    private var startDate: Date?
-    private var accumulatedTime: TimeInterval = 0
-    
-    @Published var totalTimeSpent: TimeInterval = 0
-    
-    func startSession() {
-        startDate = Date()
-        startTimer()
+@Observable
+class AppUsageTracker {
+
+    var currentSession: ReadSession?
+
+    func startSession(to context: ModelContext) {
+        guard currentSession == nil else { return }
+        currentSession = .init()
     }
-    
-    func endSession() {
-        stopTimer()
-        saveAccumulatedTime()
-    }
-    
-    func resumeSession() {
-        if let startDate = startDate {
-            accumulatedTime += Date().timeIntervalSince(startDate)
+
+    func endSession(to context: ModelContext) {
+        if let currentSession = currentSession {
+            context.insert(currentSession.end())
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
-        startTimer()
+        self.currentSession = nil
     }
-    
-    func pauseSession() {
-        if let startDate = startDate {
-            accumulatedTime += Date().timeIntervalSince(startDate)
+
+    func computeTimeSpentToday(_ sessions: ReadSession...) -> TimeInterval {
+        self.computeTimeSpentToday(sessions)
+    }
+
+    func computeTimeSpentToday(_ sessions: [ReadSession]) -> TimeInterval {
+        var duration: TimeInterval = 0
+        for session in sessions {
+            if let endTime = session.endTime {
+                duration += session.startTime.distance(to: endTime)
+            }
         }
-        stopTimer()
-    }
-    
-    private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            self?.updateTotalTime()
+        if let currentSession = currentSession {
+            duration += currentSession.startTime.distance(to: .now)
         }
+        return duration
     }
-    
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    private func updateTotalTime() {
-        if let startDate = startDate {
-            totalTimeSpent = accumulatedTime + Date().timeIntervalSince(startDate)
-        }
-    }
-    
-    private func saveAccumulatedTime() {
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(totalTimeSpent, forKey: "totalTimeSpent")
-    }
-    
-    func loadTotalTimeSpent() {
-        let userDefaults = UserDefaults.standard
-        totalTimeSpent = userDefaults.double(forKey: "totalTimeSpent")
-    }
+
 }

@@ -17,6 +17,9 @@ struct BilbaryView: View {
     private var appUsageTracker
 
     @State
+    private var coordinator = Coordinator()
+
+    @State
     private var detent: PresentationDetent = .height(64)
 
     @State
@@ -41,79 +44,34 @@ struct BilbaryView: View {
         .init(.flexible(minimum: 0, maximum: .infinity), alignment: .center)
     ]
 
+    @State
+    private var sheetOffset: Double = 100
     var body: some View {
         ZStack {
-            VStack {
-                Spacer()
-                Text("Book Content")
-                Spacer()
-            }
-            .onTapGesture {
-                tabBarShown.toggle()
+            ZStack {
+                VStack {
+                    Spacer()
+                    EPUBView()
+                    Spacer()
+                }.padding()
+                .onTapGesture {
+                    tabBarShown.toggle()
+                    if tabBarShown {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            sheetOffset = 0
+                        }
+                    } else {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            sheetOffset = 100
+                        }
+                    }
+                }
             }
             CustomSheetView()
+                .offset(y: sheetOffset)
+                .environment(coordinator)
         }
-        //        .sheet(isPresented: $tabBarShown) {
-        //            ScrollView(.vertical) {
-        //
-        //                LazyVGrid(columns: columns) {
-        //                    TabButtonItem(
-        //                        title: "Book",
-        //                        systemImage: "book"
-        //                    )
-        //                    TabButtonItem(
-        //                        title: "Reading Time",
-        //                        systemImage: "hourglass"
-        //                    )
-        //                    TabButtonItem(
-        //                        title: "Like",
-        //                        systemImage: "heart"
-        //                    )
-        //                    TabButtonItem(
-        //                        title: "Streak Goal",
-        //                        systemImage: "circlebadge.2"
-        //                    )
-        //                    TabButtonItem(
-        //                        title: "Book",
-        //                        systemImage: "textformat.size"
-        //                    )
-        //                }
-        //                .padding()
-        //
-        //                VStack(spacing: 16) {
-        //
-        //                    VStack {
-        //                        EmptyView()
-        //                    }
-        //                    .frame(maxWidth: .infinity)
-        //                    .frame(height: 200)
-        //                    .background(.regularMaterial)
-        //                    .clipShape(RoundedRectangle(cornerRadius: 8))
-        //
-        //                    ScrollView {
-        //
-        //                        VStack {
-        //                            if let timeSpent = timeSpent {
-        //                                VStack {
-        //                                    Text(timeSpent, format: .number.rounded(rule: .toNearestOrEven, increment: 1))
-        //                                        .padding()
-        //                                    Text("\(sessions.count) sessions")
-        //                                        .padding()
-        //                                }
-        //                            }
-        //                            HStack {
-        //                                Text("Library")
-        //                                    .font(.largeTitle)
-        //                                    .fontWeight(.bold)
-        //                                Spacer()
-        //                            }
-        //                            Spacer()
-        //                        }
-        //                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        //                    }
-        //                }
-        //                .padding()
-        //            }
+
         //            .scrollDisabled(true)
         //            .background(.black.opacity(0.5))
         //            .background(.ultraThinMaterial)
@@ -128,23 +86,7 @@ struct BilbaryView: View {
         //            .presentationCompactAdaptation(.automatic)
         //            .interactiveDismissDisabled()
         //        }
-        .onReceive(self.timer) { _ in
-            timeSpent = appUsageTracker.computeTimeSpentToday(sessions)
-        }
-        .onAppear {
-            appUsageTracker.startSession(to: context)
-        }
-        .onDisappear {
-            appUsageTracker.endSession(to: context)
-        }
-        .onChange(of: scenePhase) { _, newPhase in
-            switch newPhase {
-            case .active:
-                appUsageTracker.startSession(to: context)
-            default:
-                appUsageTracker.endSession(to: context)
-            }
-        }
+
     }
 }
 

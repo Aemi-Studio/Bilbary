@@ -7,13 +7,11 @@
 
 import Foundation
 
-
 import OSLog
 extension Book {
     static internal let logger: Logger = .init()
     static internal let delegate: BookDelegate = .default
 }
-
 
 import UniformTypeIdentifiers
 extension Book {
@@ -31,5 +29,5 @@ extension Book {
     public static var localBooks: [Book] {
         self.localBooksUrls.compactMap(Book.init)
     }
-    
+
 }

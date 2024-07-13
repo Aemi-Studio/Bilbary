@@ -63,9 +63,9 @@ struct CustomButton: View {
             .foregroundColor(colorScheme == .dark ? .white : .black) // Foreground color
             .cornerRadius(8)
             .overlay(
-                 RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.primary, lineWidth: 0.2)
-             )
+            )
             .padding(.all, 7)
         }
     }

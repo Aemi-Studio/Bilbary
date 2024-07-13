@@ -39,7 +39,7 @@ final class RViewModel {
                     self.libraryWidth = BConstants.libraryClosedWidth
                 }
                 self.setPopover(to: .none)
-            }else{
+            } else {
                 withAnimation {
                     self.libraryWidth = BConstants.libraryOpenWidth
                 }

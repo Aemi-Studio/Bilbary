@@ -63,7 +63,7 @@ struct BookInformationView: View {
                 GenericInfoCard(onTap: {}, title: "Odes & Ballades", subTitle: "1802 - 1885", contentText: "\"Le Géant\" is a poem by Victor Hugo in which the speaker is a giant, metaphorically representing great individual power. The giant recounts his life of strength and adventure, from his upbringing in harsh environments, through bouts with nature's elements and beasts, to his enjoyment of warfare. He proudly describes his ability to wield power without any armored protection. In the end, he acknowledges the inevitability of his own death and expresses a wish to be buried among majestic mountains so sublime that people will wonder which one serves as his tomb.", nameImage: "person.fill", number: 0)
 
                 Text("")
-                .padding(.horizontal, 30)
+                    .padding(.horizontal, 30)
             }
             .frame(minWidth: BConstants.libraryOpenWidth)
             .frame(maxWidth: BConstants.libraryOpenWidth)

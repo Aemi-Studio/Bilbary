@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct BookPlaceholder: Hashable  {
-    
+struct BookPlaceholder: Hashable {
+
     let url: URL?
 
     init(from url: URL?) {

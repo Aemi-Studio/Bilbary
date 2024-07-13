@@ -16,6 +16,9 @@ struct TabButtonItem: View {
     var systemImage: String = "circle.dotted"
     var action: (() -> Void)?
 
+    @Environment(SheetCoordinator.self)
+    private var observer
+
     var body: some View {
         Button {
             action?()
@@ -29,12 +32,14 @@ struct TabButtonItem: View {
                         .font(.title3)
                         .fontWeight(.medium)
                         .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+
                 }
                 .overlay {
                     Image(systemName: systemImage)
                         .font(.title3)
                         .fontWeight(.medium)
                         .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        .gesture(dragSheetGesture(observer: observer))
                 }
 
                 Label(title, systemImage: systemImage)

@@ -13,7 +13,7 @@ struct CustomSheetView: View {
     @Environment(\.modelContext)
     private var context
 
-    @Environment(Coordinator.self)
+    @Environment(SheetCoordinator.self)
     private var coordinator
 
     @Environment(AppUsageTracker.self)
@@ -29,22 +29,6 @@ struct CustomSheetView: View {
 
     @State
     private var timeSpent: TimeInterval?
-
-    let screenHeight = UIScreen.main.bounds.height
-    let screenWidth = UIScreen.main.bounds.width
-
-    @State
-    private var offset: Double = UIScreen.main.bounds.height * 0.85
-
-    @State
-    private var previuosOffset: CGFloat = 0
-
-    @State
-    private var dragOffset: CGFloat = 0
-
-    private let minHeight: CGFloat = UIScreen.main.bounds.height * 0.03
-    private let maxHeight: CGFloat = UIScreen.main.bounds.height * 0.85
-    private let heightFactor: Double = 0.8
 
     let columns: [GridItem] = [
         .init(.flexible(minimum: 0, maximum: .infinity), alignment: .center),
@@ -63,22 +47,32 @@ struct CustomSheetView: View {
                     TabButtonItem(
                         title: "Book",
                         systemImage: "book"
+                    ).gesture(
+                        dragSheetGesture(observer: coordinator)
                     )
                     TabButtonItem(
                         title: "Reading Time",
                         systemImage: "hourglass"
+                    ).gesture(
+                        dragSheetGesture(observer: coordinator)
                     )
                     TabButtonItem(
                         title: "Like",
                         systemImage: "heart"
+                    ).gesture(
+                        dragSheetGesture(observer: coordinator)
                     )
                     TabButtonItem(
                         title: "Streak Goal",
                         systemImage: "circlebadge.2"
+                    ).gesture(
+                        dragSheetGesture(observer: coordinator)
                     )
                     TabButtonItem(
                         title: "Book",
                         systemImage: "textformat.size"
+                    ).gesture(
+                        dragSheetGesture(observer: coordinator)
                     )
 
                 }
@@ -139,42 +133,9 @@ struct CustomSheetView: View {
         }
         .background(.ultraThinMaterial)
         .cornerRadius(20.0)
-        .offset(y: offset)
+        .offset(y: coordinator.offset)
         .gesture(
-            DragGesture()
-                .onChanged { gesture in
-                    let delta = gesture.translation.height - previuosOffset
-                    dragOffset = delta
-
-                    let newOffset = (offset + dragOffset)
-                        .clamped(to: minHeight...maxHeight)
-
-                    self.previuosOffset = gesture.translation.height
-
-                    withAnimation(.easeInOut(duration: 0.2)) {
-                        offset = newOffset
-                    }
-                }
-                .onEnded { _ in
-                    var endOffset: CGFloat = offset
-                    if dragOffset < -20 ||
-                        offset < screenHeight * 0.37 {
-                        endOffset = screenHeight * (heightFactor / 10)
-                    } else if dragOffset >= 20 ||
-                                (offset < screenHeight && offset > screenHeight * 0.65) {
-                        endOffset =  maxHeight
-                    } else if (dragOffset <= 10 && dragOffset >= -20) ||
-                                (offset <= screenHeight * 0.65 && offset >= screenHeight * 0.37) {
-                        endOffset = screenHeight * heightFactor / 1.9
-                    }
-
-                    withAnimation(.interpolatingSpring( stiffness: 300, damping: 30)) {
-                        offset = endOffset
-                        dragOffset = 0
-                        previuosOffset = 0
-                    }
-
-                }
+            dragSheetGesture(observer: coordinator)
         )
 
     }

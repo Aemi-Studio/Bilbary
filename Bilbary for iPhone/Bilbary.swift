@@ -18,6 +18,7 @@ struct Bilbary: App {
         WindowGroup {
             BilbaryView()
                 .environment(appUsageTracker)
+
         }
         .modelContainer(AppModelContainer)
     }

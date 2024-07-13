@@ -24,8 +24,8 @@ struct Bilbary: App {
                       appUsageTracker.endSession()
                   }
           }
-          .onChange(of: scenePhase) { newPhase in
-              switch newPhase {
+          .onChange(of: scenePhase) {
+              switch scenePhase {
               case .active:
                   appUsageTracker.resumeSession()
               case .inactive:

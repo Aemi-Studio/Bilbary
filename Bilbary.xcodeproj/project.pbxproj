@@ -144,6 +144,14 @@
 		46A5FE502B923CBD00C46368 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 46A5FE4F2B923CBD00C46368 /* SwiftSoup */; };
 		650AFE102C3E8B4700FEA8D0 /* determineHigherValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */; };
 		650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE112C3E8B7B00FEA8D0 /* timerView.swift */; };
+		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
+		65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DD42B87E216001D2161 /* RActionable.swift */; };
+		65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
+		65BCDC532C42CF4C0064FBBD /* RButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4302B8CD920004DD8BB /* RButton.swift */; };
+		65BCDC542C42CF510064FBBD /* RBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DC42B877C78001D2161 /* RBarRow.swift */; };
+		65BCDC552C42CF550064FBBD /* RReadingTimeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DDD2B8893A4001D2161 /* RReadingTimeMenu.swift */; };
+		65BCDC572C42E5D60064FBBD /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */; };
+		65BCDC592C42EF860064FBBD /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCDC582C42EF860064FBBD /* extensions.swift */; };
 		A07E40472B8CAACE00E5E1F2 /* GenericInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */; };
 		A08CE2952B8CA0960054400D /* GeneralLibraryStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */; };
 		A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
@@ -232,6 +240,8 @@
 		46A485B82B87392B00C6C7E3 /* EPUBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBView.swift; sourceTree = "<group>"; };
 		650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = determineHigherValue.swift; sourceTree = "<group>"; };
 		650AFE112C3E8B7B00FEA8D0 /* timerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerView.swift; sourceTree = "<group>"; };
+		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
+		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
 		A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLibraryStructs.swift; sourceTree = "<group>"; };
 		A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookCard.swift; sourceTree = "<group>"; };
@@ -516,6 +526,8 @@
 				463CEDE52B8559E3001D951C /* Bilbary.swift */,
 				650AFE112C3E8B7B00FEA8D0 /* timerView.swift */,
 				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
+				65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */,
+				65BCDC582C42EF860064FBBD /* extensions.swift */,
 				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
 				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
 				46724EBA2C40614B009254EB /* AppModel.swift */,
@@ -862,21 +874,28 @@
 				464F8F372B913DB0009102CB /* Book+Static.swift in Sources */,
 				463EBC3F2B9223F300BB9A57 /* RViewModel.swift in Sources */,
 				464F8F532B91BD2E009102CB /* BookPlaceholder.swift in Sources */,
+				65BCDC552C42CF550064FBBD /* RReadingTimeMenu.swift in Sources */,
 				463EBC2C2B9223CF00BB9A57 /* BookError.swift in Sources */,
+				65BCDC572C42E5D60064FBBD /* CustomSheetView.swift in Sources */,
 				462E0DD32B87B172001D2161 /* ViewModel+PopoverType.swift in Sources */,
 				463EBC332B9223D900BB9A57 /* RCScheme.swift in Sources */,
 				464F8F502B9144F7009102CB /* EPUBDocument+Compression.swift in Sources */,
 				463EBC372B9223E300BB9A57 /* GoalModel.swift in Sources */,
+				65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */,
+				65BCDC592C42EF860064FBBD /* extensions.swift in Sources */,
 				464F8F2F2B913BB4009102CB /* UIWindow.swift in Sources */,
 				462E0DD92B87E9B1001D2161 /* PressActions.swift in Sources */,
 				463CEDF22B855D00001D951C /* TabButtonItem.swift in Sources */,
+				65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */,
 				463EBC3A2B9223E800BB9A57 /* PermissionsModel.swift in Sources */,
+				65BCDC532C42CF4C0064FBBD /* RButton.swift in Sources */,
 				463EBC2D2B9223CF00BB9A57 /* Book.swift in Sources */,
 				463EBC2E2B9223D900BB9A57 /* RCustomizerModel+RCustomizerModelStorage.swift in Sources */,
 				463EBC362B9223E300BB9A57 /* GoalModelStorage.swift in Sources */,
 				462E0DF12B88A87C001D2161 /* GoalReadTime.swift in Sources */,
 				463EBC1F2B91F7A400BB9A57 /* Book+BookContent.swift in Sources */,
 				463EBC222B91FA3500BB9A57 /* Book+Equatable.swift in Sources */,
+				65BCDC542C42CF510064FBBD /* RBarRow.swift in Sources */,
 				463EBC392B9223E300BB9A57 /* GoalStreakDuration.swift in Sources */,
 				46724EBB2C40614B009254EB /* AppModel.swift in Sources */,
 				463EBC312B9223D900BB9A57 /* RCPreset.swift in Sources */,
@@ -888,6 +907,7 @@
 				463EBC1C2B91DD4800BB9A57 /* Book+BookCover.swift in Sources */,
 				4606E0702B92321D00D77205 /* BConstants.swift in Sources */,
 				463EBC3C2B9223EC00BB9A57 /* ReadTime+String.swift in Sources */,
+				65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */,
 				464F8F482B9144DA009102CB /* NotificationCenter.swift in Sources */,
 				464F8F462B9144DA009102CB /* Notification.Name.swift in Sources */,
 				462E0DED2B88A7C4001D2161 /* GoalReadTime+String.swift in Sources */,
@@ -1061,7 +1081,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = NP94WB3P75;
+				DEVELOPMENT_TEAM = NNZWWH5M7V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1085,7 +1105,7 @@
 				LINKER_DISPLAYS_MANGLED_NAMES = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = studio.aemi.ada23.trial.gcqd.0.iits.Read;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShoxMamadaliev.Fedora.bilbary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1107,7 +1127,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = NP94WB3P75;
+				DEVELOPMENT_TEAM = NNZWWH5M7V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1131,7 +1151,7 @@
 				LINKER_DISPLAYS_MANGLED_NAMES = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = studio.aemi.ada23.trial.gcqd.0.iits.Read;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShoxMamadaliev.Fedora.bilbary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1152,7 +1172,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = NP94WB3P75;
+				DEVELOPMENT_TEAM = NNZWWH5M7V;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1169,7 +1189,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = studio.aemi.ada23.trial.gcqd.Bilbary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShoxMamadaliev.Fedora.bilbary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1190,7 +1210,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = NP94WB3P75;
+				DEVELOPMENT_TEAM = NNZWWH5M7V;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1207,7 +1227,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = studio.aemi.ada23.trial.gcqd.Bilbary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShoxMamadaliev.Fedora.bilbary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

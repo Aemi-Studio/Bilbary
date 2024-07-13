@@ -19,6 +19,7 @@ struct TabButtonItem: View {
     var body: some View {
         Button {
             action?()
+
         } label: {
             VStack(spacing: 8) {
 

@@ -214,7 +214,7 @@
 		463CEDE32B8559E3001D951C /* Bilbary for iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bilbary for iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463CEDE52B8559E3001D951C /* Bilbary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bilbary.swift; sourceTree = "<group>"; };
 		463CEDF12B855D00001D951C /* TabButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonItem.swift; sourceTree = "<group>"; };
-		463CEDF92B8569BE001D951C /* BilbaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilbaryView.swift; sourceTree = "<group>"; };
+		463CEDF92B8569BE001D951C /* BilbaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilbaryView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		463EBC172B91CE9400BB9A57 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		463EBC1A2B91DD4800BB9A57 /* Book+BookCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+BookCover.swift"; sourceTree = "<group>"; };
 		463EBC1D2B91F7A400BB9A57 /* Book+BookContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+BookContent.swift"; sourceTree = "<group>"; };

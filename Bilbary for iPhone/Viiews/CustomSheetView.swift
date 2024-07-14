@@ -31,7 +31,7 @@ struct CustomSheetView: View {
 
     var body: some View {
         ZStack {
-            Rectangle().fill((.black.opacity(0.5)))
+            Spacer()
 
             VStack {
                 TabGridView()
@@ -43,8 +43,9 @@ struct CustomSheetView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 200)
-                    .background(.regularMaterial)
+                    .background(.bar)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .padding()
 
                     ScrollView {
 
@@ -62,7 +63,7 @@ struct CustomSheetView: View {
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
                                 Spacer()
-                            }
+                            } .padding()
                             Spacer()
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)

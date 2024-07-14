@@ -18,15 +18,18 @@ struct BilbaryView: View {
                 VStack {
                     //                    Spacer()
                     EPUBView()
+
+
                     //                    Spacer()
-                }.padding()
+                }
+
                 .onTapGesture {
                     coordinator.tabBarShown.toggle()
                 }
             }
             CustomSheetView()
                 .environment(coordinator)
-        }
+        }.ignoresSafeArea(edges: [.bottom, .horizontal])
     }
 }
 

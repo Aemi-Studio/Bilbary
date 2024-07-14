@@ -11,10 +11,11 @@ import SwiftUI
 class SheetCoordinator {
     var sheetPhase: SheetPhases = .bottom
 
-    enum SheetPhases {
-        case bottom
-        case centre
-        case top
+    enum SheetPhases: CGFloat {
+        case hide = 1.1
+        case bottom = 0.85
+        case centre = 0
+        case top = 8
     }
 
     var tabBarShown: Bool = false

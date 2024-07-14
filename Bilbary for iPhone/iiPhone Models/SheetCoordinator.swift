@@ -17,9 +17,10 @@ class SheetCoordinator {
         case top
     }
 
+    var tabBarShown: Bool = false
     var sheetOffset: Double = 0
 
-    var offset: Double = UIScreen.main.bounds.height * 0.8
+    var offset: Double = UIScreen.main.bounds.height * 1.1
     var offsetAnchor: CGFloat?
 
     var deltaOffset: CGFloat = 0

@@ -89,6 +89,20 @@ struct CustomSheetView: View {
                 appUsageTracker.endSession(to: context)
             }
         }
+        .onChange(of: coordinator.tabBarShown) {
+            if coordinator.tabBarShown {
+
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    coordinator.offset = UIScreen.main.bounds.height * 0.85
+                }
+            } else {
+
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    coordinator.offset = UIScreen.main.bounds.height * 1.1
+
+                }
+            }
+        }
         .background(.ultraThinMaterial)
         .cornerRadius(20.0)
         .offset(y: coordinator.offset)

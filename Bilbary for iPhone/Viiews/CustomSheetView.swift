@@ -105,7 +105,11 @@ struct CustomSheetView: View {
             }
         }
         .background(.ultraThinMaterial)
-        .cornerRadius(20.0)
+        .clipShape(
+            .rect(
+                cornerRadii: .init(topLeading: 16.0, bottomLeading: 0, bottomTrailing: 0, topTrailing: 16.0)
+            )
+        )
         .offset(y: coordinator.offset)
         .gesture(
             dragSheetGesture(observer: coordinator)

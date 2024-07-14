@@ -19,7 +19,6 @@ struct BilbaryView: View {
                     //                    Spacer()
                     EPUBView()
 
-
                     //                    Spacer()
                 }
 

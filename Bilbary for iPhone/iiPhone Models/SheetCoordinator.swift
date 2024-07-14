@@ -20,7 +20,9 @@ class SheetCoordinator {
     var sheetOffset: Double = 0
 
     var offset: Double = UIScreen.main.bounds.height * 0.8
-    var previuosOffset: CGFloat = 0
+    var offsetAnchor: CGFloat?
+
+    var deltaOffset: CGFloat = 0
     var dragOffset: CGFloat = 0
 
     let screenHeight = UIScreen.main.bounds.height

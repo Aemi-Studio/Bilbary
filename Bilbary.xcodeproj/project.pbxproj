@@ -145,8 +145,8 @@
 		650AFE102C3E8B4700FEA8D0 /* determineHigherValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */; };
 		650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE112C3E8B7B00FEA8D0 /* timerView.swift */; };
 		650C44C72C43239100F414A7 /* SheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44C62C43239100F414A7 /* SheetCoordinator.swift */; };
-		650C44C92C432C9A00F414A7 /* CustomSheetDrugGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44C82C432C9A00F414A7 /* CustomSheetDrugGesture.swift */; };
 		650C44CB2C43DE8400F414A7 /* TabGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44CA2C43DE8400F414A7 /* TabGridView.swift */; };
+		650C44D32C43EC9F00F414A7 /* CustomSheetDrugGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */; };
 		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
 		65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DD42B87E216001D2161 /* RActionable.swift */; };
 		65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
@@ -244,8 +244,8 @@
 		650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = determineHigherValue.swift; sourceTree = "<group>"; };
 		650AFE112C3E8B7B00FEA8D0 /* timerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerView.swift; sourceTree = "<group>"; };
 		650C44C62C43239100F414A7 /* SheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCoordinator.swift; sourceTree = "<group>"; };
-		650C44C82C432C9A00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
 		650C44CA2C43DE8400F414A7 /* TabGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGridView.swift; sourceTree = "<group>"; };
+		650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
@@ -529,17 +529,9 @@
 		463CEDE42B8559E3001D951C /* Bilbary for iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				650C44CF2C43E1A100F414A7 /* iiPhone Models */,
+				650C44CC2C43E14200F414A7 /* Viiews */,
 				463CEDE52B8559E3001D951C /* Bilbary.swift */,
-				650AFE112C3E8B7B00FEA8D0 /* timerView.swift */,
-				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
-				65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */,
-				650C44CA2C43DE8400F414A7 /* TabGridView.swift */,
-				65BCDC582C42EF860064FBBD /* extensions.swift */,
-				650C44C82C432C9A00F414A7 /* CustomSheetDrugGesture.swift */,
-				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
-				650C44C62C43239100F414A7 /* SheetCoordinator.swift */,
-				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
-				46724EBA2C40614B009254EB /* AppModel.swift */,
 			);
 			path = "Bilbary for iPhone";
 			sourceTree = "<group>";
@@ -611,6 +603,30 @@
 				46A485B82B87392B00C6C7E3 /* EPUBView.swift */,
 			);
 			path = EPUB;
+			sourceTree = "<group>";
+		};
+		650C44CC2C43E14200F414A7 /* Viiews */ = {
+			isa = PBXGroup;
+			children = (
+				650C44CA2C43DE8400F414A7 /* TabGridView.swift */,
+				65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */,
+				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
+				650AFE112C3E8B7B00FEA8D0 /* timerView.swift */,
+			);
+			path = Viiews;
+			sourceTree = "<group>";
+		};
+		650C44CF2C43E1A100F414A7 /* iiPhone Models */ = {
+			isa = PBXGroup;
+			children = (
+				650C44C62C43239100F414A7 /* SheetCoordinator.swift */,
+				650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */,
+				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
+				65BCDC582C42EF860064FBBD /* extensions.swift */,
+				46724EBA2C40614B009254EB /* AppModel.swift */,
+				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
+			);
+			path = "iiPhone Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -898,7 +914,7 @@
 				463CEDF22B855D00001D951C /* TabButtonItem.swift in Sources */,
 				65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */,
 				463EBC3A2B9223E800BB9A57 /* PermissionsModel.swift in Sources */,
-				650C44C92C432C9A00F414A7 /* CustomSheetDrugGesture.swift in Sources */,
+				650C44D32C43EC9F00F414A7 /* CustomSheetDrugGesture.swift in Sources */,
 				65BCDC532C42CF4C0064FBBD /* RButton.swift in Sources */,
 				463EBC2D2B9223CF00BB9A57 /* Book.swift in Sources */,
 				463EBC2E2B9223D900BB9A57 /* RCustomizerModel+RCustomizerModelStorage.swift in Sources */,

@@ -22,9 +22,9 @@ struct BilbaryView: View {
         ZStack {
             ZStack {
                 VStack {
-                    Spacer()
+                    //                    Spacer()
                     EPUBView()
-                    Spacer()
+                    //                    Spacer()
                 }.padding()
                 .onTapGesture {
                     tabBarShown.toggle()

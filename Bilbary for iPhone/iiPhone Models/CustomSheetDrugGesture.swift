@@ -11,13 +11,13 @@ extension View {
     func dragSheetGesture(observer: SheetCoordinator) -> some Gesture {
         DragGesture()
             .onChanged { gesture in
-                let delta = gesture.translation.height - observer.previuosOffset
+                let delta = gesture.translation.height - observer.deltaOffset
                 observer.dragOffset = delta
 
                 let newOffset = (observer.offset + observer.dragOffset)
                     .clamped(to: observer.minHeight...observer.maxHeight)
 
-                observer.self.previuosOffset = gesture.translation.height
+                observer.deltaOffset = gesture.translation.height
 
                 withAnimation(.easeInOut(duration: 0.2)) {
                     observer.offset = newOffset
@@ -39,7 +39,7 @@ extension View {
                 withAnimation(.interpolatingSpring( stiffness: 300, damping: 30)) {
                     observer.offset = endOffset
                     observer.dragOffset = 0
-                    observer.previuosOffset = 0
+                    observer.deltaOffset = 0
                 }
 
             }

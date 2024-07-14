@@ -146,6 +146,7 @@
 		650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE112C3E8B7B00FEA8D0 /* timerView.swift */; };
 		650C44C72C43239100F414A7 /* SheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44C62C43239100F414A7 /* SheetCoordinator.swift */; };
 		650C44C92C432C9A00F414A7 /* CustomSheetDrugGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44C82C432C9A00F414A7 /* CustomSheetDrugGesture.swift */; };
+		650C44CB2C43DE8400F414A7 /* TabGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44CA2C43DE8400F414A7 /* TabGridView.swift */; };
 		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
 		65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DD42B87E216001D2161 /* RActionable.swift */; };
 		65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
@@ -244,6 +245,7 @@
 		650AFE112C3E8B7B00FEA8D0 /* timerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerView.swift; sourceTree = "<group>"; };
 		650C44C62C43239100F414A7 /* SheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCoordinator.swift; sourceTree = "<group>"; };
 		650C44C82C432C9A00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
+		650C44CA2C43DE8400F414A7 /* TabGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGridView.swift; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
@@ -531,6 +533,7 @@
 				650AFE112C3E8B7B00FEA8D0 /* timerView.swift */,
 				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
 				65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */,
+				650C44CA2C43DE8400F414A7 /* TabGridView.swift */,
 				65BCDC582C42EF860064FBBD /* extensions.swift */,
 				650C44C82C432C9A00F414A7 /* CustomSheetDrugGesture.swift */,
 				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
@@ -903,6 +906,7 @@
 				462E0DF12B88A87C001D2161 /* GoalReadTime.swift in Sources */,
 				463EBC1F2B91F7A400BB9A57 /* Book+BookContent.swift in Sources */,
 				463EBC222B91FA3500BB9A57 /* Book+Equatable.swift in Sources */,
+				650C44CB2C43DE8400F414A7 /* TabGridView.swift in Sources */,
 				65BCDC542C42CF510064FBBD /* RBarRow.swift in Sources */,
 				463EBC392B9223E300BB9A57 /* GoalStreakDuration.swift in Sources */,
 				46724EBB2C40614B009254EB /* AppModel.swift in Sources */,

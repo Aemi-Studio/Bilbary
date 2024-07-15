@@ -155,6 +155,7 @@
 		65BCDC552C42CF550064FBBD /* RReadingTimeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DDD2B8893A4001D2161 /* RReadingTimeMenu.swift */; };
 		65BCDC572C42E5D60064FBBD /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */; };
 		65BCDC592C42EF860064FBBD /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCDC582C42EF860064FBBD /* extensions.swift */; };
+		65F2FD892C4562E400D455BC /* FadeOut.metal in Sources */ = {isa = PBXBuildFile; fileRef = 65F2FD882C4562E400D455BC /* FadeOut.metal */; };
 		A07E40472B8CAACE00E5E1F2 /* GenericInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */; };
 		A08CE2952B8CA0960054400D /* GeneralLibraryStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */; };
 		A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
@@ -248,6 +249,7 @@
 		650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		65F2FD882C4562E400D455BC /* FadeOut.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = FadeOut.metal; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
 		A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLibraryStructs.swift; sourceTree = "<group>"; };
 		A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookCard.swift; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 		463CEDE42B8559E3001D951C /* Bilbary for iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				65F2FD872C4562E400D455BC /* Shaders */,
 				650C44CF2C43E1A100F414A7 /* iiPhone Models */,
 				650C44CC2C43E14200F414A7 /* Viiews */,
 				463CEDE52B8559E3001D951C /* Bilbary.swift */,
@@ -627,6 +630,14 @@
 				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
 			);
 			path = "iiPhone Models";
+			sourceTree = "<group>";
+		};
+		65F2FD872C4562E400D455BC /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				65F2FD882C4562E400D455BC /* FadeOut.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -908,6 +919,7 @@
 				463EBC372B9223E300BB9A57 /* GoalModel.swift in Sources */,
 				65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */,
 				65BCDC592C42EF860064FBBD /* extensions.swift in Sources */,
+				65F2FD892C4562E400D455BC /* FadeOut.metal in Sources */,
 				464F8F2F2B913BB4009102CB /* UIWindow.swift in Sources */,
 				462E0DD92B87E9B1001D2161 /* PressActions.swift in Sources */,
 				650C44C72C43239100F414A7 /* SheetCoordinator.swift in Sources */,

@@ -94,7 +94,7 @@ struct CustomSheetView: View {
             if coordinator.tabBarShown {
 
                 withAnimation(.easeInOut(duration: 0.2)) {
-                    coordinator.offset = UIScreen.main.bounds.height * 0.85
+                    coordinator.offset = coordinator.maxHeight
                 }
             } else {
 

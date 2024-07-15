@@ -31,7 +31,7 @@ class SheetCoordinator {
     let screenWidth = UIScreen.main.bounds.width
 
     let minHeight: CGFloat = UIScreen.main.bounds.height * 0.03
-    let maxHeight: CGFloat = UIScreen.main.bounds.height * 0.85
+    let maxHeight: CGFloat = UIScreen.main.bounds.height * 0.9
     let heightFactor: Double = 0.8
 
 }

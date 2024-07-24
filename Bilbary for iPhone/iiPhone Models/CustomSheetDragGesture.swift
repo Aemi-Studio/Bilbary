@@ -29,10 +29,10 @@ extension View {
                     observer.offset < observer.screenHeight * 0.37 {
                     endOffset = observer.screenHeight * (observer.heightFactor / 10)
                 } else if observer.dragOffset >= 20 ||
-                            (observer.offset < observer.screenHeight && observer.offset > observer.screenHeight * 0.65) {
+                            (observer.offset < observer.screenHeight && observer.offset > observer.screenHeight * 0.80) {
                     endOffset =  observer.maxHeight
                 } else if (observer.dragOffset <= 10 && observer.dragOffset >= -20) ||
-                            (observer.offset <= observer.screenHeight * 0.65 && observer.offset >= observer.screenHeight * 0.37) {
+                            (observer.offset <= observer.screenHeight * 0.80 && observer.offset >= observer.screenHeight * 0.37) {
                     endOffset = observer.screenHeight * observer.heightFactor / 1.9
                 }
 
@@ -40,6 +40,7 @@ extension View {
                     observer.offset = endOffset
                     observer.dragOffset = 0
                     observer.deltaOffset = 0
+
                 }
 
             }

@@ -30,7 +30,7 @@ struct CustomSheetView: View {
     private var timeSpent: TimeInterval?
 
     @State
-    public var tabs: [TabModel] = [
+    private var tabs: [TabModel] = [
         .init(id: TabModel.Tab.book),
         .init(id: TabModel.Tab.readingTime),
         .init(id: TabModel.Tab.like),
@@ -39,9 +39,9 @@ struct CustomSheetView: View {
     ]
 
     @State
-    public var activeTab: TabModel.Tab = .book
-    @State public var mainViewScrollState: TabModel.Tab?
-    @State public var tabBarScrollState: TabModel.Tab?
+    private var activeTab: TabModel.Tab = .book
+    @State private var mainViewScrollState: TabModel.Tab?
+    @State private var tabBarScrollState: TabModel.Tab?
 
     var body: some View {
         ZStack {
@@ -98,12 +98,11 @@ struct CustomSheetView: View {
         .gesture(
             dragSheetGesture(observer: coordinator)
         )
-
     }
 
 }
 
-// MARK: - Frames
+// MARK: - ViewBuilders
 
 extension CustomSheetView {
     @ViewBuilder
@@ -123,6 +122,7 @@ extension CustomSheetView {
                         .padding(.vertical, 12)
                         .foregroundStyle(activeTab == tab.id ? Color.primary: .gray)
                         .contentShape(.rect)
+
                 }
                 .buttonStyle(.plain)
 

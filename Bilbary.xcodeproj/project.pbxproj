@@ -146,9 +146,8 @@
 		650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFE112C3E8B7B00FEA8D0 /* timerView.swift */; };
 		650C44C72C43239100F414A7 /* SheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44C62C43239100F414A7 /* SheetCoordinator.swift */; };
 		650C44CB2C43DE8400F414A7 /* TabGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44CA2C43DE8400F414A7 /* TabGridView.swift */; };
-		650C44D32C43EC9F00F414A7 /* CustomSheetDrugGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */; };
+		650C44D32C43EC9F00F414A7 /* CustomSheetDragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44D22C43EC9F00F414A7 /* CustomSheetDragGesture.swift */; };
 		654551DE2C51066F0049B59B /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551DD2C51066F0049B59B /* TabModel.swift */; };
-		654551E32C5108480049B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551E22C5108480049B59B /* ContentView.swift */; };
 		654551E72C510C9A0049B59B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654551E62C510C9A0049B59B /* Media.xcassets */; };
 		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
 		65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DD42B87E216001D2161 /* RActionable.swift */; };
@@ -249,9 +248,8 @@
 		650AFE112C3E8B7B00FEA8D0 /* timerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerView.swift; sourceTree = "<group>"; };
 		650C44C62C43239100F414A7 /* SheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCoordinator.swift; sourceTree = "<group>"; };
 		650C44CA2C43DE8400F414A7 /* TabGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGridView.swift; sourceTree = "<group>"; };
-		650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
+		650C44D22C43EC9F00F414A7 /* CustomSheetDragGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDragGesture.swift; sourceTree = "<group>"; };
 		654551DD2C51066F0049B59B /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
-		654551E22C5108480049B59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		654551E62C510C9A0049B59B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
@@ -631,7 +629,7 @@
 			isa = PBXGroup;
 			children = (
 				650C44C62C43239100F414A7 /* SheetCoordinator.swift */,
-				650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */,
+				650C44D22C43EC9F00F414A7 /* CustomSheetDragGesture.swift */,
 				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
 				65BCDC582C42EF860064FBBD /* extensions.swift */,
 				46724EBA2C40614B009254EB /* AppModel.swift */,
@@ -644,7 +642,6 @@
 			isa = PBXGroup;
 			children = (
 				654551DD2C51066F0049B59B /* TabModel.swift */,
-				654551E22C5108480049B59B /* ContentView.swift */,
 			);
 			path = "Implementing tabs";
 			sourceTree = "<group>";
@@ -952,7 +949,7 @@
 				463CEDF22B855D00001D951C /* TabButtonItem.swift in Sources */,
 				65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */,
 				463EBC3A2B9223E800BB9A57 /* PermissionsModel.swift in Sources */,
-				650C44D32C43EC9F00F414A7 /* CustomSheetDrugGesture.swift in Sources */,
+				650C44D32C43EC9F00F414A7 /* CustomSheetDragGesture.swift in Sources */,
 				65BCDC532C42CF4C0064FBBD /* RButton.swift in Sources */,
 				463EBC2D2B9223CF00BB9A57 /* Book.swift in Sources */,
 				463EBC2E2B9223D900BB9A57 /* RCustomizerModel+RCustomizerModelStorage.swift in Sources */,
@@ -980,7 +977,6 @@
 				463CEDE62B8559E3001D951C /* Bilbary.swift in Sources */,
 				464F8F4E2B9144F7009102CB /* EPUBDocument.swift in Sources */,
 				463EBC402B9223F300BB9A57 /* ViewModel+ViewModelStorage.swift in Sources */,
-				654551E32C5108480049B59B /* ContentView.swift in Sources */,
 				654551DE2C51066F0049B59B /* TabModel.swift in Sources */,
 				462E0DFF2B8CD6EE001D2161 /* OnePageOnboardingView.swift in Sources */,
 				463EBC282B92011400BB9A57 /* BookDelegate.swift in Sources */,

@@ -148,7 +148,6 @@
 		650C44CB2C43DE8400F414A7 /* TabGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44CA2C43DE8400F414A7 /* TabGridView.swift */; };
 		650C44D32C43EC9F00F414A7 /* CustomSheetDrugGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */; };
 		654551DE2C51066F0049B59B /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551DD2C51066F0049B59B /* TabModel.swift */; };
-		654551E12C5108370049B59B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551E02C5108370049B59B /* HomeView.swift */; };
 		654551E32C5108480049B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551E22C5108480049B59B /* ContentView.swift */; };
 		654551E72C510C9A0049B59B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654551E62C510C9A0049B59B /* Media.xcassets */; };
 		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
@@ -252,7 +251,6 @@
 		650C44CA2C43DE8400F414A7 /* TabGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGridView.swift; sourceTree = "<group>"; };
 		650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
 		654551DD2C51066F0049B59B /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
-		654551E02C5108370049B59B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		654551E22C5108480049B59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		654551E62C510C9A0049B59B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
@@ -646,7 +644,6 @@
 			isa = PBXGroup;
 			children = (
 				654551DD2C51066F0049B59B /* TabModel.swift */,
-				654551E02C5108370049B59B /* HomeView.swift */,
 				654551E22C5108480049B59B /* ContentView.swift */,
 			);
 			path = "Implementing tabs";
@@ -960,7 +957,6 @@
 				463EBC2D2B9223CF00BB9A57 /* Book.swift in Sources */,
 				463EBC2E2B9223D900BB9A57 /* RCustomizerModel+RCustomizerModelStorage.swift in Sources */,
 				463EBC362B9223E300BB9A57 /* GoalModelStorage.swift in Sources */,
-				654551E12C5108370049B59B /* HomeView.swift in Sources */,
 				462E0DF12B88A87C001D2161 /* GoalReadTime.swift in Sources */,
 				463EBC1F2B91F7A400BB9A57 /* Book+BookContent.swift in Sources */,
 				463EBC222B91FA3500BB9A57 /* Book+Equatable.swift in Sources */,

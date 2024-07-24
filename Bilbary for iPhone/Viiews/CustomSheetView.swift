@@ -101,10 +101,7 @@ struct CustomSheetView: View {
 
     }
 
-
-
 }
-
 
 // MARK: - Frames
 

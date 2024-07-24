@@ -10,19 +10,20 @@ import SwiftUI
 struct HomeView: View {
     @State
     private var tabs: [TabModel] = [
-        .init(id: TabModel.Tab.research),
-        .init(id: TabModel.Tab.developmnet),
-        .init(id: TabModel.Tab.analytics),
-        .init(id: TabModel.Tab.audience),
-        .init(id: TabModel.Tab.privacy)
-
+        .init(id: TabModel.Tab.book),
+        .init(id: TabModel.Tab.readingTime),
+        .init(id: TabModel.Tab.like),
+        .init(id: TabModel.Tab.streakGoal),
+        .init(id: TabModel.Tab.customization)
     ]
     @State
-    private var activeTab: TabModel.Tab = .research
+    private var activeTab: TabModel.Tab = .book
     @State private var mainViewScrollState: TabModel.Tab?
+    @State private var tabBarScrollState: TabModel.Tab?
     var body: some View {
         VStack {
             //            HeaderView()
+
             CustomTabBar()
 
             GeometryReader {
@@ -31,7 +32,7 @@ struct HomeView: View {
                 ScrollView(.horizontal) {
                     LazyHStack(spacing: 0) {
                         ForEach(tabs) { tab in
-                            Text(tab.id.rawValue )
+                            Image(systemName: tab.id.rawValue)
                                 .frame(width: size.width, height: size.height)
                                 .contentShape(.rect)
 
@@ -42,45 +43,41 @@ struct HomeView: View {
                 .scrollPosition(id: $mainViewScrollState)
                 .scrollIndicators(.hidden)
                 .scrollTargetBehavior(.paging)
+                .onChange(of: mainViewScrollState) { _, newValue in
+                    if let newValue {
+                        withAnimation(.snappy) {
+                            tabBarScrollState = newValue
+                            activeTab = newValue
+                        }
+                    }
+                }
             }
         }
     }
 
-    //    @ViewBuilder
-    //    func HeaderView() -> some View {
-    //        HStack {
-    //            Image(.logo)
-    //                .resizable()
-    //                .aspectRatio(contentMode: .fit)
-    //                .frame(width: 100)
-    //
-    //            Spacer(minLength: 0)
-    //        }.padding(15)
-    //    }
-
     @ViewBuilder
     func CustomTabBar () -> some View {
-        ScrollView(.horizontal) {
-            HStack(spacing: 20) {
-                ForEach(tabs) { tab in
-                    Button(action: {
-                        withAnimation(.snappy) {
-                            activeTab = tab.id
-                            mainViewScrollState = tab.id
-                        }
-                    }) {
-                        Text(tab.id.rawValue)
-                            .padding(.vertical, 12)
-                            .foregroundStyle(activeTab == tab.id ? Color.primary: .gray)
-                            .contentShape(.rect)
-                    }
-                    .buttonStyle(.plain)
 
+        HStack(spacing: 20) {
+            ForEach(tabs) { tab in
+                Button(action: {
+                    withAnimation(.snappy) {
+                        activeTab = tab.id
+                        mainViewScrollState = tab.id
+                    }
+
+                }) {
+                    Spacer()
+                    Image(systemName: tab.id.rawValue)
+                        .padding(.vertical, 12)
+                        .foregroundStyle(activeTab == tab.id ? Color.primary: .gray)
+                        .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
+
             }
+            Spacer()
         }
-        .safeAreaPadding(.horizontal, 15)
-        .scrollIndicators(.hidden)
     }
 }
 

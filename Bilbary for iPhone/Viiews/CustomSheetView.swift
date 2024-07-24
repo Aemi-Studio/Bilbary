@@ -29,12 +29,22 @@ struct CustomSheetView: View {
     @State
     private var timeSpent: TimeInterval?
 
+    @State
+    private var tabs: [TabModel] = [
+        .init(id: TabModel.Tab.book),
+        .init(id: TabModel.Tab.readingTime),
+        .init(id: TabModel.Tab.like),
+        .init(id: TabModel.Tab.streakGoal),
+        .init(id: TabModel.Tab.customization)
+    ]
+
     var body: some View {
         ZStack {
             Spacer()
 
             VStack {
-                TabGridView()
+                HomeView().CustomTabBar()
+                    .padding()
 
                 VStack(spacing: 16) {
 

@@ -13,10 +13,11 @@ struct TabModel: Identifiable {
     var minx: CGFloat = .zero
 
     enum Tab: String, CaseIterable {
-        case research = "Research"
-        case developmnet = "Development"
-        case analytics = "Analytics"
-        case audience = "Audience"
-        case privacy = "Privacy"
+        case book = "book"
+        case readingTime = "hourglass"
+        case like = "heart"
+        case streakGoal = "circlebadge.2"
+        case customization = "textformat.size"
+
     }
 }

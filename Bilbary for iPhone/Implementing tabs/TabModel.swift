@@ -15,9 +15,9 @@ struct TabModel: Identifiable {
     enum Tab: String, CaseIterable {
         case book = "book"
         case readingTime = "hourglass"
+        case customization = "textformat.size"
         case like = "heart"
         case streakGoal = "circlebadge.2"
-        case customization = "textformat.size"
 
     }
 }

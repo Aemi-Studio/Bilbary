@@ -30,7 +30,7 @@ struct CustomSheetView: View {
     private var timeSpent: TimeInterval?
 
     @State
-    private var tabs: [TabModel] = [
+    public var tabs: [TabModel] = [
         .init(id: TabModel.Tab.book),
         .init(id: TabModel.Tab.readingTime),
         .init(id: TabModel.Tab.like),
@@ -38,47 +38,21 @@ struct CustomSheetView: View {
         .init(id: TabModel.Tab.customization)
     ]
 
+    @State
+    public var activeTab: TabModel.Tab = .book
+    @State public var mainViewScrollState: TabModel.Tab?
+    @State public var tabBarScrollState: TabModel.Tab?
+
     var body: some View {
         ZStack {
             Spacer()
 
             VStack {
-                HomeView().CustomTabBar()
+                CustomTabBar()
                     .padding()
 
-                VStack(spacing: 16) {
+                ViewScroller()
 
-                    VStack {
-                        EmptyView()
-                    }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 200)
-                    .background(.bar)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .padding()
-
-                    ScrollView {
-
-                        VStack {
-                            if let timeSpent = timeSpent {
-                                VStack {
-                                    Text(timeSpent, format: .number.rounded(rule: .toNearestOrEven, increment: 1))
-                                        .padding()
-                                    Text("\(sessions.count) sessions")
-                                        .padding()
-                                }
-                            }
-                            HStack {
-                                Text("Library")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                                Spacer()
-                            } .padding()
-                            Spacer()
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    }
-                }
                 Spacer()
             }
 
@@ -125,5 +99,107 @@ struct CustomSheetView: View {
             dragSheetGesture(observer: coordinator)
         )
 
+    }
+
+
+
+}
+
+
+// MARK: - Frames
+
+extension CustomSheetView {
+    @ViewBuilder
+    func CustomTabBar () -> some View {
+
+        HStack(spacing: 20) {
+            ForEach(tabs) { tab in
+                Button(action: {
+                    withAnimation(.snappy) {
+                        activeTab = tab.id
+                        mainViewScrollState = tab.id
+                    }
+
+                }) {
+                    Spacer()
+                    Image(systemName: tab.id.rawValue)
+                        .padding(.vertical, 12)
+                        .foregroundStyle(activeTab == tab.id ? Color.primary: .gray)
+                        .contentShape(.rect)
+                }
+                .buttonStyle(.plain)
+
+            }
+            Spacer()
+        }
+    }
+
+    @ViewBuilder
+    func ViewScroller () -> some View {
+        GeometryReader {
+            let size = $0.size
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: 0) {
+                    ForEach(tabs) { _ in
+                        Container()
+                            .frame(width: size.width, height: size.height)
+
+                    }
+
+                }.scrollTargetLayout()
+
+            }
+            .ignoresSafeArea()
+            .scrollTargetBehavior(.paging)
+            .scrollPosition(id: $mainViewScrollState)
+            .scrollIndicators(.hidden)
+            .onChange(of: mainViewScrollState) { _, newValue in
+                if let newValue {
+                    withAnimation(.snappy) {
+                        tabBarScrollState = newValue
+                        activeTab = newValue
+                    }
+                }
+            }
+
+        }
+    }
+
+    @ViewBuilder
+    func Container() -> some View {
+        VStack(spacing: 16) {
+
+            VStack {
+                EmptyView()
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 200)
+            .background(.bar)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .padding()
+
+            ScrollView {
+
+                VStack {
+                    if let timeSpent = timeSpent {
+                        VStack {
+                            Text(timeSpent, format: .number.rounded(rule: .toNearestOrEven, increment: 1))
+                                .padding()
+
+                            Text("\(sessions.count) sessions")
+                                .padding()
+                        }
+                    }
+                    HStack {
+                        Text("Library")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        Spacer()
+                    } .padding()
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+        }
     }
 }

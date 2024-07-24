@@ -55,6 +55,6 @@ struct BilbaryView: View {
 
 }
 
-#Preview {
-    BilbaryView()
-}
+// #Preview {
+//    BilbaryView()
+// }

@@ -147,6 +147,10 @@
 		650C44C72C43239100F414A7 /* SheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44C62C43239100F414A7 /* SheetCoordinator.swift */; };
 		650C44CB2C43DE8400F414A7 /* TabGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44CA2C43DE8400F414A7 /* TabGridView.swift */; };
 		650C44D32C43EC9F00F414A7 /* CustomSheetDrugGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */; };
+		654551DE2C51066F0049B59B /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551DD2C51066F0049B59B /* TabModel.swift */; };
+		654551E12C5108370049B59B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551E02C5108370049B59B /* HomeView.swift */; };
+		654551E32C5108480049B59B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551E22C5108480049B59B /* ContentView.swift */; };
+		654551E72C510C9A0049B59B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654551E62C510C9A0049B59B /* Media.xcassets */; };
 		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
 		65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DD42B87E216001D2161 /* RActionable.swift */; };
 		65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
@@ -247,6 +251,10 @@
 		650C44C62C43239100F414A7 /* SheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCoordinator.swift; sourceTree = "<group>"; };
 		650C44CA2C43DE8400F414A7 /* TabGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGridView.swift; sourceTree = "<group>"; };
 		650C44D22C43EC9F00F414A7 /* CustomSheetDrugGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDrugGesture.swift; sourceTree = "<group>"; };
+		654551DD2C51066F0049B59B /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		654551E02C5108370049B59B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		654551E22C5108480049B59B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		654551E62C510C9A0049B59B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		65F2FD882C4562E400D455BC /* FadeOut.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = FadeOut.metal; sourceTree = "<group>"; };
@@ -309,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				464FE0A62B7B80B60005590A /* README.md */,
+				654551E52C510C740049B59B /* aasests */,
 				462E0DBD2B8773F2001D2161 /* Bilbary */,
 				460B36232B7B7D8300D99FFF /* Bilbary for iPad */,
 				463CEDE42B8559E3001D951C /* Bilbary for iPhone */,
@@ -531,6 +540,7 @@
 		463CEDE42B8559E3001D951C /* Bilbary for iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				654551DF2C5108050049B59B /* Implementing tabs */,
 				65F2FD872C4562E400D455BC /* Shaders */,
 				650C44CF2C43E1A100F414A7 /* iiPhone Models */,
 				650C44CC2C43E14200F414A7 /* Viiews */,
@@ -630,6 +640,24 @@
 				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
 			);
 			path = "iiPhone Models";
+			sourceTree = "<group>";
+		};
+		654551DF2C5108050049B59B /* Implementing tabs */ = {
+			isa = PBXGroup;
+			children = (
+				654551DD2C51066F0049B59B /* TabModel.swift */,
+				654551E02C5108370049B59B /* HomeView.swift */,
+				654551E22C5108480049B59B /* ContentView.swift */,
+			);
+			path = "Implementing tabs";
+			sourceTree = "<group>";
+		};
+		654551E52C510C740049B59B /* aasests */ = {
+			isa = PBXGroup;
+			children = (
+				654551E62C510C9A0049B59B /* Media.xcassets */,
+			);
+			path = aasests;
 			sourceTree = "<group>";
 		};
 		65F2FD872C4562E400D455BC /* Shaders */ = {
@@ -757,6 +785,7 @@
 				46A5FE4D2B92381C00C46368 /* Bilbary.plist in Resources */,
 				462E0DE62B889CDD001D2161 /* Localizable.xcstrings in Resources */,
 				4606E07F2B9234FB00D77205 /* the-trial.epub in Resources */,
+				654551E72C510C9A0049B59B /* Media.xcassets in Resources */,
 				4606E0792B9234FB00D77205 /* the-picture-of-dorian-gray.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -931,6 +960,7 @@
 				463EBC2D2B9223CF00BB9A57 /* Book.swift in Sources */,
 				463EBC2E2B9223D900BB9A57 /* RCustomizerModel+RCustomizerModelStorage.swift in Sources */,
 				463EBC362B9223E300BB9A57 /* GoalModelStorage.swift in Sources */,
+				654551E12C5108370049B59B /* HomeView.swift in Sources */,
 				462E0DF12B88A87C001D2161 /* GoalReadTime.swift in Sources */,
 				463EBC1F2B91F7A400BB9A57 /* Book+BookContent.swift in Sources */,
 				463EBC222B91FA3500BB9A57 /* Book+Equatable.swift in Sources */,
@@ -954,6 +984,8 @@
 				463CEDE62B8559E3001D951C /* Bilbary.swift in Sources */,
 				464F8F4E2B9144F7009102CB /* EPUBDocument.swift in Sources */,
 				463EBC402B9223F300BB9A57 /* ViewModel+ViewModelStorage.swift in Sources */,
+				654551E32C5108480049B59B /* ContentView.swift in Sources */,
+				654551DE2C51066F0049B59B /* TabModel.swift in Sources */,
 				462E0DFF2B8CD6EE001D2161 /* OnePageOnboardingView.swift in Sources */,
 				463EBC282B92011400BB9A57 /* BookDelegate.swift in Sources */,
 				650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */,

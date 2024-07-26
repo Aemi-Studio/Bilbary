@@ -41,19 +41,17 @@ struct CustomSheetView: View {
     @State private var tabBarScrollState: TabModel.Tab?
 
     var body: some View {
-        ZStack {
+
+        VStack {
+            Spacer().frame(height: 30)
+            CustomTabBar()
+                .padding()
+
+            ViewScroller()
+
             Spacer()
-
-            VStack {
-                CustomTabBar()
-                    .padding()
-
-                ViewScroller()
-
-                Spacer()
-            }
-
         }
+
         .onReceive(self.timer) { _ in
             timeSpent = appUsageTracker.computeTimeSpentToday(sessions)
         }

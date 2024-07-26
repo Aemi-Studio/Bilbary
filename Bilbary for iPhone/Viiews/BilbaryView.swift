@@ -8,7 +8,7 @@ import SwiftUI
 
 struct BilbaryView: View {
     @State private var showSheet: Bool = false
-
+    @State private var mask: Bool = false
     let screenHeight = UIScreen.main.bounds.height
 
     var body: some View {
@@ -48,12 +48,16 @@ struct BilbaryView: View {
         .sheet(isPresented: $showSheet) {
             CustomSheetView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .presentationDetents([.height(60), .height(300), .large])
+                .presentationDetents([.height(50), .medium, .large])
                 .presentationCornerRadius(20)
-                .presentationBackground(Material.ultraThin)
+                .presentationBackground(Material.ultraThin.opacity(0.1))
+                .presentationBackgroundInteraction(.enabled(upThrough: .large))
                 .presentationContentInteraction(.scrolls)
                 .presentationDragIndicator(.hidden)
-            //                .interactiveDismissDisabled()
+                .presentationCompactAdaptation(horizontal: .none, vertical: .none)
+                .interactiveDismissDisabled()
+                .maskForSheet(mask: mask)
+
         }
 
     }

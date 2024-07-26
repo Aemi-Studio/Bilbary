@@ -149,6 +149,7 @@
 		650C44D32C43EC9F00F414A7 /* CustomSheetDragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650C44D22C43EC9F00F414A7 /* CustomSheetDragGesture.swift */; };
 		654551DE2C51066F0049B59B /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654551DD2C51066F0049B59B /* TabModel.swift */; };
 		654551E72C510C9A0049B59B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654551E62C510C9A0049B59B /* Media.xcassets */; };
+		655B17602C53AD0F00507A3F /* SheetMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B175F2C53AD0F00507A3F /* SheetMask.swift */; };
 		65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462D50262B8413D6001ED44E /* CustomizerView.swift */; };
 		65BCDC512C42CF280064FBBD /* RActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E0DD42B87E216001D2161 /* RActionable.swift */; };
 		65BCDC522C42CF360064FBBD /* RPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656F4312B8CD920004DD8BB /* RPopover.swift */; };
@@ -251,6 +252,7 @@
 		650C44D22C43EC9F00F414A7 /* CustomSheetDragGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSheetDragGesture.swift; sourceTree = "<group>"; };
 		654551DD2C51066F0049B59B /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		654551E62C510C9A0049B59B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		655B175F2C53AD0F00507A3F /* SheetMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMask.swift; sourceTree = "<group>"; };
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		65F2FD882C4562E400D455BC /* FadeOut.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = FadeOut.metal; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 				650AFE0F2C3E8B4700FEA8D0 /* determineHigherValue.swift */,
 				65BCDC582C42EF860064FBBD /* extensions.swift */,
 				46724EBA2C40614B009254EB /* AppModel.swift */,
+				655B175F2C53AD0F00507A3F /* SheetMask.swift */,
 				463CEDF12B855D00001D951C /* TabButtonItem.swift */,
 			);
 			path = "iiPhone Models";
@@ -975,6 +978,7 @@
 				464F8F462B9144DA009102CB /* Notification.Name.swift in Sources */,
 				462E0DED2B88A7C4001D2161 /* GoalReadTime+String.swift in Sources */,
 				463CEDE62B8559E3001D951C /* Bilbary.swift in Sources */,
+				655B17602C53AD0F00507A3F /* SheetMask.swift in Sources */,
 				464F8F4E2B9144F7009102CB /* EPUBDocument.swift in Sources */,
 				463EBC402B9223F300BB9A57 /* ViewModel+ViewModelStorage.swift in Sources */,
 				654551DE2C51066F0049B59B /* TabModel.swift in Sources */,

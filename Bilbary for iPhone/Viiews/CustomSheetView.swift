@@ -12,9 +12,6 @@ struct CustomSheetView: View {
     @Environment(\.modelContext)
     private var context
 
-    @Environment(SheetCoordinator.self)
-    private var coordinator
-
     @Environment(AppUsageTracker.self)
     private var appUsageTracker
 
@@ -74,30 +71,8 @@ struct CustomSheetView: View {
                 appUsageTracker.endSession(to: context)
             }
         }
-        .onChange(of: coordinator.tabBarShown) {
-            if coordinator.tabBarShown {
-
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    coordinator.offset = coordinator.maxHeight
-                }
-            } else {
-
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    coordinator.offset = UIScreen.main.bounds.height * 1.1
-
-                }
-            }
-        }
         .background(.ultraThinMaterial)
-        .clipShape(
-            .rect(
-                cornerRadii: .init(topLeading: 16.0, bottomLeading: 0, bottomTrailing: 0, topTrailing: 16.0)
-            )
-        )
-        .offset(y: coordinator.offset)
-        .gesture(
-            dragSheetGesture(observer: coordinator)
-        )
+
     }
 
 }

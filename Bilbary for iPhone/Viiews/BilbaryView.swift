@@ -7,54 +7,64 @@
 import SwiftUI
 
 struct BilbaryView: View {
+    @State private var showSheet: Bool = false
 
-    @State
-    private var coordinator = SheetCoordinator()
+    let screenHeight = UIScreen.main.bounds.height
 
     var body: some View {
+
         ZStack {
-            ZStack {
 
-                VStack {
-
-                    EPUBView()
-
-                }
-                .onTapGesture {
-                    coordinator.tabBarShown.toggle()
-                }
-                VStack {
-
-                    Rectangle().fill(Color.black)
-                        .frame(height: coordinator.screenHeight / 3)
-                        .visualEffect { content, geoProxy in
-                            content
-                                .colorEffect(ShaderLibrary.fadeOut(.float(geoProxy.size.height), .float(1.0)))
-                        }
-                        .allowsHitTesting(false)
-
-                    Spacer()
-
-                    Rectangle().fill(Color.black)
-                        .frame(height: coordinator.screenHeight / 3)
-                        .visualEffect { content, geoProxy in
-                            content
-                                .colorEffect(ShaderLibrary.fadeOut(.float(geoProxy.size.height), .float(0.0)))
-                        }
-                        .allowsHitTesting(false)
-                }
-
+            VStack {
+                EPUBView()
             }
 
-            CustomSheetView()
-                .environment(coordinator)
+            VStack {
 
-        }.ignoresSafeArea(edges: [ .horizontal, .vertical])
+                Rectangle().fill(Color.black)
+                    .frame(height: screenHeight / 3)
+                    .visualEffect { content, geoProxy in
+                        content
+                            .colorEffect(ShaderLibrary.fadeOut(.float(geoProxy.size.height), .float(1.0)))
+                    }
+                    .allowsHitTesting(false)
+
+                Spacer()
+
+                Rectangle().fill(Color.black)
+                    .frame(height: screenHeight / 3)
+                    .visualEffect { content, geoProxy in
+                        content
+                            .colorEffect(ShaderLibrary.fadeOut(.float(geoProxy.size.height), .float(0.0)))
+                    }
+                    .allowsHitTesting(false)
+            }
+
+        }
+        .onTapGesture {
+            showSheet.toggle()
+        }
+        .ignoresSafeArea(edges: [ .horizontal, .vertical])
+        .sheet(isPresented: $showSheet) {
+            CustomSheetView()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                .presentationDetents([.height(60), .height(300), .large])
+                .presentationCornerRadius(20)
+                .presentationBackground(Material.ultraThin)
+                .presentationContentInteraction(.scrolls)
+                .presentationDragIndicator(.hidden)
+            //                .interactiveDismissDisabled()
+        }
 
     }
 
 }
 
-// #Preview {
-//    BilbaryView()
+// struct BilbaryView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        let appUsageTracker = AppUsageTracker()
+//        BilbaryView()
+//            .environment(appUsageTracker)
+//    }
 // }

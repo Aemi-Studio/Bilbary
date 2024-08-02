@@ -39,17 +39,29 @@ struct CustomSheetView: View {
     private var activeTab: TabModel.Tab = .book
     @State private var mainViewScrollState: TabModel.Tab?
     @State private var tabBarScrollState: TabModel.Tab?
+    @State private var screenHeight = UIScreen.main.bounds.height
+    @State private var heightSpacing: CGFloat  = 30
 
     var body: some View {
 
         VStack {
-            Spacer().frame(height: 30)
+            Spacer().frame(height: heightSpacing)
             CustomTabBar()
                 .padding()
 
             ViewScroller()
 
             Spacer()
+        }
+        .viewPosition { value in
+            let minValue = screenHeight * 0.84
+            let clampedValue = value.clamped(to: minValue...minValue + 30)
+            let height = clampedValue - minValue
+            if height.truncatingRemainder(dividingBy: 3) == 0 {
+                withAnimation {
+                    heightSpacing = height
+                }
+            }
         }
 
         .onReceive(self.timer) { _ in

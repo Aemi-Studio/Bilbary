@@ -38,7 +38,6 @@ private struct SheetRootViewFinder: UIViewRepresentable {
                     size: .init(width: window.frame.width, height: window.frame.height - (self.mask ? (height) : height + 0.1)
                     ))
 
-                
                 rootView.clipsToBounds = true
                 rootView.frame = newFrame
                 rootView.layoutIfNeeded()

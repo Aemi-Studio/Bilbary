@@ -7,23 +7,19 @@
 
 import SwiftUI
 
-// struct TimerView: View {
-//    @Environment(AppUsageTracker.self) var appUsageTracker: AppUsageTracker
-//
-//    var body: some View {
-//        VStack {
-//            Text("Total Time Spent: \(appUsageTracker.totalTimeSpent, specifier: "%.2f") seconds")
-//                .padding()
-//        }
-//        .onAppear {
-//            appUsageTracker.loadTotalTimeSpent()
-//        }
-//    }
-// }
-
-// struct timerView: PreviewProvider {
-//    static var previews: some View {
-//       timerView()
-//            .environmentObject(AppUsageTracker())
-//    }
-// }
+struct TimerView: View {
+    @State
+    private var timeSpent: TimeInterval?
+    
+    var body: some View {
+        VStack {
+            if let timeSpent = timeSpent {
+                VStack {
+                    Text("This View For Content Length")
+                        .padding()
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}

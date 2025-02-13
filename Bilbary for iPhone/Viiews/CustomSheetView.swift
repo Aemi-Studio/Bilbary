@@ -9,8 +9,6 @@ import SwiftData
 
 struct CustomSheetView: View {
     
-    @State private var toggleState: Bool = false
-    
     @Environment(\.modelContext)
     private var context
     
@@ -146,7 +144,7 @@ extension CustomSheetView {
                         }
                         
                         else {
-                            Container()
+                            ContainerView()
                                 .frame(width: size.width, height: size.height)
                         }
                         
@@ -169,144 +167,5 @@ extension CustomSheetView {
             }
         }
     }
-    @ViewBuilder
-    func Container() -> some View {
-        VStack(spacing: 16) {
-            
-            VStack {
-                EmptyView()
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 200)
-            .background(.bar)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            .padding()
-            
-            ScrollView {
-                
-                VStack {
-                    if let timeSpent = timeSpent {
-                        VStack {
-                            Text(timeSpent, format: .number.rounded(rule: .toNearestOrEven, increment: 1))
-                                .padding()
-                            
-                            Text("\(sessions.count) sessions")
-                                .padding()
-                        }
-                    }
-                    HStack {
-                        Text("Library")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        Spacer()
-                    } .padding()
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
-        }
-    }
-    
-    @ViewBuilder
-    func CustomizationView() -> some View {
-        VStack(spacing: 16) {
-            VStack {
-                Text("Customization View")
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 200)
-            .background(.bar)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            .padding()
-            
-            ScrollView {
-                
-            }
-        }
-    }
-    
-    @ViewBuilder
-    func TimerView() -> some View {
-                VStack {
-                    if let timeSpent = timeSpent {
-                        VStack {
-                            Text("This View For Content Lenght")
-                                .padding()
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-    
-    
 
-    @ViewBuilder
-    func StreakView() -> some View {
-        VStack {
-            // Title Section
-            HStack {
-                Text("3 Streak")
-                    .font(.title)
-                    .bold()
-                Spacer()
-            }
-            .padding()
-            WeekView()
-            Spacer()
-            
-           
-            VStack(spacing: 16) {
-                HStack {
-                    Text("Read for")
-                    Spacer()
-                    Menu {
-                        Button("5 minutes", action: { })
-                        Button("10 minutes", action: { })
-                        Button("15 minutes", action: { })
-                    } label: {
-                        Text("5 minutes")
-                            .foregroundStyle(.white)
-                            .padding(.vertical, 6)
-                            .padding(.horizontal, 12)
-                            .background(Color.secondary.opacity(0.2))
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                    }
-                }
-                
-                HStack {
-                    Text("Streak")
-                    Spacer()
-                    Menu {
-                        Button("3 months", action: {  })
-                        Button("6 months", action: { })
-                        Button("12 months", action: { })
-                    } label: {
-                        Text("3 months")
-                            .foregroundStyle(.white)
-                            .padding(.vertical, 6)
-                            .padding(.horizontal, 12)
-                            .background(Color.secondary.opacity(0.2))
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                    }
-                }
-                
-                HStack {
-                    Text("Streak")
-                    Spacer()
-                    Toggle("", isOn: $toggleState)
-                        .labelsHidden()
-                        .tint(Color.gray.opacity(0.6))
-                }
-            }
-            .padding()
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .shadow(radius: 5)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding()
-            
-            Spacer()
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity) 
-    }
 }

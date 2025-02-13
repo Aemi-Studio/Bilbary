@@ -64,11 +64,4 @@ struct BilbaryView: View {
 
 }
 
-// struct BilbaryView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        let appUsageTracker = AppUsageTracker()
-//        BilbaryView()
-//            .environment(appUsageTracker)
-//    }
-// }
+

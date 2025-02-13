@@ -4,7 +4,6 @@
 //
 //  Created by Guillaume Coquard on 19/02/24.
 //
-
 import SwiftUI
 import SwiftData
 
@@ -30,14 +29,7 @@ struct CustomizerView: View {
     @State
     private var styles: [RCPreset] = RCPreset.defaults
 
-    private var columns: [GridItem] = [
-        .init(.flexible(minimum: 100, maximum: 200), spacing: 2, alignment: .center),
-        .init(.flexible(minimum: 100, maximum: 200), spacing: 2, alignment: .center),
-        .init(.flexible(minimum: 100, maximum: 200), spacing: 2, alignment: .center),
-        .init(.flexible(minimum: 100, maximum: 200), spacing: 2, alignment: .center)
-    ]
-
-    func getAttibutedString(from style: RCPreset) -> AttributedString {
+    func getAttributedString(from style: RCPreset) -> AttributedString {
         var attributedString = AttributedString("Aa")
         if style.fontFace == .default {
             attributedString.font = .system(size: 48)
@@ -49,34 +41,48 @@ struct CustomizerView: View {
     }
 
     var body: some View {
-        VStack {
-            LazyVGrid(columns: columns, spacing: 2) {
-                ForEach(styles) { style in
-                    VStack {
-                        Text(
-                            getAttibutedString(from: style)
+        VStack(alignment: .leading) {
+            Text("Choose Your Style")
+                .font(.headline)
+                .padding(.bottom, 16)
+                .padding(.leading)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(styles) { style in
+                        VStack {
+                            Text(getAttributedString(from: style))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                        }
+                        .padding()
+                        .frame(width: 160, height: 120) 
+                        .background(Color(style.backgroundColor))
+                        .cornerRadius(16)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(
+                                    style.id == selectedId ? Color.blue : Color.gray.opacity(0.5),
+                                    lineWidth: 2
+                                )
                         )
+                        .onTapGesture {
+                            selectedId = style.id
+                            customizer.style = style
+                        }
                     }
-                    .padding()
-                    .frame(width: 192, height: 128)
-                    .foregroundColor(Color(style.fontColor))
-                    .background(style.backgroundColor)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color(white: 0, opacity: 0.5), lineWidth: 0.2)
-                            .foregroundStyle(.clear)
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .tag(style.id)
                 }
+                .padding(.horizontal)
             }
         }
-        .frame(minWidth: 200)
         .padding()
-        .background(.regularMaterial)
+        .background(.ultraThinMaterial)
+        .cornerRadius(20)
+        .shadow(radius: 10)
         .onAppear {
             self.selectedId = customizer.style.id
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
     }
 }
 

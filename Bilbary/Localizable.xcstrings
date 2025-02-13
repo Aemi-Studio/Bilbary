@@ -19,13 +19,43 @@
     "%lld sessions" : {
 
     },
+    "3 months" : {
+
+    },
+    "3 Streak" : {
+
+    },
+    "5 minutes" : {
+
+    },
+    "6 months" : {
+
+    },
+    "10 minutes" : {
+
+    },
+    "12 months" : {
+
+    },
+    "15 minutes" : {
+
+    },
     "Aa" : {
+
+    },
+    "Books" : {
 
     },
     "Cater to Your Liking" : {
 
     },
+    "Choose Your Style" : {
+
+    },
     "Continue" : {
+
+    },
+    "Customization View" : {
 
     },
     "Customize your pace, time, and content" : {
@@ -153,6 +183,9 @@
     "Placeholder" : {
 
     },
+    "Read for" : {
+
+    },
     "readTime.0min" : {
       "comment" : "No Reading Time Goal",
       "extractionState" : "stale",
@@ -245,6 +278,9 @@
 
     },
     "The Giant in Glee." : {
+
+    },
+    "This View For Content Length" : {
 
     },
     "Today" : {

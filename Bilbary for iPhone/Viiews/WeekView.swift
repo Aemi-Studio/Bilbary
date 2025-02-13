@@ -35,11 +35,11 @@ struct WeekView: View {
                             if isActive {
                                 Circle()
                                     .fill(Color.white)
-                                    .frame(width: 16, height: 16)
+                                    .frame(width: 13, height: 13)
                             } else {
                                 Circle()
                                     .stroke(Color.white.opacity(0.7), lineWidth: 2)
-                                    .frame(width: 16, height: 16)
+                                    .frame(width: 13, height: 13)
                             }
                             
                            

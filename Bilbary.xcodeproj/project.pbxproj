@@ -156,6 +156,11 @@
 		65BCDC572C42E5D60064FBBD /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */; };
 		65BCDC592C42EF860064FBBD /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BCDC582C42EF860064FBBD /* extensions.swift */; };
 		65F2FD892C4562E400D455BC /* FadeOut.metal in Sources */ = {isa = PBXBuildFile; fileRef = 65F2FD882C4562E400D455BC /* FadeOut.metal */; };
+		6CF78CE42D5B381800BF9260 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF78CE32D5B381800BF9260 /* BooksView.swift */; };
+		6CF78D2B2D5E323500BF9260 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF78D2A2D5E323500BF9260 /* WeekView.swift */; };
+		6CF78D2D2D5E44B800BF9260 /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF78D2C2D5E44B800BF9260 /* StreakView.swift */; };
+		6CF78D2F2D5E46C600BF9260 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF78D2E2D5E46C600BF9260 /* ContainerView.swift */; };
+		6CF78D312D5E47CD00BF9260 /* CustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF78D302D5E47CD00BF9260 /* CustomizationView.swift */; };
 		A07E40472B8CAACE00E5E1F2 /* GenericInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */; };
 		A08CE2952B8CA0960054400D /* GeneralLibraryStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */; };
 		A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
@@ -250,6 +255,11 @@
 		65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		65BCDC582C42EF860064FBBD /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		65F2FD882C4562E400D455BC /* FadeOut.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = FadeOut.metal; sourceTree = "<group>"; };
+		6CF78CE32D5B381800BF9260 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
+		6CF78D2A2D5E323500BF9260 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		6CF78D2C2D5E44B800BF9260 /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
+		6CF78D2E2D5E46C600BF9260 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		6CF78D302D5E47CD00BF9260 /* CustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
 		A07E40462B8CAACE00E5E1F2 /* GenericInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoCard.swift; sourceTree = "<group>"; };
 		A08CE2942B8CA0960054400D /* GeneralLibraryStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLibraryStructs.swift; sourceTree = "<group>"; };
 		A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookCard.swift; sourceTree = "<group>"; };
@@ -616,6 +626,11 @@
 				65BCDC562C42E5D60064FBBD /* CustomSheetView.swift */,
 				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
 				650AFE112C3E8B7B00FEA8D0 /* timerView.swift */,
+				6CF78CE32D5B381800BF9260 /* BooksView.swift */,
+				6CF78D2A2D5E323500BF9260 /* WeekView.swift */,
+				6CF78D2C2D5E44B800BF9260 /* StreakView.swift */,
+				6CF78D2E2D5E46C600BF9260 /* ContainerView.swift */,
+				6CF78D302D5E47CD00BF9260 /* CustomizationView.swift */,
 			);
 			path = Viiews;
 			sourceTree = "<group>";
@@ -932,6 +947,7 @@
 				65BCDC572C42E5D60064FBBD /* CustomSheetView.swift in Sources */,
 				462E0DD32B87B172001D2161 /* ViewModel+PopoverType.swift in Sources */,
 				463EBC332B9223D900BB9A57 /* RCScheme.swift in Sources */,
+				6CF78D2B2D5E323500BF9260 /* WeekView.swift in Sources */,
 				464F8F502B9144F7009102CB /* EPUBDocument+Compression.swift in Sources */,
 				463EBC372B9223E300BB9A57 /* GoalModel.swift in Sources */,
 				65BCDC4F2C42CEB50064FBBD /* CustomizerView.swift in Sources */,
@@ -951,6 +967,7 @@
 				65BCDC542C42CF510064FBBD /* RBarRow.swift in Sources */,
 				463EBC392B9223E300BB9A57 /* GoalStreakDuration.swift in Sources */,
 				46724EBB2C40614B009254EB /* AppModel.swift in Sources */,
+				6CF78D312D5E47CD00BF9260 /* CustomizationView.swift in Sources */,
 				463EBC312B9223D900BB9A57 /* RCPreset.swift in Sources */,
 				464F8F2B2B913BB4009102CB /* NavigationSplitViewVisibility.swift in Sources */,
 				462E0DD02B87AE2C001D2161 /* ViewModel+NavigationPath.swift in Sources */,
@@ -973,9 +990,12 @@
 				463EBC282B92011400BB9A57 /* BookDelegate.swift in Sources */,
 				650AFE122C3E8B7B00FEA8D0 /* timerView.swift in Sources */,
 				463EBC3D2B9223EF00BB9A57 /* UNHelper.swift in Sources */,
+				6CF78D2F2D5E46C600BF9260 /* ContainerView.swift in Sources */,
 				650AFE102C3E8B4700FEA8D0 /* determineHigherValue.swift in Sources */,
 				651B80C52C5D34D600AACB35 /* SheetPosition.swift in Sources */,
+				6CF78D2D2D5E44B800BF9260 /* StreakView.swift in Sources */,
 				463EBC302B9223D900BB9A57 /* RCColor.swift in Sources */,
+				6CF78CE42D5B381800BF9260 /* BooksView.swift in Sources */,
 				463EBC352B9223D900BB9A57 /* RCFontFace.swift in Sources */,
 				463EBC252B91FA5900BB9A57 /* Book+Hashable.swift in Sources */,
 			);
@@ -1228,7 +1248,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = NNZWWH5M7V;
+				DEVELOPMENT_TEAM = 2UM3345R5P;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1266,7 +1286,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = NNZWWH5M7V;
+				DEVELOPMENT_TEAM = 2UM3345R5P;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

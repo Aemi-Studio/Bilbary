@@ -46,5 +46,4 @@ class AppUsageTracker {
         }
         return duration
     }
-
 }

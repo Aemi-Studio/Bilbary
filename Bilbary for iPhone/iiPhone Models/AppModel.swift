@@ -28,6 +28,11 @@ class ReadSession: Identifiable {
         self.endTime = .now
         return self
     }
+    
+    var duration: TimeInterval {
+           let end = endTime ?? .now
+           return end.timeIntervalSince(startTime)
+       }
 
 }
 

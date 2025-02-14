@@ -132,7 +132,7 @@ extension CustomSheetView {
                                 .frame(width: size.width, height: size.height)
                         }
                         else if tab.id == .readingTime {
-                            TimerView()  // Show CustomBooksView when active tab is .book
+                            SessionsListView(sessions: sessions)
                                 .frame(width: size.width, height: size.height)
                         }
                         
@@ -140,32 +140,32 @@ extension CustomSheetView {
                             VStack{
                                 StreakView()
                             }
-                                .frame(width: size.width, height: size.height)
+                            .frame(width: size.width, height: size.height)
                         }
                         
                         else {
-                            ContainerView()
-                                .frame(width: size.width, height: size.height)
+                            ContainerView(timeSpent: timeSpent, sessionsCount: sessions.count)
+                            .frame(width: size.width, height: size.height)
+                            
                         }
                         
                     }
-                    
+                }
+                .scrollTargetLayout()
+            }
+            .ignoresSafeArea()
+            .scrollTargetBehavior(.paging)
+            .scrollPosition(id: $mainViewScrollState)
+            .scrollIndicators(.hidden)
+            .onChange(of: mainViewScrollState) { _, newValue in
+                if let newValue {
+                    withAnimation(.snappy) {
+                        tabBarScrollState = newValue
+                        activeTab = newValue
+                    }
                 }
             }
-            .scrollTargetLayout()
         }
-        .ignoresSafeArea()
-        .scrollTargetBehavior(.paging)
-        .scrollPosition(id: $mainViewScrollState)
-        .scrollIndicators(.hidden)
-        .onChange(of: mainViewScrollState) { _, newValue in
-            if let newValue {
-                withAnimation(.snappy) {
-                    tabBarScrollState = newValue
-                    activeTab = newValue
-                }
-            }
-        }
-    }
 
+    }
 }

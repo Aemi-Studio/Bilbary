@@ -8,7 +8,7 @@ import SwiftUI
 
 struct StreakView: View {
     @State private var toggleState: Bool = false
-    @State private var progress: Double = 0.7 // Example progress value (0.0 to 1.0)
+    @State private var progress: Double = 0.7
     
     var body: some View {
         VStack {

@@ -10,7 +10,7 @@ import SwiftData
 @Model
 class UserPreferences {
     var selectedGoal: ReadGoal
-    
+
     init(selectedGoal: ReadGoal = .twoHours) {
         self.selectedGoal = selectedGoal
     }
@@ -23,6 +23,7 @@ enum ReadGoal: Int, CaseIterable, Codable {
     case fortyMinutes = 2400
     case oneHour = 3600
     case twoHours = 7200
+    case sixHours = 21600
     
     var label: String {
         switch self {
@@ -38,20 +39,23 @@ enum ReadGoal: Int, CaseIterable, Codable {
             return "1 hour"
         case .twoHours:
             return "2 hours"
+            
+        case .sixHours :
+            return "6 hours"
         }
     }
 }
 
 struct StreakView: View {
-    
     @Environment(\.modelContext) private var modelContext
     @Query private var preferences: [UserPreferences]
-    
+
+   
     let timeSpent: TimeInterval
-    
+
     @State private var toggleState: Bool = false
     @State private var animatedProgress: Double = 0.0
-    
+
     private var userPreferences: UserPreferences {
         if let existing = preferences.first {
             return existing
@@ -61,20 +65,26 @@ struct StreakView: View {
             return newPreferences
         }
     }
-    
+
+   
     var computedProgress: Double {
         min(timeSpent / Double(userPreferences.selectedGoal.rawValue), 1.0)
     }
-    
+
+   
+    var isTodayActive: Bool {
+        timeSpent >= Double(userPreferences.selectedGoal.rawValue)
+    }
+
     var body: some View {
         VStack {
             HStack {
                 Text("3 Streak")
                     .font(.title)
                     .bold()
-                
+
                 Spacer()
-                
+
                 ZStack {
                     Circle()
                         .stroke(
@@ -92,14 +102,15 @@ struct StreakView: View {
                         )
                         .rotationEffect(.degrees(-90))
                 }
-                .frame(width: 40, height: 40)
+                .frame(width: 30, height: 30)
             }
             .padding()
-            
-            WeekView()
-            
+
+           
+            WeekView(isTodayActive: isTodayActive)
+
             Spacer()
-            
+
             VStack(spacing: 16) {
                 HStack {
                     Text("Read for")
@@ -120,7 +131,7 @@ struct StreakView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-                
+
                 HStack {
                     Text("Streak")
                     Spacer()
@@ -137,7 +148,7 @@ struct StreakView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-                
+
                 HStack {
                     Text("Streak")
                     Spacer()
@@ -152,7 +163,7 @@ struct StreakView: View {
             .shadow(radius: 5)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
-            
+
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -163,7 +174,7 @@ struct StreakView: View {
             }
         }
     }
-    
+
     private func updateProgress() {
         animatedProgress = 0.0
         withAnimation(.easeOut(duration: 0.5)) {

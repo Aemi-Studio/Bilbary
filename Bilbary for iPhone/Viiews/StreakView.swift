@@ -5,15 +5,24 @@
 //  Created by Shohjakhon Mamadaliev on 13/02/25.
 //
 import SwiftUI
+import SwiftData
 
-enum ReadGoal: Int, CaseIterable {
+@Model
+class UserPreferences {
+    var selectedGoal: ReadGoal
+    
+    init(selectedGoal: ReadGoal = .twoHours) {
+        self.selectedGoal = selectedGoal
+    }
+}
+
+enum ReadGoal: Int, CaseIterable, Codable {
     case fiveMinutes = 300
     case tenMinutes = 600
     case fifteenMinutes = 900
     case fortyMinutes = 2400
     case oneHour = 3600
     case twoHours = 7200
-    
     
     var label: String {
         switch self {
@@ -33,20 +42,28 @@ enum ReadGoal: Int, CaseIterable {
     }
 }
 
-
-
 struct StreakView: View {
+    
+    @Environment(\.modelContext) private var modelContext
+    @Query private var preferences: [UserPreferences]
     
     let timeSpent: TimeInterval
     
     @State private var toggleState: Bool = false
-    
     @State private var animatedProgress: Double = 0.0
     
-    @State private var selectedGoal: ReadGoal = .twoHours
+    private var userPreferences: UserPreferences {
+        if let existing = preferences.first {
+            return existing
+        } else {
+            let newPreferences = UserPreferences()
+            modelContext.insert(newPreferences)
+            return newPreferences
+        }
+    }
     
     var computedProgress: Double {
-        min(timeSpent / Double(selectedGoal.rawValue), 1.0)
+        min(timeSpent / Double(userPreferences.selectedGoal.rawValue), 1.0)
     }
     
     var body: some View {
@@ -88,16 +105,14 @@ struct StreakView: View {
                     Text("Read for")
                     Spacer()
                     Menu {
-
                         ForEach(ReadGoal.allCases, id: \.self) { goal in
-                            Button( goal.label) {
-                                selectedGoal = goal
+                            Button(goal.label) {
+                                userPreferences.selectedGoal = goal
                                 updateProgress()
                             }
                         }
-                        
                     } label: {
-                        Text(selectedGoal.label)
+                        Text(userPreferences.selectedGoal.label)
                             .foregroundStyle(.white)
                             .padding(.vertical, 6)
                             .padding(.horizontal, 12)
@@ -142,7 +157,6 @@ struct StreakView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
-            // Start the progress at 0, then animate to the computed progress.
             animatedProgress = 0.0
             withAnimation(.easeOut(duration: 0.5)) {
                 animatedProgress = computedProgress
@@ -151,11 +165,9 @@ struct StreakView: View {
     }
     
     private func updateProgress() {
-            animatedProgress = 0.0
-            withAnimation(.easeOut(duration: 0.5)) {
-                animatedProgress = computedProgress
-            }
+        animatedProgress = 0.0
+        withAnimation(.easeOut(duration: 0.5)) {
+            animatedProgress = computedProgress
         }
+    }
 }
-
-

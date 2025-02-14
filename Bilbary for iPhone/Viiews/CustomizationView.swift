@@ -20,7 +20,7 @@ struct CustomizationView: View {
             .padding()
             
             ScrollView {
-                // Add your scrollable content here
+               
             }
         }
     }

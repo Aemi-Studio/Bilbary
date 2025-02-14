@@ -138,13 +138,14 @@ extension CustomSheetView {
                         
                         else if tab.id == .streakGoal {
                             VStack{
-                                StreakView()
+                                StreakView(timeSpent: timeSpent ?? 0.0)
                             }
                             .frame(width: size.width, height: size.height)
                         }
                         
                         else {
-                            ContainerView(timeSpent: timeSpent, sessionsCount: sessions.count)
+                            DailyUsageView(sessions: sessions)
+//                            ContainerView(timeSpent: timeSpent, sessionsCount: sessions.count)
                             .frame(width: size.width, height: size.height)
                             
                         }

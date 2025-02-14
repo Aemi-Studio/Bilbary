@@ -6,9 +6,48 @@
 //
 import SwiftUI
 
+enum ReadGoal: Int, CaseIterable {
+    case fiveMinutes = 300
+    case tenMinutes = 600
+    case fifteenMinutes = 900
+    case fortyMinutes = 2400
+    case oneHour = 3600
+    case twoHours = 7200
+    
+    
+    var label: String {
+        switch self {
+        case .fiveMinutes:
+            return "5 minutes"
+        case .tenMinutes:
+            return "10 minutes"
+        case .fifteenMinutes:
+            return "15 minutes"
+        case .fortyMinutes:
+            return "40 minutes"
+        case .oneHour:
+            return "1 hour"
+        case .twoHours:
+            return "2 hours"
+        }
+    }
+}
+
+
+
 struct StreakView: View {
+    
+    let timeSpent: TimeInterval
+    
     @State private var toggleState: Bool = false
-    @State private var progress: Double = 0.7
+    
+    @State private var animatedProgress: Double = 0.0
+    
+    @State private var selectedGoal: ReadGoal = .twoHours
+    
+    var computedProgress: Double {
+        min(timeSpent / Double(selectedGoal.rawValue), 1.0)
+    }
     
     var body: some View {
         VStack {
@@ -18,7 +57,7 @@ struct StreakView: View {
                     .bold()
                 
                 Spacer()
-            
+                
                 ZStack {
                     Circle()
                         .stroke(
@@ -26,7 +65,7 @@ struct StreakView: View {
                             lineWidth: 4
                         )
                     Circle()
-                        .trim(from: 0, to: progress)
+                        .trim(from: 0, to: animatedProgress)
                         .stroke(
                             Color.white,
                             style: StrokeStyle(
@@ -41,6 +80,7 @@ struct StreakView: View {
             .padding()
             
             WeekView()
+            
             Spacer()
             
             VStack(spacing: 16) {
@@ -48,11 +88,16 @@ struct StreakView: View {
                     Text("Read for")
                     Spacer()
                     Menu {
-                        Button("5 minutes", action: { })
-                        Button("10 minutes", action: { })
-                        Button("15 minutes", action: { })
+
+                        ForEach(ReadGoal.allCases, id: \.self) { goal in
+                            Button( goal.label) {
+                                selectedGoal = goal
+                                updateProgress()
+                            }
+                        }
+                        
                     } label: {
-                        Text("5 minutes")
+                        Text(selectedGoal.label)
                             .foregroundStyle(.white)
                             .padding(.vertical, 6)
                             .padding(.horizontal, 12)
@@ -96,5 +141,21 @@ struct StreakView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear {
+            // Start the progress at 0, then animate to the computed progress.
+            animatedProgress = 0.0
+            withAnimation(.easeOut(duration: 0.5)) {
+                animatedProgress = computedProgress
+            }
+        }
     }
+    
+    private func updateProgress() {
+            animatedProgress = 0.0
+            withAnimation(.easeOut(duration: 0.5)) {
+                animatedProgress = computedProgress
+            }
+        }
 }
+
+

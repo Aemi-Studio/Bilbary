@@ -11,26 +11,28 @@ struct BooksView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Text("Books")
-                    .font(.title)
-                    .bold()
-                Spacer()
-            }
-            .padding()
+//            HStack {
+//                Text("Books")
+//                    .font(.title)
+//                    .bold()
+//                Spacer()
+//            }
+//            .padding()
             
             List {
-                ForEach(toBooks, id: \.id) { book in
-                    VStack(alignment: .leading) {
-                        Text(book.name)
-                            .font(.headline)
-                        
-                        Text(book.author)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
+                Section(header: Text("books" )) {
+                    ForEach(toBooks, id: \.id) { book in
+                        VStack(alignment: .leading) {
+                            Text(book.name)
+                                .font(.headline)
+                            
+                            Text(book.author)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                        .padding()
+                        .listRowBackground(Color.black.opacity(0.2))
                     }
-                    .padding()
-                    .listRowBackground(Color.black.opacity(0.2))
                 }
             }
             .scrollContentBackground(.hidden)

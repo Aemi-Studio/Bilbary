@@ -60,7 +60,4 @@ struct WeekView: View {
     }
 }
 
-#Preview {
-    
-    WeekView(isTodayActive: true)
-}
+

@@ -11,36 +11,30 @@ import SwiftData
 
 @Model
 class ReadSession: Identifiable {
-    
+
     typealias ID = UUID
-    
+
     @Attribute(.unique)
     let id: ID = ID()
-    
+
     let startTime: Date
     private(set) var endTime: Date?
-    
+
     init() {
         self.startTime = .now
     }
-    
+
     func end() -> Self {
         self.endTime = .now
         return self
     }
-    
+
     var duration: TimeInterval {
         let end = endTime ?? .now
         return end.timeIntervalSince(startTime)
     }
-    
+
 }
-
-
-
-
-
-
 
 @MainActor
 let AppModelContainer: ModelContainer = {
@@ -51,5 +45,3 @@ let AppModelContainer: ModelContainer = {
         fatalError("Failed to create container")
     }
 }()
-
-

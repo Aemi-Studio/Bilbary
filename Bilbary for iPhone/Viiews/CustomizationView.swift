@@ -18,9 +18,9 @@ struct CustomizationView: View {
             .background(.bar)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .padding()
-            
+
             ScrollView {
-               
+
             }
         }
     }

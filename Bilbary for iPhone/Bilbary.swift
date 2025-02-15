@@ -13,18 +13,15 @@ struct Bilbary: App {
 
     @State
     private var appUsageTracker = AppUsageTracker()
-    
+
     @State private var userPreferences = UserPreferences()
-    
-    
-    
 
     var body: some Scene {
         WindowGroup {
             BilbaryView()
                 .environment(appUsageTracker)
-              //  .environmentObject(userPreferences)
-                
+            //  .environmentObject(userPreferences)
+
         }
         .modelContainer(AppModelContainer)
     }

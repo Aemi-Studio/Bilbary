@@ -63,5 +63,3 @@ struct BilbaryView: View {
     }
 
 }
-
-

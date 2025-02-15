@@ -11,21 +11,21 @@ struct BooksView: View {
 
     var body: some View {
         VStack {
-//            HStack {
-//                Text("Books")
-//                    .font(.title)
-//                    .bold()
-//                Spacer()
-//            }
-//            .padding()
-            
+            //            HStack {
+            //                Text("Books")
+            //                    .font(.title)
+            //                    .bold()
+            //                Spacer()
+            //            }
+            //            .padding()
+
             List {
                 Section(header: Text("books" )) {
                     ForEach(toBooks, id: \.id) { book in
                         VStack(alignment: .leading) {
                             Text(book.name)
                                 .font(.headline)
-                            
+
                             Text(book.author)
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
@@ -40,7 +40,6 @@ struct BooksView: View {
         .ignoresSafeArea(.all, edges: .bottom)
     }
 }
-
 
 struct BookIphone: Identifiable {
     let name: String

@@ -55,7 +55,7 @@ struct CustomizerView: View {
                                 .frame(maxWidth: .infinity, alignment: .center)
                         }
                         .padding()
-                        .frame(width: 160, height: 120) 
+                        .frame(width: 160, height: 120)
                         .background(Color(style.backgroundColor))
                         .cornerRadius(16)
                         .overlay(

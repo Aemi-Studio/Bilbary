@@ -7,13 +7,13 @@
 import SwiftUI
 
 struct WeekView: View {
-    
+
     let isTodayActive: Bool
 
     var body: some View {
-       
+
         let weekdaySymbols = ["M", "T", "W", "T", "F", "S", "S"]
-       
+
         let calendar = Calendar.current
         let weekdayComponent = calendar.component(.weekday, from: Date())
         // In Calendar, Sunday is 1, Monday is 2, ..., Saturday is 7.
@@ -30,7 +30,7 @@ struct WeekView: View {
                 HStack(spacing: 20) {
                     ForEach(0..<weekdaySymbols.count, id: \.self) { index in
                         VStack(spacing: 6) {
-                          
+
                             if index == todayIndex {
                                 if isTodayActive {
                                     Circle()
@@ -42,7 +42,7 @@ struct WeekView: View {
                                         .frame(width: 13, height: 13)
                                 }
                             } else {
-                    
+
                                 Circle()
                                     .stroke(Color.white.opacity(0.7), lineWidth: 2)
                                     .frame(width: 13, height: 13)
@@ -59,5 +59,3 @@ struct WeekView: View {
             .padding(.horizontal)
     }
 }
-
-

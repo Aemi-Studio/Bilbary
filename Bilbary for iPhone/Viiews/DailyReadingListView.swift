@@ -5,10 +5,10 @@
 //  Created by Shohjakhon Mamadaliev on 14/02/25.
 //
 
-//import SwiftUI
-//import SwiftData
+// import SwiftUI
+// import SwiftData
 //
-//struct DailyReadingListView: View {
+// struct DailyReadingListView: View {
 //    // Query all DailyReading objects.
 //    @Query private var dailyReadings: [DailyReading]
 //
@@ -25,9 +25,9 @@
 //            .navigationTitle("Daily Readings")
 //        }
 //    }
-//}
+// }
 //
-//#Preview {
+// #Preview {
 //    DailyReadingListView()
 //        .modelContainer(AppModelContainer)
-//}
+// }

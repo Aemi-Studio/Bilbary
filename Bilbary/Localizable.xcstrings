@@ -43,7 +43,7 @@
     "Aa" : {
 
     },
-    "Books" : {
+    "books" : {
 
     },
     "Cater to Your Liking" : {
@@ -59,6 +59,15 @@
 
     },
     "Customize your pace, time, and content" : {
+
+    },
+    "Daily Usage" : {
+
+    },
+    "Duration: %lld seconds" : {
+
+    },
+    "Ended: %@" : {
 
     },
     "F" : {
@@ -180,6 +189,9 @@
     "M" : {
 
     },
+    "Ongoing" : {
+
+    },
     "Placeholder" : {
 
     },
@@ -262,7 +274,19 @@
     "Select a content length" : {
       "comment" : "Picker string for content length/duration"
     },
+    "Session #%lld" : {
+
+    },
+    "Sessions" : {
+
+    },
+    "Sessions: %lld" : {
+
+    },
     "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
+
+    },
+    "Started: %@" : {
 
     },
     "Streak" : {
@@ -280,10 +304,10 @@
     "The Giant in Glee." : {
 
     },
-    "This View For Content Length" : {
+    "Today" : {
 
     },
-    "Today" : {
+    "Total Time: %@" : {
 
     },
     "Victor Hugo" : {

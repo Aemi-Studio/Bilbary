@@ -24,7 +24,7 @@ enum ReadGoal: Int, CaseIterable, Codable {
     case oneHour = 3600
     case twoHours = 7200
     case sixHours = 21600
-    
+
     var label: String {
         switch self {
         case .fiveMinutes:
@@ -39,8 +39,8 @@ enum ReadGoal: Int, CaseIterable, Codable {
             return "1 hour"
         case .twoHours:
             return "2 hours"
-            
-        case .sixHours :
+
+        case .sixHours:
             return "6 hours"
         }
     }
@@ -50,7 +50,6 @@ struct StreakView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var preferences: [UserPreferences]
 
-   
     let timeSpent: TimeInterval
 
     @State private var toggleState: Bool = false
@@ -66,12 +65,10 @@ struct StreakView: View {
         }
     }
 
-   
     var computedProgress: Double {
         min(timeSpent / Double(userPreferences.selectedGoal.rawValue), 1.0)
     }
 
-   
     var isTodayActive: Bool {
         timeSpent >= Double(userPreferences.selectedGoal.rawValue)
     }
@@ -106,7 +103,6 @@ struct StreakView: View {
             }
             .padding()
 
-           
             WeekView(isTodayActive: isTodayActive)
 
             Spacer()

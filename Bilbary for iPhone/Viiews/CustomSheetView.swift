@@ -8,24 +8,24 @@ import SwiftUI
 import SwiftData
 
 struct CustomSheetView: View {
-    
+
     @Environment(\.modelContext)
     private var context
-    
+
     @Environment(AppUsageTracker.self)
     private var appUsageTracker
-    
+
     @Environment(\.scenePhase)
     private var scenePhase
-    
+
     @Query
     private var sessions: [ReadSession]
-    
+
     private var timer = Timer.publish(every: 0.1, on: .main, in: .default).autoconnect()
-    
+
     @State
     private var timeSpent: TimeInterval?
-    
+
     @State
     private var tabs: [TabModel] = [
         .init(id: TabModel.Tab.book),
@@ -34,23 +34,23 @@ struct CustomSheetView: View {
         .init(id: TabModel.Tab.streakGoal),
         .init(id: TabModel.Tab.customization)
     ]
-    
+
     @State
     private var activeTab: TabModel.Tab = .book
     @State private var mainViewScrollState: TabModel.Tab?
     @State private var tabBarScrollState: TabModel.Tab?
     @State private var screenHeight = UIScreen.main.bounds.height
     @State private var heightSpacing: CGFloat  = 30
-    
+
     var body: some View {
-        
+
         VStack {
             Spacer().frame(height: heightSpacing)
             CustomTabBar()
                 .padding()
-            
+
             ViewScroller()
-            
+
             Spacer()
         }
         .viewPosition { value in
@@ -63,7 +63,7 @@ struct CustomSheetView: View {
                 }
             }
         }
-        
+
         .onReceive(self.timer) { _ in
             timeSpent = appUsageTracker.computeTimeSpentToday(sessions)
         }
@@ -82,18 +82,17 @@ struct CustomSheetView: View {
             }
         }
         .background(.ultraThinMaterial)
-        
-    }
-    
-}
 
+    }
+
+}
 
 // MARK: - ViewBuilders
 
 extension CustomSheetView {
     @ViewBuilder
     func CustomTabBar () -> some View {
-        
+
         HStack(spacing: 20) {
             ForEach(tabs) { tab in
                 Button(action: {
@@ -101,22 +100,22 @@ extension CustomSheetView {
                         activeTab = tab.id
                         mainViewScrollState = tab.id
                     }
-                    
+
                 }) {
                     Spacer()
                     Image(systemName: tab.id.rawValue)
                         .padding(.vertical, 12)
                         .foregroundStyle(activeTab == tab.id ? Color.primary: .gray)
                         .contentShape(.rect)
-                    
+
                 }
                 .buttonStyle(.plain)
-                
+
             }
             Spacer()
         }
     }
-    
+
     @ViewBuilder
     func ViewScroller() -> some View {
         GeometryReader {
@@ -130,26 +129,21 @@ extension CustomSheetView {
                         } else if tab.id == .book {
                             BooksView()
                                 .frame(width: size.width, height: size.height)
-                        }
-                        else if tab.id == .readingTime {
+                        } else if tab.id == .readingTime {
                             SessionsListView(sessions: sessions)
                                 .frame(width: size.width, height: size.height)
-                        }
-                        
-                        else if tab.id == .streakGoal {
-                            VStack{
+                        } else if tab.id == .streakGoal {
+                            VStack {
                                 StreakView(timeSpent: timeSpent ?? 0.0)
                             }
                             .frame(width: size.width, height: size.height)
-                        }
-                        
-                        else {
+                        } else {
                             DailyUsageView(sessions: sessions)
 
-                            .frame(width: size.width, height: size.height)
-                            
+                                .frame(width: size.width, height: size.height)
+
                         }
-                        
+
                     }
                 }
                 .scrollTargetLayout()

@@ -28,20 +28,20 @@ enum ReadGoal: Int, CaseIterable, Codable {
     var label: String {
         switch self {
         case .fiveMinutes:
-            return "5 minutes"
+            return String(localized: "5 minutes")
         case .tenMinutes:
-            return "10 minutes"
+            return String(localized: "10 minutes" )
         case .fifteenMinutes:
-            return "15 minutes"
+            return String(localized: "15 minutes")
         case .fortyMinutes:
-            return "40 minutes"
+            return String(localized: "40 minutes")
         case .oneHour:
-            return "1 hour"
+            return String(localized: "1 hour")
         case .twoHours:
-            return "2 hours"
+            return String(localized: "2 hours")
 
         case .sixHours:
-            return "6 hours"
+            return String(localized: "6 hours")
         }
     }
 }
@@ -132,11 +132,11 @@ struct StreakView: View {
                     Text(String(localized: "Streak"))
                     Spacer()
                     Menu {
-                        Button("3 months", action: {  })
-                        Button("6 months", action: { })
-                        Button("12 months", action: { })
+                        Button(String(localized: "3 months"), action: {  })
+                        Button(String(localized: "6 months"), action: { })
+                        Button(String(localized: "12 months"), action: { })
                     } label: {
-                        Text("3 months")
+                        Text(String(localized: "3 months"))
                             .foregroundStyle(.white)
                             .padding(.vertical, 6)
                             .padding(.horizontal, 12)

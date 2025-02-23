@@ -22,7 +22,7 @@ struct CustomSheetView: View {
     private var sessions: [ReadSession]
 
     private var timer = Timer.publish(every: 0.1, on: .main, in: .default).autoconnect()
-
+    
     @State
     private var timeSpent: TimeInterval?
 

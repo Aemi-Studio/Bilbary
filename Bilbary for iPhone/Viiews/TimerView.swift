@@ -57,3 +57,33 @@ struct DailyUsageView: View {
         }
     }
 }
+
+class DailyUsageManager: ObservableObject {
+    @Published var sessions: [ReadSession] {
+        didSet {
+            calculateDailyUsage()
+        }
+    }
+    
+    @Published var dailyUsage: [(day: Date, totalTime: TimeInterval, sessionCount: Int)] = []
+    
+    init(sessions: [ReadSession]) {
+        self.sessions = sessions
+        calculateDailyUsage()
+    }
+    
+    private func calculateDailyUsage() {
+        let calendar = Calendar.current
+        
+        let grouped = Dictionary(grouping: sessions) { session in
+            calendar.startOfDay(for: session.startTime)
+        }
+        
+        let usageArray = grouped.map { (day, sessions) in
+            let totalTime = sessions.reduce(0) { $0 + $1.duration }
+            return (day: day, totalTime: totalTime, sessionCount: sessions.count)
+        }
+        
+        dailyUsage = usageArray.sorted { $0.day > $1.day }
+    }
+}

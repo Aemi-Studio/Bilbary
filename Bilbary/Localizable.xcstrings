@@ -370,18 +370,6 @@
     "Placeholder" : {
 
     },
-    "readTime.0min" : {
-      "comment" : "No Reading Time Goal",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Limit"
-          }
-        }
-      }
-    },
     "readTime.1min" : {
       "comment" : "Reading Time Goal of 1 minute",
       "localizations" : {
@@ -462,7 +450,14 @@
 
     },
     "Streak" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стрик"
+          }
+        }
+      }
     },
     "Swipe for Different Content" : {
 

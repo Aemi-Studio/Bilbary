@@ -15,9 +15,9 @@ class ReadSession: Identifiable {
     typealias ID = UUID
 
     @Attribute(.unique)
-    let id: ID = ID()
+    var id: ID = ID()
 
-    let startTime: Date
+    var startTime: Date
     private(set) var endTime: Date?
 
     init() {

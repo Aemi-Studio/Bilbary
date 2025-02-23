@@ -53,7 +53,7 @@ struct DailyUsageView: View {
                 }
                 .padding(.vertical, 4)
             }
-            .navigationTitle("Daily Usage")
+            .navigationTitle(String(localized: "Daily Usage"))
         }
     }
 }

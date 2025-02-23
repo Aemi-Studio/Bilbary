@@ -39,7 +39,7 @@ struct SessionsListView: View {
                     Text("Ended: \(endTime, formatter: dateFormatter)")
                         .font(.subheadline)
                 } else {
-                    Text("Ongoing")
+                    Text(String(localized: "Ongoing"))
                         .font(.subheadline)
                         .foregroundColor(.green)
                 }

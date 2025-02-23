@@ -76,7 +76,7 @@ struct StreakView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("3 Streak")
+                Text(String(localized: "3 Streak"))
                     .font(.title)
                     .bold()
 
@@ -109,7 +109,7 @@ struct StreakView: View {
 
             VStack(spacing: 16) {
                 HStack {
-                    Text("Read for")
+                    Text(String(localized: "3 Streak"))
                     Spacer()
                     Menu {
                         ForEach(ReadGoal.allCases, id: \.self) { goal in
@@ -129,7 +129,7 @@ struct StreakView: View {
                 }
 
                 HStack {
-                    Text("Streak")
+                    Text(String(localized: "Streak"))
                     Spacer()
                     Menu {
                         Button("3 months", action: {  })
@@ -146,7 +146,7 @@ struct StreakView: View {
                 }
 
                 HStack {
-                    Text("Streak")
+                    Text(String(localized: "Streak"))
                     Spacer()
                     Toggle("", isOn: $toggleState)
                         .labelsHidden()

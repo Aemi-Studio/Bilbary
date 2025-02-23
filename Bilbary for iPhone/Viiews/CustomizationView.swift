@@ -11,7 +11,7 @@ struct CustomizationView: View {
     var body: some View {
         VStack(spacing: 16) {
             VStack {
-                Text("Customization View")
+                Text(String(localized: "Customization View"))
             }
             .frame(maxWidth: .infinity)
             .frame(height: 200)

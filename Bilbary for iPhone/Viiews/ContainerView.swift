@@ -34,7 +34,7 @@ struct ContainerView: View {
                         }
                     }
                     HStack {
-                        Text("Library")
+                        Text(String(localized: "Library"))
                             .font(.largeTitle)
                             .fontWeight(.bold)
                         Spacer()

@@ -11,16 +11,8 @@ struct BooksView: View {
 
     var body: some View {
         VStack {
-            //            HStack {
-            //                Text("Books")
-            //                    .font(.title)
-            //                    .bold()
-            //                Spacer()
-            //            }
-            //            .padding()
-
             List {
-                Section(header: Text("books" )) {
+                Section(header: Text(String(localized: "books") )) {
                     ForEach(toBooks, id: \.id) { book in
                         VStack(alignment: .leading) {
                             Text(book.name)

@@ -8,7 +8,14 @@
 
     },
     " Read" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прочесть"
+          }
+        }
+      }
     },
     "%@" : {
 
@@ -19,32 +26,135 @@
     "%lld sessions" : {
 
     },
+    "1 hour" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 час"
+          }
+        }
+      }
+    },
+    "2 hours" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 часа"
+          }
+        }
+      }
+    },
     "3 months" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 месяца"
+          }
+        }
+      }
     },
     "3 Streak" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 Стрик"
+          }
+        }
+      }
     },
     "5 minutes" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 минут"
+          }
+        }
+      }
+    },
+    "6 hours" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6 часов"
+          }
+        }
+      }
     },
     "6 months" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6 месяцев"
+          }
+        }
+      }
     },
     "10 minutes" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 минут"
+          }
+        }
+      }
     },
     "12 months" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 месяцев"
+          }
+        }
+      }
     },
     "15 minutes" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "15 минут"
+          }
+        }
+      }
+    },
+    "40 minutes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "40 минут"
+          }
+        }
+      }
     },
     "Aa" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аа"
+          }
+        }
+      }
     },
     "books" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "книги"
+          }
+        }
+      }
     },
     "Cater to Your Liking" : {
 
@@ -53,7 +163,14 @@
 
     },
     "Continue" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить "
+          }
+        }
+      }
     },
     "Customization View" : {
 
@@ -62,10 +179,24 @@
 
     },
     "Daily Usage" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дневная активность"
+          }
+        }
+      }
     },
     "Duration: %lld seconds" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжительность %lld секунд"
+          }
+        }
+      }
     },
     "Ended: %@" : {
 
@@ -93,6 +224,12 @@
             "state" : "translated",
             "value" : "1 Week"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 неделя "
+          }
         }
       }
     },
@@ -103,6 +240,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2 Weeks"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 недели "
           }
         }
       }
@@ -115,6 +258,12 @@
             "state" : "translated",
             "value" : "1 Month"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 месяц "
+          }
         }
       }
     },
@@ -125,6 +274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3 Months"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 месяца "
           }
         }
       }
@@ -137,6 +292,12 @@
             "state" : "translated",
             "value" : "6 Months"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6 месяцев"
+          }
         }
       }
     },
@@ -147,6 +308,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 Year"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 год"
           }
         }
       }
@@ -172,7 +339,15 @@
       "comment" : "Information about the current open book"
     },
     "Library" : {
-      "comment" : "Library"
+      "comment" : "Library",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Библиотека "
+          }
+        }
+      }
     },
     "Like" : {
       "comment" : "Action of liking, in the context of the current book"
@@ -194,21 +369,6 @@
     },
     "Placeholder" : {
 
-    },
-    "Read for" : {
-
-    },
-    "readTime.0min" : {
-      "comment" : "No Reading Time Goal",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Limit"
-          }
-        }
-      }
     },
     "readTime.1min" : {
       "comment" : "Reading Time Goal of 1 minute",
@@ -290,7 +450,14 @@
 
     },
     "Streak" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стрик"
+          }
+        }
+      }
     },
     "Swipe for Different Content" : {
 

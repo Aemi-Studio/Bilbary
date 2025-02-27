@@ -27,7 +27,7 @@ final class RCustomizerModel: ObservableObject {
             self.storage.lineHeight = self.style.lineHeight
             self.storage.paragraphSpacing = self.style.paragraphSpacing
             self.storage.wordSpacing = self.style.wordSpacing
-            self.storage.scheme = self.style.scheme.rawValue ?? 2
+            self.storage.scheme = self.style.scheme.rawValue
         }
     }
 

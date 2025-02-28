@@ -51,7 +51,6 @@ struct CustomizationView: View {
                     }
                 }
                 .padding()
-            }
             
             Divider()
                 .padding(.vertical)
@@ -74,6 +73,7 @@ struct CustomizationView: View {
                             Label("Larger Font Size", systemImage: "textformat.size.larger")
                                 .labelStyle(.iconOnly)
                         }
+                        .tint(Color.gray.opacity(0.8))
                     }
                     
                     VStack(alignment: .leading, spacing: 4) {
@@ -92,6 +92,7 @@ struct CustomizationView: View {
                             Label("Looser Kerning", systemImage: "plus")
                                 .labelStyle(.iconOnly)
                         }
+                        .tint(Color.gray.opacity(0.8))
                     }
                     
                     VStack(alignment: .leading, spacing: 4) {
@@ -110,6 +111,7 @@ struct CustomizationView: View {
                             Label("Taller", systemImage: "plus")
                                 .labelStyle(.iconOnly)
                         }
+                        .tint(Color.gray.opacity(0.8))
                     }
                     
                     VStack(alignment: .leading, spacing: 4) {
@@ -128,14 +130,16 @@ struct CustomizationView: View {
                             Label("Taller", systemImage: "plus")
                                 .labelStyle(.iconOnly)
                         }
+                        .tint(Color.gray.opacity(0.8))
                     }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal)
             }
         }
+    }
         .padding()
-        .background(.regularMaterial)
+        .background(.ultraThinMaterial)
         .onAppear {
             self.selectedId = customizer.style.id
         }

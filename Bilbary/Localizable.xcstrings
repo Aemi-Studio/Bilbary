@@ -22,13 +22,22 @@
     "%lld" : {
 
     },
+    "%lld sessions" : {
+
+    },
+    "3 months" : {
+
+    },
+    "3 Streak" : {
+
+    },
+    "6 months" : {
+
+    },
+    "12 months" : {
+
+    },
     "Aa" : {
-
-    },
-    "Book" : {
-
-    },
-    "Book Content" : {
 
     },
     "book.notStartedYet" : {
@@ -75,6 +84,9 @@
         }
       }
     },
+    "books" : {
+
+    },
     "button.streak" : {
       "comment" : "Streak word display on the interface UI",
       "localizations" : {
@@ -102,7 +114,19 @@
         }
       }
     },
+    "Customization View" : {
+
+    },
     "Customize your pace, time, and content" : {
+
+    },
+    "Daily Usage" : {
+
+    },
+    "Duration: %lld seconds" : {
+
+    },
+    "Ended: %@" : {
 
     },
     "F" : {
@@ -333,7 +357,13 @@
         }
       }
     },
+    "Ongoing" : {
+
+    },
     "Paragraph Spacing" : {
+
+    },
+    "Read for" : {
 
     },
     "readTime.0min" : {
@@ -412,6 +442,15 @@
     "Select a content length" : {
       "comment" : "Picker string for content length/duration"
     },
+    "Session #%lld" : {
+
+    },
+    "Sessions" : {
+
+    },
+    "Sessions: %lld" : {
+
+    },
     "Settings" : {
 
     },
@@ -422,6 +461,12 @@
 
     },
     "Start small with a few sentences.\nAll you have to do is scroll if you like what you see." : {
+
+    },
+    "Started: %@" : {
+
+    },
+    "Streak" : {
 
     },
     "Streak Validated" : {
@@ -443,6 +488,9 @@
 
     },
     "Today" : {
+
+    },
+    "Total Time: %@" : {
 
     },
     "Unlike this book" : {

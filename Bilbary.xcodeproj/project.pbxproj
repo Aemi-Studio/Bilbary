@@ -259,7 +259,6 @@
 		6C6002712D72035900E76008 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6002702D72035900E76008 /* WeekView.swift */; };
 		6C6002732D72037400E76008 /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6002722D72037400E76008 /* StreakView.swift */; };
 		6C6002752D72039600E76008 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6002742D72039600E76008 /* ContainerView.swift */; };
-		6C6002772D7203AF00E76008 /* CustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6002762D7203AF00E76008 /* CustomizationView.swift */; };
 		6C6002792D7203CE00E76008 /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6002782D7203CE00E76008 /* SessionsView.swift */; };
 		6C60027A2D72065E00E76008 /* BReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FA7CB2B96269E00BA04DA /* BReadModel.swift */; };
 		6C60027B2D7206B300E76008 /* BookInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CEDD92B8545E0001D951C /* BookInformationView.swift */; };
@@ -270,6 +269,7 @@
 		6C6002802D72071300E76008 /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
 		6C6002812D72073400E76008 /* BBookInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E0F1A2B95B58600D83BE5 /* BBookInfoCard.swift */; };
 		6C6002822D72073C00E76008 /* BBookInfoCardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E0F1D2B95B5C000D83BE5 /* BBookInfoCardHeader.swift */; };
+		6CC9F0B62D7214DC0098C9CB /* CustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9F0B52D7214DC0098C9CB /* CustomizerView.swift */; };
 		A0CCC1922B8C93D90086578C /* LibraryBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -424,8 +424,8 @@
 		6C6002702D72035900E76008 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		6C6002722D72037400E76008 /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
 		6C6002742D72039600E76008 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
-		6C6002762D7203AF00E76008 /* CustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
 		6C6002782D7203CE00E76008 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
+		6CC9F0B52D7214DC0098C9CB /* CustomizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizerView.swift; sourceTree = "<group>"; };
 		A0CCC1912B8C93D90086578C /* LibraryBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookCard.swift; sourceTree = "<group>"; };
 		B20752E92B8BF1A10093BCBA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -907,6 +907,7 @@
 		6C6002552D71CDFB00E76008 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CC9F0B52D7214DC0098C9CB /* CustomizerView.swift */,
 				463CEDF92B8569BE001D951C /* BilbaryView.swift */,
 				6C6002562D71CE1B00E76008 /* CustomSheetView.swift */,
 				6C6002692D71CEE500E76008 /* TimerView.swift */,
@@ -914,7 +915,6 @@
 				6C6002702D72035900E76008 /* WeekView.swift */,
 				6C6002722D72037400E76008 /* StreakView.swift */,
 				6C6002742D72039600E76008 /* ContainerView.swift */,
-				6C6002762D7203AF00E76008 /* CustomizationView.swift */,
 				6C6002782D7203CE00E76008 /* SessionsView.swift */,
 			);
 			path = Views;
@@ -1303,7 +1303,6 @@
 				464F8F372B913DB0009102CB /* Book+Formatter.swift in Sources */,
 				46ED8AC02B92945700EA292A /* LibraryToolbarView.swift in Sources */,
 				465E0F102B94E08300D83BE5 /* BReadSize.swift in Sources */,
-				6C6002772D7203AF00E76008 /* CustomizationView.swift in Sources */,
 				465E0F132B950AA200D83BE5 /* EPUBSwipeView.swift in Sources */,
 				46406D572B97D01000500A8F /* RCustomizerModel+UINavigation.swift in Sources */,
 				465E0F0D2B94DCFB00D83BE5 /* BClickableModifier.swift in Sources */,
@@ -1371,6 +1370,7 @@
 				6C6002602D71CEA700E76008 /* SheetMask.swift in Sources */,
 				6C6002612D71CEA700E76008 /* SheetPosition.swift in Sources */,
 				6C6002802D72071300E76008 /* LibraryBookCard.swift in Sources */,
+				6CC9F0B62D7214DC0098C9CB /* CustomizerView.swift in Sources */,
 				6C6002622D71CEA700E76008 /* AppModel.swift in Sources */,
 				4606E0702B92321D00D77205 /* BConstants.swift in Sources */,
 				463EBC3C2B9223EC00BB9A57 /* ReadTime+Extensions.swift in Sources */,

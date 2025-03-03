@@ -56,7 +56,7 @@ struct BilbaryView: View {
                 .presentationDragIndicator(.hidden)
                 .presentationCompactAdaptation(horizontal: .none, vertical: .none)
                 .interactiveDismissDisabled()
-                .maskForSheet(mask: mask)
+              //  .maskForSheet(mask: mask)
 
         }
 

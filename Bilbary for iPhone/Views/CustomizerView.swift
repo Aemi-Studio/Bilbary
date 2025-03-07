@@ -63,7 +63,7 @@ struct CustomizationView: View {
                             .fontWeight(.semibold)
                             .textCase(.uppercase)
                             .kerning(0.2)
-                            .foregroundStyle(Color.userDefinedForeground.secondary)
+                            //.foregroundStyle(Color.userDefinedForeground.secondary)
                         Slider(value: $customizer.fontSize, in: 16.0...64.0) {
                             Label("Font Size", systemImage: "textformat.size")
                         } minimumValueLabel: {
@@ -82,7 +82,7 @@ struct CustomizationView: View {
                             .fontWeight(.semibold)
                             .textCase(.uppercase)
                             .kerning(0.2)
-                            .foregroundStyle(Color.userDefinedForeground.secondary)
+                          //  .foregroundStyle(Color.userDefinedForeground.secondary)
                         Slider(value: $customizer.kerning, in: -1.0...3.0, step: 0.2) {
                             Label("Kerning", systemImage: "character")
                         } minimumValueLabel: {
@@ -101,7 +101,7 @@ struct CustomizationView: View {
                             .fontWeight(.semibold)
                             .textCase(.uppercase)
                             .kerning(0.2)
-                            .foregroundStyle(Color.userDefinedForeground.secondary)
+                           // .foregroundStyle(Color.userDefinedForeground.secondary)
                         Slider(value: $customizer.lineHeight, in: 0...100.0, step: 0.1) {
                             Label("Line Height", systemImage: "arrow.up.and.down.text.horizontal")
                         } minimumValueLabel: {

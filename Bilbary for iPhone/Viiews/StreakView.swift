@@ -7,43 +7,27 @@
 import SwiftUI
 import SwiftData
 
-
-
 struct StreakView: View {
     
-    let sessions: [ReadSession]
-
-    var dailyUsage: [(day: Date, totalTime: TimeInterval, sessionCount: Int)] {
-        let calendar = Calendar.current
-
-        let grouped = Dictionary(grouping: sessions) { session in
-            calendar.startOfDay(for: session.startTime)
-        }
-
-        let usageArray = grouped.map { (day, sessions) in
-            let totalTime = sessions.reduce(0) { $0 + $1.duration }
-            return (day: day, totalTime: totalTime, sessionCount: sessions.count)
-        }
-
-        return usageArray.sorted { $0.day > $1.day }
-    }
-    
-    var todayTotalTime: TimeInterval {
-        if let todayUsage = dailyUsage.first(where: { Calendar.current.isDateInToday($0.day) }) {
-            return todayUsage.totalTime
-        }
-        return 0
-    }
-    
+    @State private var viewModel: ViewModel
     
     @Environment(\.modelContext) private var modelContext
     @Query private var preferences: [UserPreferences]
-
-    let timeSpent: TimeInterval
-
+    
     @State private var toggleState: Bool = false
+    
     @State private var animatedProgress: Double = 0.0
+    
+    
+    let sessions: [ReadSession]
 
+
+    init(sessions: [ReadSession]) {
+           self.sessions = sessions
+           self._viewModel = State(initialValue: ViewModel(sessions: sessions))
+       }
+   
+   
     private var userPreferences: UserPreferences {
         if let existing = preferences.first {
             return existing
@@ -55,11 +39,11 @@ struct StreakView: View {
     }
 
     var computedProgress: Double {
-        min(todayTotalTime / Double(userPreferences.selectedGoal.rawValue), 1.0)
+        min(viewModel.todayTotalTime / Double(userPreferences.selectedGoal.rawValue), 1.0)
     }
 
     var isTodayActive: Bool {
-        todayTotalTime >= Double(userPreferences.selectedGoal.rawValue)
+        viewModel.todayTotalTime >= Double(userPreferences.selectedGoal.rawValue)
     }
 
     var body: some View {
@@ -157,6 +141,10 @@ struct StreakView: View {
             withAnimation(.easeOut(duration: 0.5)) {
                 animatedProgress = computedProgress
             }
+        }
+        
+        .onChange(of: viewModel.todayTotalTime) { _, _ in
+            updateProgress()
         }
     }
 

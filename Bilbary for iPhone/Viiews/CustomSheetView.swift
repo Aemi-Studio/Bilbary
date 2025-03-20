@@ -134,7 +134,7 @@ extension CustomSheetView {
                                 .frame(width: size.width, height: size.height)
                         } else if tab.id == .streakGoal {
                             VStack {
-                                StreakView(sessions: sessions, timeSpent: timeSpent ?? 0.0)
+                                StreakView(sessions: sessions)
                             }
                             .frame(width: size.width, height: size.height)
                         } else {

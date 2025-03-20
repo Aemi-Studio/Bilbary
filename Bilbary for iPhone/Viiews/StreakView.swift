@@ -18,17 +18,12 @@ struct StreakView: View {
     
     @State private var animatedProgress: Double = 0.0
     
-    
-    let sessions: [ReadSession]
-
-
     init(sessions: [ReadSession]) {
-           self.sessions = sessions
-           self._viewModel = State(initialValue: ViewModel(sessions: sessions))
-       }
-   
-   
-    private var userPreferences: UserPreferences {
+        self._viewModel = State(initialValue: ViewModel(sessions: sessions))
+    }
+    
+    
+    var userPreferences: UserPreferences {
         if let existing = preferences.first {
             return existing
         } else {
@@ -37,24 +32,25 @@ struct StreakView: View {
             return newPreferences
         }
     }
-
-    var computedProgress: Double {
-        min(viewModel.todayTotalTime / Double(userPreferences.selectedGoal.rawValue), 1.0)
+    
+    func computeProgress() -> Double {
+        return min(viewModel.todayTotalTime / Double(userPreferences.selectedGoal.rawValue), 1.0)
     }
-
+    
     var isTodayActive: Bool {
         viewModel.todayTotalTime >= Double(userPreferences.selectedGoal.rawValue)
     }
-
+    
+    
     var body: some View {
         VStack {
             HStack {
                 Text("3 Streak")
                     .font(.title)
                     .bold()
-
+                
                 Spacer()
-
+                
                 ZStack {
                     Circle()
                         .stroke(
@@ -75,11 +71,11 @@ struct StreakView: View {
                 .frame(width: 30, height: 30)
             }
             .padding()
-
+            
             WeekView(isTodayActive: isTodayActive)
-
+            
             Spacer()
-
+            
             VStack(spacing: 16) {
                 HStack {
                     Text("Read for")
@@ -100,7 +96,7 @@ struct StreakView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-
+                
                 HStack {
                     Text("Streak")
                     Spacer()
@@ -117,7 +113,7 @@ struct StreakView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-
+                
                 HStack {
                     Text("Streak")
                     Spacer()
@@ -132,14 +128,14 @@ struct StreakView: View {
             .shadow(radius: 5)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
-
+            
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
             animatedProgress = 0.0
             withAnimation(.easeOut(duration: 0.5)) {
-                animatedProgress = computedProgress
+                animatedProgress = computeProgress()
             }
         }
         
@@ -147,11 +143,12 @@ struct StreakView: View {
             updateProgress()
         }
     }
-
+    
     private func updateProgress() {
         animatedProgress = 0.0
         withAnimation(.easeOut(duration: 0.5)) {
-            animatedProgress = computedProgress
+            animatedProgress = computeProgress()
         }
     }
 }
+

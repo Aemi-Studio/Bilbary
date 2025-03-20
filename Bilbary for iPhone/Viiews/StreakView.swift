@@ -7,55 +7,23 @@
 import SwiftUI
 import SwiftData
 
-@Model
-class UserPreferences {
-    var selectedGoal: ReadGoal
-
-    init(selectedGoal: ReadGoal = .twoHours) {
-        self.selectedGoal = selectedGoal
-    }
-}
-
-enum ReadGoal: Int, CaseIterable, Codable {
-    case fiveMinutes = 300
-    case tenMinutes = 600
-    case fifteenMinutes = 900
-    case fortyMinutes = 2400
-    case oneHour = 3600
-    case twoHours = 7200
-    case sixHours = 21600
-
-    var label: String {
-        switch self {
-        case .fiveMinutes:
-            return "5 minutes"
-        case .tenMinutes:
-            return "10 minutes"
-        case .fifteenMinutes:
-            return "15 minutes"
-        case .fortyMinutes:
-            return "40 minutes"
-        case .oneHour:
-            return "1 hour"
-        case .twoHours:
-            return "2 hours"
-
-        case .sixHours:
-            return "6 hours"
-        }
-    }
-}
-
 struct StreakView: View {
+    
+    @State private var viewModel: ViewModel
+    
     @Environment(\.modelContext) private var modelContext
     @Query private var preferences: [UserPreferences]
-
-    let timeSpent: TimeInterval
-
+    
     @State private var toggleState: Bool = false
+    
     @State private var animatedProgress: Double = 0.0
-
-    private var userPreferences: UserPreferences {
+    
+    init(sessions: [ReadSession]) {
+        self._viewModel = State(initialValue: ViewModel(sessions: sessions))
+    }
+    
+    
+    var userPreferences: UserPreferences {
         if let existing = preferences.first {
             return existing
         } else {
@@ -64,24 +32,25 @@ struct StreakView: View {
             return newPreferences
         }
     }
-
-    var computedProgress: Double {
-        min(timeSpent / Double(userPreferences.selectedGoal.rawValue), 1.0)
+    
+    func computeProgress() -> Double {
+        return min(viewModel.todayTotalTime / Double(userPreferences.selectedGoal.rawValue), 1.0)
     }
-
+    
     var isTodayActive: Bool {
-        timeSpent >= Double(userPreferences.selectedGoal.rawValue)
+        viewModel.todayTotalTime >= Double(userPreferences.selectedGoal.rawValue)
     }
-
+    
+    
     var body: some View {
         VStack {
             HStack {
                 Text("3 Streak")
                     .font(.title)
                     .bold()
-
+                
                 Spacer()
-
+                
                 ZStack {
                     Circle()
                         .stroke(
@@ -102,11 +71,11 @@ struct StreakView: View {
                 .frame(width: 30, height: 30)
             }
             .padding()
-
+            
             WeekView(isTodayActive: isTodayActive)
-
+            
             Spacer()
-
+            
             VStack(spacing: 16) {
                 HStack {
                     Text("Read for")
@@ -127,7 +96,7 @@ struct StreakView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-
+                
                 HStack {
                     Text("Streak")
                     Spacer()
@@ -144,7 +113,7 @@ struct StreakView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-
+                
                 HStack {
                     Text("Streak")
                     Spacer()
@@ -159,22 +128,27 @@ struct StreakView: View {
             .shadow(radius: 5)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
-
+            
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
             animatedProgress = 0.0
             withAnimation(.easeOut(duration: 0.5)) {
-                animatedProgress = computedProgress
+                animatedProgress = computeProgress()
             }
         }
+        
+        .onChange(of: viewModel.todayTotalTime) { _, _ in
+            updateProgress()
+        }
     }
-
+    
     private func updateProgress() {
         animatedProgress = 0.0
         withAnimation(.easeOut(duration: 0.5)) {
-            animatedProgress = computedProgress
+            animatedProgress = computeProgress()
         }
     }
 }
+

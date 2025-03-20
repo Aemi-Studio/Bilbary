@@ -23,6 +23,21 @@ class ReadSession: Identifiable {
     init() {
         self.startTime = .now
     }
+    
+#if DEBUG
+ // Helper initializer for testing that allows custom start and end times.
+ init(startTime: Date, endTime: Date? = nil) {
+     self.startTime = startTime
+     self.endTime = endTime
+ }
+ 
+ // Convenience initializer that sets up a session with a fixed duration.
+ convenience init(fixedDuration duration: TimeInterval) {
+     let now = Date()
+     let start = now.addingTimeInterval(-duration)
+     self.init(startTime: start, endTime: now)
+ }
+ #endif
 
     func end() -> Self {
         self.endTime = .now
